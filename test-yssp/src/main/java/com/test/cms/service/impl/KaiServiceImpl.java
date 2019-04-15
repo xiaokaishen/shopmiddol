@@ -18,8 +18,7 @@ import java.util.Map;
 public class KaiServiceImpl implements KaiService {
     @Autowired
     private IJedisClient jedisClient;
-
-
+    //你好啊
     @Override
     public QingYinResult WXLoginRegist(Map<String, String> userMap) {
         UserResult userResult = new UserResult();

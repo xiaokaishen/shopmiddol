@@ -16,6 +16,7 @@ import java.util.Map;
 @RequestMapping("kai")
 public class KaiController {
 
+    //你好啊
     @Autowired
     private KaiService kaiService;
 
