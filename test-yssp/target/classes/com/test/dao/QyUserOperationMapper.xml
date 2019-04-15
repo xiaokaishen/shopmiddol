@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.QyUserOperationMapper">
+	<resultMap id="BaseResultMap" type="com.test.pojo.QyUserIntegralView">
+		<result column="ID" property="id" jdbcType="BIGINT" />
+		<result column="userID" property="userid" jdbcType="VARCHAR" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="openID" property="openid" jdbcType="VARCHAR" />
+		<result column="wxName" property="wxname" jdbcType="VARCHAR" />
+		<result column="Head_portrait_url" property="headPortraitUrl"
+			jdbcType="VARCHAR" />
+		<result column="telephone" property="telephone" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="sex" property="sex" jdbcType="VARCHAR" />
+		<result column="birthday" property="birthday" jdbcType="DATE" />
+		<result column="IDCard" property="idcard" jdbcType="VARCHAR" />
+		<result column="CreateTime" property="createtime" jdbcType="TIMESTAMP" />
+		<result column="UpdateTime" property="updatetime" jdbcType="TIMESTAMP" />
+		<result column="user_vip_level" property="userVipLevel"
+			jdbcType="VARCHAR" />
+		<result column="user_source" property="userSource" jdbcType="VARCHAR" />
+		<result column="user_address" property="userAddress" jdbcType="VARCHAR" />
+		<result column="user_father_name" property="userFatherName"
+			jdbcType="VARCHAR" />
+		<result column="user_father_id" property="userFatherId"
+			jdbcType="BIGINT" />
+		<result column="user_remark" property="userRemark" jdbcType="VARCHAR" />
+		<result column="member_integral" property="memberIntegral"
+			jdbcType="INTEGER" />
+		<result column="member_accumulative_integral" property="memberAccumulativeIntegral"
+			jdbcType="BIGINT" />
+		<result column="member_accumulative_money" property="memberAccumulativeMoney"
+			jdbcType="BIGINT" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<parameterMap type="com.test.pojo.QyUserInteAndLevel" id="updateMap">
+		<parameter property="id" jdbcType="BIGINT" mode="IN" />
+		<parameter property="userVipLevel" jdbcType="VARCHAR" mode="IN" />
+		<parameter property="memberIntegral" jdbcType="INTEGER"
+			mode="IN" />
+		<parameter property="memberAccumulativeIntegral" jdbcType="BIGINT"
+			mode="IN" />
+		<parameter property="memberAccumulativeMoney" jdbcType="BIGINT"
+			mode="IN" />
+		<parameter property="changeType" jdbcType="TINYINT" mode="IN" />
+		<parameter property="relationOrder" jdbcType="VARCHAR" mode="IN" />
+		<parameter property="integralChange" jdbcType="INTEGER"
+			mode="IN" />
+		<parameter property="changePlatform" jdbcType="TINYINT"
+			mode="IN" />
+		<parameter property="changeTime" jdbcType="VARCHAR" mode="IN" />
+	</parameterMap>
+	<!-- 调用存储过程更新用户信息 -->
+	<update id="updateMember" parameterMap="updateMap">
+		call
+		updateMember(?,?,?,?,?,?,?,?,?,?)
+	</update>
+
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+		call deleteMember(
+		#{id,mode=IN,jdbcType=BIGINT}
+
+	</delete>
+
+	<!-- 调用添加用户信息存储过程添加一个用户信息 -->
+
+	<insert id="addMenberUser" parameterType="com.test.pojo.QyUserIntegralView">
+		call AddMember(
+		#{id,mode=IN,jdbcType=BIGINT},
+		#{userid,mode=IN,jdbcType=VARCHAR},
+		#{username,mode=IN,jdbcType=VARCHAR},
+		#{openid,mode=IN,jdbcType=VARCHAR},
+		#{wxname,mode=IN,jdbcType=VARCHAR},
+		#{headPortraitUrl,mode=IN,jdbcType=VARCHAR},
+		#{telephone,mode=IN,jdbcType=VARCHAR},
+		#{email,mode=IN,jdbcType=VARCHAR},
+		#{password,mode=IN,jdbcType=VARCHAR},
+		#{sex,mode=IN,jdbcType=VARCHAR},
+		#{birthday,mode=IN,jdbcType=DATE},
+		#{idcard,mode=IN,jdbcType=VARCHAR},
+		#{createtime,mode=IN,jdbcType=TIMESTAMP},
+		#{updatetime,mode=IN,jdbcType=TIMESTAMP},
+		#{userVipLevel,mode=IN,jdbcType=VARCHAR},
+		#{userSource,mode=IN,jdbcType=VARCHAR},
+		#{userAddress,mode=IN,jdbcType=VARCHAR},
+		#{userFatherName,mode=IN,jdbcType=VARCHAR},
+		#{userFatherId,mode=IN,jdbcType=BIGINT},
+		#{userRemark,mode=IN,jdbcType=LONGVARCHAR},
+		#{memberIntegral,mode=IN,jdbcType=INTEGER},
+		#{memberAccumulativeIntegral,mode=IN,jdbcType=BIGINT},
+		#{memberAccumulativeMoney,mode=IN,jdbcType=BIGINT},
+		#{remark,mode=IN,jdbcType=VARCHAR}
+		)
+	</insert>
+
+</mapper>

@@ -1,0 +1,1 @@
+<template name="63c1dcea"><view class="_view 63c1dcea fa {{['fa-' + type]}}" style=" {{('color:' + color + ';' + 'font-size:' + fontSize + ';')}}"></view></template>

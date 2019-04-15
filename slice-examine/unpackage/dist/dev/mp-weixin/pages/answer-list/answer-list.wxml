@@ -1,0 +1,2 @@
+<import src="./answer-list.vue.wxml" />
+    <template is="4f561fc8" data="{{ ...$root['0'], $root }}"/>

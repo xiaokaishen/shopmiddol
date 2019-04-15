@@ -1,0 +1,2 @@
+<import src="./mission-list.vue.wxml" />
+    <template is="1cac23a8" data="{{ ...$root['0'], $root }}"/>

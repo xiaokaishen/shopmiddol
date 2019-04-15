@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.YsspFavoriteMapper" >
+  <resultMap id="BaseResultMap" type="com.test.pojo.YsspFavorite" >
+    <id column="favorite_id" property="favoriteId" jdbcType="BIGINT" />
+    <result column="favorite_user_id" property="favoriteUserId" jdbcType="BIGINT" />
+    <result column="favorite_works_id" property="favoriteWorksId" jdbcType="BIGINT" />
+    <result column="favorite_works_type" property="favoriteWorksType" jdbcType="TINYINT" />
+    <result column="favorite_status" property="favoriteStatus" jdbcType="TINYINT" />
+    <result column="favorite_created_time" property="favoriteCreatedTime" jdbcType="VARCHAR" />
+    <result column="favorite_updated_time" property="favoriteUpdatedTime" jdbcType="VARCHAR" />
+  </resultMap>
+  
+   <resultMap id="queryFavCollectionXMLTW" type="com.test.pojo.YsspFavoriteBelongs" extends="BaseResultMap">
+      <association property="ysspInteractiveUser" javaType="com.test.pojo.YsspInteractiveUser">
+        <result column="Interactive_id" property="interactiveId" jdbcType="BIGINT" />
+		<result column="Interactive_memberId" property="interactiveMemberid"
+			jdbcType="BIGINT" />
+		<result column="Interactive_label" property="interactiveLabel"
+			jdbcType="VARCHAR" />
+		<result column="Interactive_position" property="interactivePosition"
+			jdbcType="VARCHAR" />
+		<result column="Interactive_createTime" property="interactiveCreatetime"
+			jdbcType="VARCHAR" />
+		<result column="Interactive_comment_Number" property="interactiveCommentNumber"
+			jdbcType="BIGINT" />
+		<result column="Interactive_likes_Number" property="interactiveLikesNumber"
+			jdbcType="BIGINT" />
+		<result column="Interactive_share_Number" property="interactiveShareNumber"
+			jdbcType="BIGINT" />
+		<result column="Interactive_Collection_Number" property="interactiveCollectionNumber"
+			jdbcType="BIGINT" />
+		<result column="Interactive_examine_status" property="interactiveExamineStatus"
+			jdbcType="TINYINT" />
+		<result column="Interactive_status" property="interactiveStatus"
+			jdbcType="TINYINT" />
+		<result column="Interactive_body" property="interactiveBody"
+			jdbcType="LONGVARCHAR" />
+		<result column="Interactive_img" property="interactiveImg"
+			jdbcType="LONGVARCHAR" />
+		<result column="Interactive_activity" property="interactiveActivity"
+			jdbcType="BIGINT" />
+		<result column="Interactive_video" property="interactiveVideo"
+			jdbcType="LONGVARCHAR" />
+		<result column="ID" property="id" jdbcType="BIGINT" />
+		<result column="userID" property="userid" jdbcType="VARCHAR" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="openID" property="openid" jdbcType="VARCHAR" />
+		<result column="wxName" property="wxname" jdbcType="VARCHAR" />
+		<result column="Head_portrait_url" property="headPortraitUrl"
+			jdbcType="VARCHAR" />
+		<result column="telephone" property="telephone" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="sex" property="sex" jdbcType="VARCHAR" />
+       <result column="follow_id" property="followId" jdbcType="BIGINT" />
+       <result column="collection_works_id"  property="collectionWorksId" jdbcType="BIGINT"/>
+       <result column="favorite_id"  property="favoriteId" jdbcType="BIGINT"/>
+	  </association>
+    
+	   <association property="ysspFollow" javaType="com.test.pojo.YsspFollow" >
+	    <result column="follow_id" property="followId" jdbcType="BIGINT" />
+	    <result column="follow_to_people" property="followToPeople" jdbcType="BIGINT" />
+	    <result column="follow_concerned_people" property="followConcernedPeople" jdbcType="BIGINT" />
+	    <result column="follow_status" property="followStatus" jdbcType="TINYINT" />
+	    <result column="follow_created_time" property="followCreatedTime" jdbcType="VARCHAR" />
+	  </association>
+	  
+   	  <association property="qyUserIntegralView" javaType="com.test.pojo.QyUserIntegralView">
+		<result column="ID" property="id" jdbcType="BIGINT" />
+		<result column="userID" property="userid" jdbcType="VARCHAR" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="openID" property="openid" jdbcType="VARCHAR" />
+		<result column="wxName" property="wxname" jdbcType="VARCHAR" />
+		<result column="Head_portrait_url" property="headPortraitUrl"
+			jdbcType="VARCHAR" />
+		<result column="telephone" property="telephone" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="sex" property="sex" jdbcType="VARCHAR" />
+		<result column="birthday" property="birthday" jdbcType="DATE" />
+		<result column="IDCard" property="idcard" jdbcType="VARCHAR" />
+		<result column="CreateTime" property="createtime" jdbcType="TIMESTAMP" />
+		<result column="UpdateTime" property="updatetime" jdbcType="TIMESTAMP" />
+		<result column="user_vip_level" property="userVipLevel"
+			jdbcType="VARCHAR" />
+		<result column="user_source" property="userSource" jdbcType="VARCHAR" />
+		<result column="user_address" property="userAddress" jdbcType="VARCHAR" />
+		<result column="user_father_name" property="userFatherName"
+			jdbcType="VARCHAR" />
+		<result column="user_father_id" property="userFatherId"
+			jdbcType="BIGINT" />
+		<result column="user_remark" property="userRemark" jdbcType="LONGVARCHAR" />
+		<result column="member_integral" property="memberIntegral"
+			jdbcType="INTEGER" />
+		<result column="member_accumulative_integral" property="memberAccumulativeIntegral"
+			jdbcType="BIGINT" />
+		<result column="member_accumulative_money" property="memberAccumulativeMoney"
+			jdbcType="BIGINT" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />
+	</association>
+   
+  	<association property="ysspUserRealName" javaType="com.test.pojo.YsspUserRealName">
+  		<result column="real_name_userId" property="realNameUserid" jdbcType="BIGINT" />
+		<result column="real_name_username" property="realNameUsername"
+			jdbcType="VARCHAR" />
+		<result column="real_name_DocumentType" property="realNameDocumenttype"
+			jdbcType="TINYINT" />
+		<result column="real_name_Document_num" property="realNameDocumentNum"
+			jdbcType="VARCHAR" />
+		<result column="real_name_Document_tel" property="realNameDocumentTel"
+			jdbcType="VARCHAR" />
+		<result column="real_name_email" property="realNameEmail"
+			jdbcType="VARCHAR" />
+		<result column="real_name_Country" property="realNameCountry"
+			jdbcType="VARCHAR" />
+		<result column="real_name_province" property="realNameProvince"
+			jdbcType="VARCHAR" />
+		<result column="real_name_city" property="realNameCity"
+			jdbcType="VARCHAR" />
+		<result column="real_name_createTime" property="realNameCreatetime"
+			jdbcType="VARCHAR" />
+		<result column="real_name_updateTime" property="realNameUpdatetime"
+			jdbcType="VARCHAR" />
+		<result column="real_name_status" property="realNameStatus"
+			jdbcType="TINYINT" />
+		<result column="real_name_remark" property="realNameRemark"
+			jdbcType="VARCHAR" />
+		<result column="Document_front" property="documentFront"
+			jdbcType="LONGVARCHAR" />
+		<result column="Document_Back" property="documentBack"
+			jdbcType="LONGVARCHAR" />
+  	</association>
+  </resultMap>  
+  
+   <resultMap id="queryFavCollectionXMLZP" type="com.test.pojo.YsspFavoriteBelongs" extends="BaseResultMap">
+	  <association property="ysspArtworkWithBLOBs" javaType="com.test.pojo.YsspArtworkWithBLOBs">
+		<result column="artwork_id" property="artworkId" jdbcType="BIGINT" />
+		<result column="artwork_name" property="artworkName" jdbcType="VARCHAR" />
+		<result column="artwork_authorId" property="artworkAuthorid"
+			jdbcType="BIGINT" />
+		<result column="artwork_type" property="artworkType" jdbcType="TINYINT" />
+		<result column="artwork_width" property="artworkWidth"
+			jdbcType="VARCHAR" />
+		<result column="artwork_height" property="artworkHeight"
+			jdbcType="VARCHAR" />
+		<result column="artwork_weigth" property="artworkWeigth"
+			jdbcType="VARCHAR" />
+		<result column="artwork_year" property="artworkYear" jdbcType="VARCHAR" />
+		<result column="artwork_Label" property="artworkLabel"
+			jdbcType="VARCHAR" />
+		<result column="artwork_examine_status" property="artworkExamineStatus"
+			jdbcType="TINYINT" />
+		<result column="artwork_status" property="artworkStatus"
+			jdbcType="TINYINT" />
+		<result column="artwork_createTime" property="artworkCreatetime"
+			jdbcType="VARCHAR" />
+		<result column="artwork_updateTime" property="artworkUpdatetime"
+			jdbcType="VARCHAR" />
+		<result column="artwork_Auditor" property="artworkAuditor"
+			jdbcType="BIGINT" />
+		<result column="artwork_browse_Number" property="artworkBrowseNumber"
+			jdbcType="BIGINT" />
+		<result column="artwork_comment_Number" property="artworkCommentNumber"
+			jdbcType="BIGINT" />
+		<result column="artwork_likes_Number" property="artworkLikesNumber"
+			jdbcType="BIGINT" />
+		<result column="artwork_share_Number" property="artworkShareNumber"
+			jdbcType="BIGINT" />
+		<result column="artwork_remark" property="artworkRemark"
+			jdbcType="VARCHAR" />
+		<result column="artwork_imgs" property="artworkImgs" jdbcType="LONGVARCHAR" />
+	</association>
+   	  <association property="qyUserIntegralView" javaType="com.test.pojo.QyUserIntegralView">
+		<result column="ID" property="id" jdbcType="BIGINT" />
+		<result column="userID" property="userid" jdbcType="VARCHAR" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="openID" property="openid" jdbcType="VARCHAR" />
+		<result column="wxName" property="wxname" jdbcType="VARCHAR" />
+		<result column="Head_portrait_url" property="headPortraitUrl"
+			jdbcType="VARCHAR" />
+		<result column="telephone" property="telephone" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="sex" property="sex" jdbcType="VARCHAR" />
+		<result column="birthday" property="birthday" jdbcType="DATE" />
+		<result column="IDCard" property="idcard" jdbcType="VARCHAR" />
+		<result column="CreateTime" property="createtime" jdbcType="TIMESTAMP" />
+		<result column="UpdateTime" property="updatetime" jdbcType="TIMESTAMP" />
+		<result column="user_vip_level" property="userVipLevel"
+			jdbcType="VARCHAR" />
+		<result column="user_source" property="userSource" jdbcType="VARCHAR" />
+		<result column="user_address" property="userAddress" jdbcType="VARCHAR" />
+		<result column="user_father_name" property="userFatherName"
+			jdbcType="VARCHAR" />
+		<result column="user_father_id" property="userFatherId"
+			jdbcType="BIGINT" />
+		<result column="user_remark" property="userRemark" jdbcType="LONGVARCHAR" />
+		<result column="member_integral" property="memberIntegral"
+			jdbcType="INTEGER" />
+		<result column="member_accumulative_integral" property="memberAccumulativeIntegral"
+			jdbcType="BIGINT" />
+		<result column="member_accumulative_money" property="memberAccumulativeMoney"
+			jdbcType="BIGINT" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />
+	</association>
+   
+  	<association property="ysspUserRealName" javaType="com.test.pojo.YsspUserRealName">
+  		<result column="real_name_userId" property="realNameUserid" jdbcType="BIGINT" />
+		<result column="real_name_username" property="realNameUsername"
+			jdbcType="VARCHAR" />
+		<result column="real_name_DocumentType" property="realNameDocumenttype"
+			jdbcType="TINYINT" />
+		<result column="real_name_Document_num" property="realNameDocumentNum"
+			jdbcType="VARCHAR" />
+		<result column="real_name_Document_tel" property="realNameDocumentTel"
+			jdbcType="VARCHAR" />
+		<result column="real_name_email" property="realNameEmail"
+			jdbcType="VARCHAR" />
+		<result column="real_name_Country" property="realNameCountry"
+			jdbcType="VARCHAR" />
+		<result column="real_name_province" property="realNameProvince"
+			jdbcType="VARCHAR" />
+		<result column="real_name_city" property="realNameCity"
+			jdbcType="VARCHAR" />
+		<result column="real_name_createTime" property="realNameCreatetime"
+			jdbcType="VARCHAR" />
+		<result column="real_name_updateTime" property="realNameUpdatetime"
+			jdbcType="VARCHAR" />
+		<result column="real_name_status" property="realNameStatus"
+			jdbcType="TINYINT" />
+		<result column="real_name_remark" property="realNameRemark"
+			jdbcType="VARCHAR" />
+		<result column="Document_front" property="documentFront"
+			jdbcType="LONGVARCHAR" />
+		<result column="Document_Back" property="documentBack"
+			jdbcType="LONGVARCHAR" />
+  	</association>
+  </resultMap>
+  
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    favorite_id, favorite_user_id, favorite_works_id, favorite_works_type, favorite_status, 
+    favorite_created_time, favorite_updated_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.test.pojo.YsspFavoriteExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from yssp_favorite
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from yssp_favorite
+    where favorite_id = #{favoriteId,jdbcType=BIGINT}
+  </select>
+  
+ <!--  查询出所有用户的点赞头像 -->
+  <select id="selectFavoriteHeadImgs" resultType="java.lang.String">
+	SELECT qu.Head_portrait_url
+	FROM `yssp_favorite` yf
+	JOIN  `qy_user_integral_view` qu ON yf.`favorite_user_id` = qu.ID
+	GROUP BY qu.`ID` ORDER BY yf.`favorite_created_time` DESC
+  </select>
+  
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from yssp_favorite
+    where favorite_id = #{favoriteId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.test.pojo.YsspFavoriteExample" >
+    delete from yssp_favorite
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.test.pojo.YsspFavorite" >
+    insert into yssp_favorite (favorite_id, favorite_user_id, favorite_works_id, 
+      favorite_works_type, favorite_status, favorite_created_time, 
+      favorite_updated_time)
+    values (#{favoriteId,jdbcType=BIGINT}, #{favoriteUserId,jdbcType=BIGINT}, #{favoriteWorksId,jdbcType=BIGINT}, 
+      #{favoriteWorksType,jdbcType=TINYINT}, #{favoriteStatus,jdbcType=TINYINT}, #{favoriteCreatedTime,jdbcType=VARCHAR}, 
+      #{favoriteUpdatedTime,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="favoriteId" parameterType="com.test.pojo.YsspFavorite" >
+    insert into yssp_favorite
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="favoriteId != null" >
+        favorite_id,
+      </if>
+      <if test="favoriteUserId != null" >
+        favorite_user_id,
+      </if>
+      <if test="favoriteWorksId != null" >
+        favorite_works_id,
+      </if>
+      <if test="favoriteWorksType != null" >
+        favorite_works_type,
+      </if>
+      <if test="favoriteStatus != null" >
+        favorite_status,
+      </if>
+      <if test="favoriteCreatedTime != null" >
+        favorite_created_time,
+      </if>
+      <if test="favoriteUpdatedTime != null" >
+        favorite_updated_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="favoriteId != null" >
+        #{favoriteId,jdbcType=BIGINT},
+      </if>
+      <if test="favoriteUserId != null" >
+        #{favoriteUserId,jdbcType=BIGINT},
+      </if>
+      <if test="favoriteWorksId != null" >
+        #{favoriteWorksId,jdbcType=BIGINT},
+      </if>
+      <if test="favoriteWorksType != null" >
+        #{favoriteWorksType,jdbcType=TINYINT},
+      </if>
+      <if test="favoriteStatus != null" >
+        #{favoriteStatus,jdbcType=TINYINT},
+      </if>
+      <if test="favoriteCreatedTime != null" >
+        #{favoriteCreatedTime,jdbcType=VARCHAR},
+      </if>
+      <if test="favoriteUpdatedTime != null" >
+        #{favoriteUpdatedTime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.test.pojo.YsspFavoriteExample" resultType="java.lang.Integer" >
+    select count(*) from yssp_favorite
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update yssp_favorite
+    <set >
+      <if test="record.favoriteId != null" >
+        favorite_id = #{record.favoriteId,jdbcType=BIGINT},
+      </if>
+      <if test="record.favoriteUserId != null" >
+        favorite_user_id = #{record.favoriteUserId,jdbcType=BIGINT},
+      </if>
+      <if test="record.favoriteWorksId != null" >
+        favorite_works_id = #{record.favoriteWorksId,jdbcType=BIGINT},
+      </if>
+      <if test="record.favoriteWorksType != null" >
+        favorite_works_type = #{record.favoriteWorksType,jdbcType=TINYINT},
+      </if>
+      <if test="record.favoriteStatus != null" >
+        favorite_status = #{record.favoriteStatus,jdbcType=TINYINT},
+      </if>
+      <if test="record.favoriteCreatedTime != null" >
+        favorite_created_time = #{record.favoriteCreatedTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.favoriteUpdatedTime != null" >
+        favorite_updated_time = #{record.favoriteUpdatedTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update yssp_favorite
+    set favorite_id = #{record.favoriteId,jdbcType=BIGINT},
+      favorite_user_id = #{record.favoriteUserId,jdbcType=BIGINT},
+      favorite_works_id = #{record.favoriteWorksId,jdbcType=BIGINT},
+      favorite_works_type = #{record.favoriteWorksType,jdbcType=TINYINT},
+      favorite_status = #{record.favoriteStatus,jdbcType=TINYINT},
+      favorite_created_time = #{record.favoriteCreatedTime,jdbcType=VARCHAR},
+      favorite_updated_time = #{record.favoriteUpdatedTime,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.test.pojo.YsspFavorite" >
+    update yssp_favorite
+    <set >
+      <if test="favoriteUserId != null" >
+        favorite_user_id = #{favoriteUserId,jdbcType=BIGINT},
+      </if>
+      <if test="favoriteWorksId != null" >
+        favorite_works_id = #{favoriteWorksId,jdbcType=BIGINT},
+      </if>
+      <if test="favoriteWorksType != null" >
+        favorite_works_type = #{favoriteWorksType,jdbcType=TINYINT},
+      </if>
+      <if test="favoriteStatus != null" >
+        favorite_status = #{favoriteStatus,jdbcType=TINYINT},
+      </if>
+      <if test="favoriteCreatedTime != null" >
+        favorite_created_time = #{favoriteCreatedTime,jdbcType=VARCHAR},
+      </if>
+      <if test="favoriteUpdatedTime != null" >
+        favorite_updated_time = #{favoriteUpdatedTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where favorite_id = #{favoriteId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.test.pojo.YsspFavorite" >
+    update yssp_favorite
+    set favorite_user_id = #{favoriteUserId,jdbcType=BIGINT},
+      favorite_works_id = #{favoriteWorksId,jdbcType=BIGINT},
+      favorite_works_type = #{favoriteWorksType,jdbcType=TINYINT},
+      favorite_status = #{favoriteStatus,jdbcType=TINYINT},
+      favorite_created_time = #{favoriteCreatedTime,jdbcType=VARCHAR},
+      favorite_updated_time = #{favoriteUpdatedTime,jdbcType=VARCHAR}
+    where favorite_id = #{favoriteId,jdbcType=BIGINT}
+  </update>
+  
+    <select id="queryFavCollectionTW" resultMap="queryFavCollectionXMLTW" >
+		select c.*,i.*,u.*,f.*,n.* from yssp_favorite c INNER JOIN yssp_interactive i 
+		ON c.favorite_works_id = i.Interactive_id and c.favorite_status = 1 
+		and c.favorite_user_id=#{userId} INNER JOIN qy_user u
+		ON i.Interactive_memberId = u.ID LEFT JOIN yssp_follow f 
+		on f.follow_to_people = #{userId} AND f.follow_concerned_people = u.ID
+		LEFT JOIN yssp_user_real_name n ON u.ID = n.real_name_userId 
+		ORDER BY c.favorite_created_time DESC
+  	</select>
+  	
+  	    <select id="queryFavCollectionZP" resultMap="queryFavCollectionXMLZP" >
+		select c.*,a.*,u.*,n.* from yssp_favorite c INNER JOIN yssp_artwork a 
+		ON c.favorite_works_id = a.artwork_id and a.artwork_status = 1 
+		and c.favorite_user_id=#{userId} INNER JOIN qy_user u
+		ON a.artwork_authorId = u.ID LEFT JOIN yssp_user_real_name n 
+		ON u.ID = n.real_name_userId ORDER BY c.favorite_created_time DESC
+  	</select>
+  	
+  	<select id="selectFavoriteByObj" resultMap="queryFavCollectionXMLZP">
+  		SELECT
+			yf.*
+		FROM
+		 yssp_favorite yf
+		WHERE 
+			yf.favorite_user_id = #{favoriteUserId}
+		AND
+			yf.favorite_works_id = #{favoriteWorksId}
+		AND
+			yf.favorite_works_type = #{favoriteWorksType}
+		AND
+			yf.favorite_status =1
+  	</select>
+  	<select id="selectFavoriteByWorksId" resultMap="queryFavCollectionXMLZP">
+  	  		SELECT
+				yf.*,
+				qu.*
+			FROM
+				yssp_favorite yf
+			INNER JOIN qy_user qu ON yf.favorite_user_id =qu.ID
+			WHERE
+				yf.favorite_works_id =#{worksId}
+			AND	
+				yf.favorite_works_type =#{worksType}
+			AND 
+				yf.favorite_status =1
+			ORDER BY
+				yf.favorite_created_time
+			DESC
+  	</select>
+  	<select id="selectCountByWorksId" resultType="java.lang.Long">
+  	  		SELECT
+				COUNT(yf.favorite_id)
+			FROM
+				yssp_favorite yf
+			INNER JOIN qy_user qu ON yf.favorite_user_id =qu.ID
+			WHERE
+				yf.favorite_works_id =#{worksId}
+			AND	
+				yf.favorite_works_type =#{worksType}
+			AND 
+				yf.favorite_status =1
+  	</select>
+</mapper>

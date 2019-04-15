@@ -1,0 +1,8 @@
+com\test\cms\controller\KaiController.class
+com\test\cms\service\impl\KaiServiceImpl.class
+com\test\pojo\QyUserAuths.class
+com\test\dao\impl\JedisClientCluster.class
+com\test\pojo\UserResult.class
+com\test\dao\impl\JedisClientPool.class
+com\test\cms\service\KaiService.class
+com\test\dao\IJedisClient.class

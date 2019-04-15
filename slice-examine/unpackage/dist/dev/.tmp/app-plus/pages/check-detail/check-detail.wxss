@@ -1,0 +1,205 @@
+
+.upload-img{
+	position:absolute;
+	width: 150rpx;
+	height: 150rpx;
+}
+.close-img{
+	position:absolute;
+	font-size:20rpx;
+	background:black;
+	border-radius:50%;
+	width:30rpx;
+	height:30rpx;
+	text-align:center;
+	right:-5rpx;
+	top:-5rpx;
+	color:#ffffff;
+}
+.choose-img-top{
+	position:relative;
+	width:150rpx;
+	height:150rpx;
+}
+
+
+.record-modal-list{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding:20rpx 30rpx;
+}
+.detail-modal-submit{
+	background:rgb(73,90,128);
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+	padding:20rpx 0rpx;
+	margin:30rpx 30rpx 0rpx;
+	border-radius:15rpx;
+	color:rgb(255,255,255);
+	font-size:32rpx;
+}
+.radio-list{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	font-size: 26rpx;
+	margin-bottom: 30rpx;
+}
+.check-option-top{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+.check-background{
+	background: rgb(255,255,255);
+}
+.check-main{
+	width: 100%;
+	background: rgb(241,241,241);
+}
+.check-top{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	font-size:26rpx;
+	padding: 30rpx;
+}
+.check-top-number{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+	background:rgb(1,184,213);
+	color:rgb(255,255,255);
+	padding:0rpx 40rpx;
+	margin-right:20rpx;
+	border-radius:10rpx;
+}
+.check-option{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	height:80rpx;
+	font-size:26rpx;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+	border-bottom:1rpx solid rgb(241,241,241);
+}
+.check-option-left{
+	margin:0rpx 30rpx;
+}
+.check-image-top{
+	padding: 30rpx;
+}
+.check-image-title{
+	font-size:30rpx;
+	color:rgb(0,189,208);
+	margin-bottom: 30rpx;
+}
+.check-textarea{
+	width:100%;
+	border:1rpx solid rgb(241,241,241);
+	height:80rpx;
+}
+.check-bottom{
+	position:fixed;
+	width:100%;
+	bottom:0rpx;
+}
+.check-bottom-menu{
+	padding:30rpx;
+	font-size:30rpx;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack:justify;
+	-webkit-justify-content:space-between;
+	    -ms-flex-pack:justify;
+	        justify-content:space-between;
+}
+.bottom-menu-left{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	color:rgb(0,189,208);
+}
+.bottom-menu-right{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.bottom-menu-list{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin-right: 20rpx;
+}
+.check-icon{
+	margin-right: 10rpx;
+}
+.bottom-submit-img{
+	margin-right: 20rpx;
+}
+.bottom-submit-img >image{
+	width:30rpx;
+	height:50rpx;
+}
+.bottom-menu-img{
+	width: 50rpx;
+	height: 50rpx;
+	margin-right: 20rpx;
+}
+

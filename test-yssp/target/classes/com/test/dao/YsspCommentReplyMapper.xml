@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.YsspCommentReplyMapper" >
+  <resultMap id="BaseResultMap" type="com.test.pojo.YsspCommentReply" >
+    <id column="reply_id" property="replyId" jdbcType="BIGINT" />
+    <result column="reply_comment_id" property="replyCommentId" jdbcType="BIGINT" />
+    <result column="reply_create_date" property="replyCreateDate" jdbcType="VARCHAR" />
+    <result column="reply_update_date" property="replyUpdateDate" jdbcType="VARCHAR" />
+    <result column="reply_content" property="replyContent" jdbcType="VARCHAR" />
+    <result column="reply_status" property="replyStatus" jdbcType="BIT" />
+    <result column="reply_remark" property="replyRemark" jdbcType="VARCHAR" />
+    <result column="reply_flag" property="replyFlag" jdbcType="INTEGER" />
+    <result column="reply_user_id" property="replyUserId" jdbcType="BIGINT"/>
+    <result column="reply_comment_user_id" property="replyCommentUserId" jdbcType="BIGINT"/>
+    <result column="replyMineId" property="replyMineId" jdbcType="BIGINT"/>
+    <result column="wxName" property="wxName" jdbcType="VARCHAR"/>
+    <result column="Head_portrait_url" property="HeadPortraitUrl" jdbcType="VARCHAR"/>
+    <result column="commentWxName" property="commentWxName" jdbcType="VARCHAR"/>
+    <result column="commentHeadUrl" property="commentHeadUrl" jdbcType="VARCHAR"/>
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    reply_id, reply_comment_id, reply_create_date, reply_update_date, reply_content, 
+    reply_status, reply_remark, reply_flag, reply_user_id, reply_comment_user_id
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.test.pojo.YsspCommentReplyExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from yssp_comment_reply
+     
+    <choose>
+		<when test="_parameter != null">
+			<include refid="Example_Where_Clause" /> and  reply_status = 1
+		</when>
+		<otherwise>
+			where  reply_status = 1
+		</otherwise>
+		</choose>
+    
+    
+    
+    
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from yssp_comment_reply
+    where reply_id = #{replyId,jdbcType=BIGINT}
+  </select>
+  
+  <!-- 查询出对应评价的回复信息 -->
+  <select id="selectByCommentId" resultMap="BaseResultMap">
+  	select 
+    yr.*,qu.wxName,qu.Head_portrait_url,qu.ID AS replyMineId,
+		quiv.wxName AS commentWxName,quiv.Head_portrait_url AS commentHeadUrl
+    from yssp_comment_reply yr JOIN 
+    qy_user_integral_view qu
+    ON yr.reply_user_id = qu.ID
+    JOIN 
+    qy_user_integral_view quiv
+    ON yr.reply_comment_user_id = quiv.ID
+    where reply_comment_id = #{replyCommentId,jdbcType=BIGINT} and reply_status = 1
+    ORDER BY reply_create_date DESC
+  </select>
+  
+  
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from yssp_comment_reply
+    where reply_id = #{replyId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.test.pojo.YsspCommentReplyExample" >
+    delete from yssp_comment_reply
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.test.pojo.YsspCommentReply" >
+    insert into yssp_comment_reply (reply_id, reply_comment_id, reply_create_date, 
+      reply_update_date, reply_content, reply_status, 
+      reply_remark, reply_flag)
+    values (#{replyId,jdbcType=BIGINT}, #{replyCommentId,jdbcType=BIGINT}, #{replyCreateDate,jdbcType=VARCHAR}, 
+      #{replyUpdateDate,jdbcType=VARCHAR}, #{replyContent,jdbcType=VARCHAR}, #{replyStatus,jdbcType=BIT}, 
+      #{replyRemark,jdbcType=VARCHAR}, #{replyFlag,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="replyId" parameterType="com.test.pojo.YsspCommentReply" >
+    insert into yssp_comment_reply
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="replyId != null" >
+        reply_id,
+      </if>
+      <if test="replyUserId != null" >
+        reply_user_id,
+      </if>
+      <if test="replyCommentId != null" >
+        reply_comment_id,
+      </if>
+      <if test="replyCreateDate != null" >
+        reply_create_date,
+      </if>
+      <if test="replyUpdateDate != null" >
+        reply_update_date,
+      </if>
+      <if test="replyContent != null" >
+        reply_content,
+      </if>
+      <if test="replyStatus != null" >
+        reply_status,
+      </if>
+      <if test="replyRemark != null" >
+        reply_remark,
+      </if>
+      <if test="replyFlag != null" >
+        reply_flag,
+      </if>
+      <if test="replyCommentUserId !=null">
+      	reply_comment_user_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="replyId != null" >
+        #{replyId,jdbcType=BIGINT},
+      </if>
+      <if test="replyUserId != null" >
+        #{replyUserId,jdbcType=BIGINT},
+      </if>
+      <if test="replyCommentId != null" >
+        #{replyCommentId,jdbcType=BIGINT},
+      </if>
+      <if test="replyCreateDate != null" >
+        #{replyCreateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="replyUpdateDate != null" >
+        #{replyUpdateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="replyContent != null" >
+        #{replyContent,jdbcType=VARCHAR},
+      </if>
+      <if test="replyStatus != null" >
+        #{replyStatus,jdbcType=BIT},
+      </if>
+      <if test="replyRemark != null" >
+        #{replyRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="replyFlag != null" >
+        #{replyFlag,jdbcType=INTEGER},
+      </if>
+      <if test="replyCommentUserId !=null">
+      	#{replyCommentUserId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.test.pojo.YsspCommentReplyExample" resultType="java.lang.Integer" >
+    select count(*) from yssp_comment_reply
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update yssp_comment_reply
+    <set >
+      <if test="record.replyId != null" >
+        reply_id = #{record.replyId,jdbcType=BIGINT},
+      </if>
+      <if test="record.replyCommentId != null" >
+        reply_comment_id = #{record.replyCommentId,jdbcType=BIGINT},
+      </if>
+      <if test="record.replyCreateDate != null" >
+        reply_create_date = #{record.replyCreateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.replyUpdateDate != null" >
+        reply_update_date = #{record.replyUpdateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.replyContent != null" >
+        reply_content = #{record.replyContent,jdbcType=VARCHAR},
+      </if>
+      <if test="record.replyStatus != null" >
+        reply_status = #{record.replyStatus,jdbcType=BIT},
+      </if>
+      <if test="record.replyRemark != null" >
+        reply_remark = #{record.replyRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.replyFlag != null" >
+        reply_flag = #{record.replyFlag,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update yssp_comment_reply
+    set reply_id = #{record.replyId,jdbcType=BIGINT},
+      reply_comment_id = #{record.replyCommentId,jdbcType=BIGINT},
+      reply_create_date = #{record.replyCreateDate,jdbcType=VARCHAR},
+      reply_update_date = #{record.replyUpdateDate,jdbcType=VARCHAR},
+      reply_content = #{record.replyContent,jdbcType=VARCHAR},
+      reply_status = #{record.replyStatus,jdbcType=BIT},
+      reply_remark = #{record.replyRemark,jdbcType=VARCHAR},
+      reply_flag = #{record.replyFlag,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.test.pojo.YsspCommentReply" >
+    update yssp_comment_reply
+    <set >
+      <if test="replyCommentId != null" >
+        reply_comment_id = #{replyCommentId,jdbcType=BIGINT},
+      </if>
+      <if test="replyCreateDate != null" >
+        reply_create_date = #{replyCreateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="replyUpdateDate != null" >
+        reply_update_date = #{replyUpdateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="replyContent != null" >
+        reply_content = #{replyContent,jdbcType=VARCHAR},
+      </if>
+      <if test="replyStatus != null" >
+        reply_status = #{replyStatus,jdbcType=BIT},
+      </if>
+      <if test="replyRemark != null" >
+        reply_remark = #{replyRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="replyFlag != null" >
+        reply_flag = #{replyFlag,jdbcType=INTEGER},
+      </if>
+    </set>
+    where reply_id = #{replyId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.test.pojo.YsspCommentReply" >
+    update yssp_comment_reply
+    set reply_comment_id = #{replyCommentId,jdbcType=BIGINT},
+      reply_create_date = #{replyCreateDate,jdbcType=VARCHAR},
+      reply_update_date = #{replyUpdateDate,jdbcType=VARCHAR},
+      reply_content = #{replyContent,jdbcType=VARCHAR},
+      reply_status = #{replyStatus,jdbcType=BIT},
+      reply_remark = #{replyRemark,jdbcType=VARCHAR},
+      reply_flag = #{replyFlag,jdbcType=INTEGER}
+    where reply_id = #{replyId,jdbcType=BIGINT}
+  </update>
+  
+    <update id="deleteReply" parameterType="java.lang.Long" >
+    update yssp_comment_reply
+    set reply_status = 0
+    where reply_id = #{id}
+  </update>
+</mapper>

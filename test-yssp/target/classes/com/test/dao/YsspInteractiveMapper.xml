@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.YsspInteractiveMapper">
+	<resultMap id="BaseResultMap" type="com.test.pojo.YsspInteractive">
+		<id column="Interactive_id" property="interactiveId" jdbcType="BIGINT" />
+		<result column="Interactive_memberId" property="interactiveMemberid"
+			jdbcType="BIGINT" />
+		<result column="Interactive_label" property="interactiveLabel"
+			jdbcType="VARCHAR" />
+		<result column="Interactive_position" property="interactivePosition"
+			jdbcType="VARCHAR" />
+		<result column="Interactive_createTime" property="interactiveCreatetime"
+			jdbcType="VARCHAR" />
+		<result column="Interactive_comment_Number" property="interactiveCommentNumber"
+			jdbcType="BIGINT" />
+		<result column="Interactive_likes_Number" property="interactiveLikesNumber"
+			jdbcType="BIGINT" />
+		<result column="Interactive_share_Number" property="interactiveShareNumber"
+			jdbcType="BIGINT" />
+		<result column="Interactive_Collection_Number" property="interactiveCollectionNumber"
+			jdbcType="BIGINT" />
+		<result column="Interactive_examine_status" property="interactiveExamineStatus"
+			jdbcType="TINYINT" />
+		<result column="Interactive_status" property="interactiveStatus"
+			jdbcType="TINYINT" />
+		<result column="Interactive_accredit_user" property="interactiveAccreditUser"
+			jdbcType="BIGINT" />
+		<result column="Interactive_activity" property="interactiveActivity"
+			jdbcType="BIGINT" />
+		<result column="Interactive_video" property="interactiveVideo"
+			jdbcType="LONGVARCHAR" />
+	</resultMap>
+	<resultMap id="ResultMapWithBLOBs" type="com.test.pojo.YsspInteractiveWithBLOBs"
+		extends="BaseResultMap">
+		<result column="Interactive_body" property="interactiveBody"
+			jdbcType="LONGVARCHAR" />
+		<result column="Interactive_img" property="interactiveImg"
+			jdbcType="LONGVARCHAR" />
+	<association property="qyUserIntegralView" javaType="com.test.pojo.QyUserIntegralView">
+		<result column="ID" property="id" jdbcType="BIGINT" />
+		<result column="userID" property="userid" jdbcType="VARCHAR" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="openID" property="openid" jdbcType="VARCHAR" />
+		<result column="wxName" property="wxname" jdbcType="VARCHAR" />
+		<result column="Head_portrait_url" property="headPortraitUrl"
+			jdbcType="VARCHAR" />
+		<result column="telephone" property="telephone" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="sex" property="sex" jdbcType="VARCHAR" />
+		<result column="birthday" property="birthday" jdbcType="DATE" />
+		<result column="IDCard" property="idcard" jdbcType="VARCHAR" />
+		<result column="CreateTime" property="createtime" jdbcType="TIMESTAMP" />
+		<result column="UpdateTime" property="updatetime" jdbcType="TIMESTAMP" />
+		<result column="user_vip_level" property="userVipLevel"
+			jdbcType="VARCHAR" />
+		<result column="user_source" property="userSource" jdbcType="VARCHAR" />
+		<result column="user_address" property="userAddress" jdbcType="VARCHAR" />
+		<result column="user_father_name" property="userFatherName"
+			jdbcType="VARCHAR" />
+		<result column="user_father_id" property="userFatherId"
+			jdbcType="BIGINT" />
+		<result column="user_remark" property="userRemark" jdbcType="LONGVARCHAR" />
+		<result column="member_integral" property="memberIntegral"
+			jdbcType="INTEGER" />
+		<result column="member_accumulative_integral" property="memberAccumulativeIntegral"
+			jdbcType="BIGINT" />
+		<result column="member_accumulative_money" property="memberAccumulativeMoney"
+			jdbcType="BIGINT" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />	
+		</association>
+		<association property="ysspUserRealName" javaType="com.test.pojo.YsspUserRealName">
+		<result column="real_name_userId" property="realNameUserid" jdbcType="BIGINT" />
+		<result column="real_name_username" property="realNameUsername"
+			jdbcType="VARCHAR" />
+		<result column="real_name_DocumentType" property="realNameDocumenttype"
+			jdbcType="TINYINT" />
+		<result column="real_name_Document_num" property="realNameDocumentNum"
+			jdbcType="VARCHAR" />
+		<result column="real_name_Document_tel" property="realNameDocumentTel"
+			jdbcType="VARCHAR" />
+		<result column="real_name_email" property="realNameEmail"
+			jdbcType="VARCHAR" />
+		<result column="real_name_Country" property="realNameCountry"
+			jdbcType="VARCHAR" />
+		<result column="real_name_province" property="realNameProvince"
+			jdbcType="VARCHAR" />
+		<result column="real_name_city" property="realNameCity"
+			jdbcType="VARCHAR" />
+		<result column="real_name_createTime" property="realNameCreatetime"
+			jdbcType="VARCHAR" />
+		<result column="real_name_updateTime" property="realNameUpdatetime"
+			jdbcType="VARCHAR" />
+		<result column="real_name_status" property="realNameStatus"
+			jdbcType="TINYINT" />
+		<result column="real_name_remark" property="realNameRemark"
+			jdbcType="VARCHAR" />
+		<result column="Document_front" property="documentFront"
+			jdbcType="LONGVARCHAR" />
+		<result column="Document_Back" property="documentBack"
+			jdbcType="LONGVARCHAR" />
+		</association>
+	</resultMap>
+
+	<resultMap id="ysspInteractiveUser" type="com.test.pojo.YsspInteractiveUser"
+		extends="BaseResultMap">
+		<result column="Interactive_body" property="interactiveBody"
+			jdbcType="LONGVARCHAR" />
+		<result column="Interactive_img" property="interactiveImg"
+			jdbcType="LONGVARCHAR" />
+		<result column="ID" property="id" jdbcType="BIGINT" />
+		<result column="userID" property="userid" jdbcType="VARCHAR" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="openID" property="openid" jdbcType="VARCHAR" />
+		<result column="wxName" property="wxname" jdbcType="VARCHAR" />
+		<result column="Head_portrait_url" property="headPortraitUrl"
+			jdbcType="VARCHAR" />
+		<result column="telephone" property="telephone" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="sex" property="sex" jdbcType="VARCHAR" />
+       <result column="follow_id" property="followId" jdbcType="BIGINT" />
+       <result column="collection_works_id"  property="collectionWorksId" jdbcType="BIGINT"/>
+       <result column="favorite_id"  property="favoriteId" jdbcType="BIGINT"/>
+       <result column="real_name_userId" property="realNameUserId" jdbcType="BIGINT"/>
+		<result column="Interactive_activity" property="interactiveActivity"
+			jdbcType="BIGINT" />
+		<result column="Interactive_video" property="interactiveVideo"
+			jdbcType="LONGVARCHAR" />
+	</resultMap>
+	
+	<resultMap id="interactiveWithComment" type="com.test.pojo.YsspInteractiveWithComment"
+	extends="ysspInteractiveUser">
+		<result column="interactiveCount" property="interactiveCount" 
+			jdbcType="BIGINT"/>
+		<collection property="commentList" column="Interactive_id"
+		select="com.test.dao.YsspCommentMapper.selectCommentByInteractiveId">
+			
+		</collection>
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		Interactive_id, Interactive_memberId, Interactive_label,
+		Interactive_position,
+		Interactive_createTime,
+		Interactive_comment_Number, Interactive_likes_Number,
+		Interactive_share_Number,
+		Interactive_Collection_Number,
+		Interactive_examine_status, Interactive_status,
+		Interactive_activity
+	</sql>
+	<sql id="Blob_Column_List">
+		Interactive_body, Interactive_img
+	</sql>
+	<sql id="user_sql">
+		ID, userID, username, openID, wxName,
+		Head_portrait_url, telephone,
+		email,
+		password,
+		sex
+	</sql>
+
+	<!-- 查询互动专区内容通过id -->
+	<select id="selectInteractiveById" resultMap="ysspInteractiveUser">
+		select 
+			yu.*,
+			yf.follow_id,
+			yfa.favorite_id,
+			yc.collection_works_id
+		from yssp_interactive_user yu
+	  	LEFT JOIN yssp_follow yf ON yu.Interactive_memberId = yf.follow_concerned_people AND
+		yf.follow_to_people = #{userId,jdbcType=BIGINT}
+		LEFT JOIN yssp_favorite yfa ON yfa.favorite_works_id =yu.Interactive_id AND favorite_works_type =2
+		AND yfa.favorite_user_id =#{userId,jdbcType=BIGINT}
+		LEFT JOIN yssp_collection yc ON yc.collection_works_id =yu.Interactive_id AND collection_works_type =2
+		AND yc.collection_user_id =#{userId,jdbcType=BIGINT}
+		WHERE
+		yu.Interactive_id = #{interactiveId,jdbcType=BIGINT}
+		AND
+		yu.Interactive_status != -1
+		GROUP BY
+		yu.Interactive_id
+	</select>
+
+	<!-- 查询所有的互动专区内容 -->
+	<select id="selectAllInteractive" resultMap="ysspInteractiveUser">
+		select 
+		yu.*,
+		yf.follow_id,
+		yc.collection_works_id,
+		yfa.favorite_id,
+		yurn.real_name_userId,
+		(SELECT 
+				COUNT(Interactive_id) 
+		 FROM 
+				yssp_interactive_user 
+		 WHERE 
+				Interactive_status =1) AS interactiveCount
+		from 
+		yssp_interactive_user yu
+		LEFT JOIN yssp_follow yf ON yu.Interactive_memberId = yf.follow_concerned_people AND
+		yf.follow_to_people = #{userId,jdbcType=BIGINT}
+		LEFT JOIN yssp_collection yc ON yc.collection_user_id = #{userId,jdbcType=BIGINT} AND
+		yc.collection_works_type = 2 AND yc.collection_works_id = yu.Interactive_id
+		LEFT JOIN yssp_favorite yfa ON yfa.favorite_user_id = #{userId,jdbcType=BIGINT} AND
+		yfa.favorite_works_id = yu.Interactive_id AND yfa.favorite_works_type = 2
+		LEFT JOIN yssp_user_real_name yurn ON yu.Interactive_memberId = yurn.real_name_userId where yu.Interactive_status = 1
+		
+		GROUP BY yu.Interactive_id
+		ORDER BY Interactive_createTime DESC
+	</select>
+
+	<!-- 根据互动id查询互动详情 -->
+	<select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs"
+		parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		,
+		<include refid="Blob_Column_List" />
+		from yssp_interactive
+		where Interactive_id =
+		#{interactiveId,jdbcType=BIGINT} and Interactive_status in(1,3)
+	</select>
+
+
+	<!-- 根据审核id查询互动列表 -->
+	<select id="selectListByExamineStatus" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from yssp_interactive
+		where Interactive_examine_status =
+		#{examineStatus,jdbcType=TINYINT}
+		and Interactive_status=1 or Interactive_status=3
+		ORDER BY Interactive_createTime DESC
+
+	</select>
+
+
+	<!-- 添加一个互动信息 -->
+	<insert id="insertInteractive" parameterType="com.test.pojo.YsspInteractiveWithBLOBs">
+		insert into
+		yssp_interactive (Interactive_id, Interactive_memberId,
+		Interactive_label, Interactive_position,
+		Interactive_createTime,
+		Interactive_comment_Number,
+		Interactive_likes_Number,
+		Interactive_share_Number,
+		Interactive_Collection_Number,
+		Interactive_examine_status,
+		Interactive_status, Interactive_body
+		<if test="interactiveImg !=null">
+		,Interactive_img
+		</if>
+		<if test="interactiveVideo !=null">
+		,Interactive_video
+		</if>
+		<if test="interactiveAccreditUser !=null">
+		,interactive_accredit_user
+		</if>)
+		values (#{interactiveId,jdbcType=BIGINT},
+		#{interactiveMemberid,jdbcType=BIGINT},
+		#{interactiveLabel,jdbcType=VARCHAR},
+		#{interactivePosition,jdbcType=VARCHAR},
+		#{interactiveCreatetime,jdbcType=VARCHAR},
+		#{interactiveCommentNumber,jdbcType=BIGINT},
+		#{interactiveLikesNumber,jdbcType=BIGINT},
+		#{interactiveShareNumber,jdbcType=BIGINT},
+		#{interactiveCollectionNumber,jdbcType=BIGINT},
+		#{interactiveExamineStatus,jdbcType=TINYINT},
+		#{interactiveStatus,jdbcType=TINYINT},
+		#{interactiveBody,jdbcType=LONGVARCHAR}
+		<if test="interactiveImg !=null">
+		,#{interactiveImg,jdbcType=LONGVARCHAR}
+		</if>
+		<if test="interactiveVideo !=null">
+		,#{interactiveVideo,jdbcType=LONGVARCHAR}
+		</if>
+		<if test="interactiveAccreditUser !=null">
+		,#{interactiveAccreditUser,jdbcType=BIGINT}
+		</if>)
+	</insert>
+
+
+
+  <insert id="insertSelective" parameterType="com.test.pojo.YsspInteractiveWithBLOBs"
+ 	 useGeneratedKeys="true" keyProperty="interactiveId">
+    insert into yssp_interactive
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="interactiveId != null" >
+        Interactive_id,
+      </if>
+      <if test="interactiveMemberid != null" >
+        Interactive_memberId,
+      </if>
+      <if test="interactiveLabel != null" >
+        Interactive_label,
+      </if>
+      <if test="interactivePosition != null" >
+        Interactive_position,
+      </if>
+      <if test="interactiveCreatetime != null" >
+        Interactive_createTime,
+      </if>
+      <if test="interactiveCommentNumber != null" >
+        Interactive_comment_Number,
+      </if>
+      <if test="interactiveLikesNumber != null" >
+        Interactive_likes_Number,
+      </if>
+      <if test="interactiveShareNumber != null" >
+        Interactive_share_Number,
+      </if>
+      <if test="interactiveCollectionNumber != null" >
+        Interactive_Collection_Number,
+      </if>
+      <if test="interactiveExamineStatus != null" >
+        Interactive_examine_status,
+      </if>
+      <if test="interactiveStatus != null" >
+        Interactive_status,
+      </if>
+      <if test="interactiveBody != null" >
+        Interactive_body,
+      </if>
+      <if test="interactiveImg != null" >
+        Interactive_img,
+      </if>
+      <if test="interactiveAccreditUser != null" >
+        interactive_accredit_user,
+      </if>
+      <if test="interactiveActivity != null" >
+        Interactive_activity,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="interactiveId != null" >
+        #{interactiveId},
+      </if>
+      <if test="interactiveMemberid != null" >
+        #{interactiveMemberid},
+      </if>
+      <if test="interactiveLabel != null" >
+        #{interactiveLabel},
+      </if>
+      <if test="interactivePosition != null" >
+        #{interactivePosition},
+      </if>
+      <if test="interactiveCreatetime != null" >
+        #{interactiveCreatetime},
+      </if>
+      <if test="interactiveCommentNumber != null" >
+        #{interactiveCommentNumber},
+      </if>
+
+      <if test="interactiveLikesNumber != null" >
+        #{interactiveLikesNumber},
+      </if>
+      <if test="interactiveShareNumber != null" >
+        #{interactiveShareNumber},
+      </if>
+      <if test="interactiveCollectionNumber != null" >
+        #{interactiveCollectionNumber},
+      </if>
+      <if test="interactiveExamineStatus != null" >
+        #{interactiveExamineStatus},
+      </if>
+       <if test="interactiveStatus != null" >
+        #{interactiveStatus},
+      </if>
+      <if test="interactiveBody != null" >
+        #{interactiveBody},
+      </if>
+      <if test="interactiveImg != null" >
+        #{interactiveImg},
+      </if>
+      <if test="interactiveAccreditUser != null" >
+        #{interactiveAccreditUser},
+      </if>
+      <if test="interactiveActivity != null" >
+        #{interactiveActivity},
+      </if>
+    </trim>
+  </insert>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- 更新一个互动信息 -->
+	<update id="updateInteractive" parameterType="com.test.pojo.YsspInteractiveWithBLOBs">
+		update yssp_interactive
+		<set>
+			<if test="interactiveMemberid != null">
+				Interactive_memberId =
+				#{interactiveMemberid,jdbcType=BIGINT},
+			</if>
+			<if test="interactiveLabel != null">
+				Interactive_label = #{interactiveLabel,jdbcType=VARCHAR},
+			</if>
+			<if test="interactivePosition != null">
+				Interactive_position =
+				#{interactivePosition,jdbcType=VARCHAR},
+			</if>
+			<if test="interactiveCreatetime != null">
+				Interactive_createTime =
+				#{interactiveCreatetime,jdbcType=VARCHAR},
+			</if>
+			<if test="interactiveCommentNumber != null">
+				Interactive_comment_Number =
+				#{interactiveCommentNumber,jdbcType=BIGINT},
+			</if>
+			<if test="interactiveLikesNumber != null">
+				Interactive_likes_Number =
+				#{interactiveLikesNumber,jdbcType=BIGINT},
+			</if>
+			<if test="interactiveShareNumber != null">
+				Interactive_share_Number =
+				#{interactiveShareNumber,jdbcType=BIGINT},
+			</if>
+			<if test="interactiveCollectionNumber != null">
+				Interactive_Collection_Number =
+				#{interactiveCollectionNumber,jdbcType=BIGINT},
+			</if>
+			<if test="interactiveExamineStatus != null">
+				Interactive_examine_status =
+				#{interactiveExamineStatus,jdbcType=TINYINT},
+			</if>
+			<if test="interactiveStatus != null">
+				Interactive_status =
+				#{interactiveStatus,jdbcType=TINYINT},
+			</if>
+			<if test="interactiveBody != null">
+				Interactive_body =
+				#{interactiveBody,jdbcType=LONGVARCHAR},
+			</if>
+			<if test="interactiveImg != null">
+				Interactive_img = #{interactiveImg,jdbcType=LONGVARCHAR},
+			</if>
+		</set>
+		where Interactive_id = #{interactiveId,jdbcType=BIGINT}
+	</update>
+	
+	
+		<update id="updateByActivityId" parameterType="com.test.pojo.YsspInteractiveWithBLOBs">
+		update yssp_interactive
+		<set>
+			<if test="interactiveMemberid != null">
+				Interactive_memberId =
+				#{interactiveMemberid,jdbcType=BIGINT},
+			</if>
+			<if test="interactiveLabel != null">
+				Interactive_label = #{interactiveLabel,jdbcType=VARCHAR},
+			</if>
+			<if test="interactivePosition != null">
+				Interactive_position =
+				#{interactivePosition,jdbcType=VARCHAR},
+			</if>
+			<if test="interactiveCreatetime != null">
+				Interactive_createTime =
+				#{interactiveCreatetime,jdbcType=VARCHAR},
+			</if>
+			<if test="interactiveCommentNumber != null">
+				Interactive_comment_Number =
+				#{interactiveCommentNumber,jdbcType=BIGINT},
+			</if>
+			<if test="interactiveLikesNumber != null">
+				Interactive_likes_Number =
+				#{interactiveLikesNumber,jdbcType=BIGINT},
+			</if>
+			<if test="interactiveShareNumber != null">
+				Interactive_share_Number =
+				#{interactiveShareNumber,jdbcType=BIGINT},
+			</if>
+			<if test="interactiveCollectionNumber != null">
+				Interactive_Collection_Number =
+				#{interactiveCollectionNumber,jdbcType=BIGINT},
+			</if>
+			<if test="interactiveExamineStatus != null">
+				Interactive_examine_status =
+				#{interactiveExamineStatus,jdbcType=TINYINT},
+			</if>
+			<if test="interactiveStatus != null">
+				Interactive_status =
+				#{interactiveStatus,jdbcType=TINYINT},
+			</if>
+			<if test="interactiveBody != null">
+				Interactive_body =
+				#{interactiveBody,jdbcType=LONGVARCHAR},
+			</if>
+			<if test="interactiveImg != null">
+				Interactive_img = #{interactiveImg,jdbcType=LONGVARCHAR},
+			</if>
+		</set>
+		where Interactive_activity = #{interactiveActivity,jdbcType=BIGINT}
+	</update>
+	
+	<!-- 更新对应互动专区的点赞数 -->
+	<update id="updateLikesNumber">
+	  update yssp_interactive
+	  set Interactive_likes_Number = Interactive_likes_Number+#{num,jdbcType=BIGINT}
+	  where Interactive_id = #{interactiveId,jdbcType=BIGINT}
+	</update>
+	
+	<!-- 更新对应互动专区的收藏数量 -->
+	<update id="updateCollectionNumber">
+	 update yssp_interactive
+	  set Interactive_Collection_Number = Interactive_Collection_Number+#{num,jdbcType=BIGINT}
+	  where Interactive_id = #{interactiveId,jdbcType=BIGINT}
+	</update>
+	
+	<select id="getUserInfoById" resultMap="ResultMapWithBLOBs"
+		parameterType="java.lang.Long">
+		select i.*,u.*,n.* from yssp_interactive i INNER JOIN qy_user u 
+		ON i.Interactive_memberId = u.ID and i.Interactive_memberId = #{id} and i.Interactive_status != -1
+		LEFT JOIN yssp_user_real_name n 
+		ON u.ID = n.real_name_userId ORDER BY i.Interactive_createTime DESC
+	</select>
+	
+	<update id="deleteInteractive">
+	  update yssp_interactive
+	  set  Interactive_status = -1
+	  where Interactive_id = #{interactiveId,jdbcType=BIGINT}
+	</update>
+	
+	<update id="updateInteractiveCom">
+	  UPDATE yssp_interactive 
+	   set	Interactive_comment_Number=IF(Interactive_comment_Number-1 <![CDATA[<]]> 0,0,Interactive_comment_Number-1)
+	  where Interactive_id = #{id} and Interactive_status != -1
+	</update>
+	
+	
+		<update id="updateShareNumber">
+	  UPDATE yssp_interactive 
+	   set	Interactive_share_Number=IF(Interactive_share_Number+1 <![CDATA[<]]> 0,0,Interactive_share_Number+1)
+	  where Interactive_id = #{id} and Interactive_status != -1
+	</update>
+	
+	<update id="updateInterStatus">
+	  UPDATE yssp_interactive 
+	   set	Interactive_status= -1
+	  where Interactive_id = #{id}
+	</update>
+	
+	
+	<select id="selectAllInteractiveByIdList" resultMap="interactiveWithComment">
+		select 
+		yu.*,
+		yf.follow_id,
+		yc.collection_works_id,
+		yfa.favorite_id,
+		yurn.real_name_userId,
+		(SELECT 
+				COUNT(Interactive_id) 
+		 FROM 
+				yssp_interactive_user 
+		 WHERE 
+				Interactive_status =1) AS interactiveCount 
+		from 
+		yssp_interactive_user yu
+		LEFT JOIN yssp_follow yf ON yu.Interactive_memberId = yf.follow_concerned_people AND
+		yf.follow_to_people = #{userId,jdbcType=BIGINT}
+		LEFT JOIN yssp_collection yc ON yc.collection_user_id = #{userId,jdbcType=BIGINT} AND
+		yc.collection_works_type = 2 AND yc.collection_works_id = yu.Interactive_id
+		LEFT JOIN yssp_favorite yfa ON yfa.favorite_user_id = #{userId,jdbcType=BIGINT} AND
+		yfa.favorite_works_id = yu.Interactive_id AND yfa.favorite_works_type = 2
+		LEFT JOIN yssp_user_real_name yurn ON yu.Interactive_memberId = yurn.real_name_userId 
+		WHERE 
+			yu.Interactive_status = 1
+		AND
+			yu.Interactive_id IN
+		<foreach collection="idList" index="index" item="item" open="(" separator="," close=")">
+			#{item}
+		</foreach>
+		GROUP BY yu.Interactive_id
+		ORDER BY Interactive_createTime DESC
+	</select>
+		<!-- 查询所有的互动专区内容 -->
+	<select id="selectAllInteractiveWithComment" resultMap="interactiveWithComment">
+		select 
+		yu.*,
+		yf.follow_id,
+		yc.collection_works_id,
+		yfa.favorite_id,
+		yurn.real_name_userId,
+		ycm.*,
+		(SELECT 
+				COUNT(Interactive_id) 
+		 FROM 
+				yssp_interactive_user 
+		 WHERE 
+				Interactive_status =1) AS interactiveCount
+		from 
+		yssp_interactive_user yu
+		LEFT JOIN yssp_comment ycm ON yu.Interactive_id = ycm.comment_work_id AND ycm.comment_flag =3
+		LEFT JOIN yssp_follow yf ON yu.Interactive_memberId = yf.follow_concerned_people AND
+		yf.follow_to_people = #{userId,jdbcType=BIGINT}
+		LEFT JOIN yssp_collection yc ON yc.collection_user_id = #{userId,jdbcType=BIGINT} AND
+		yc.collection_works_type = 2 AND yc.collection_works_id = yu.Interactive_id
+		LEFT JOIN yssp_favorite yfa ON yfa.favorite_user_id = #{userId,jdbcType=BIGINT} AND
+		yfa.favorite_works_id = yu.Interactive_id AND yfa.favorite_works_type = 2
+		LEFT JOIN yssp_user_real_name yurn ON yu.Interactive_memberId = yurn.real_name_userId where yu.Interactive_status = 1
+		GROUP BY
+		yu.Interactive_id
+		ORDER BY Interactive_createTime DESC
+	</select>
+	
+	<!-- 查询活动互动专区内容通过id -->
+	<select id="selectActivityById" resultMap="ResultMapWithBLOBs">
+		select 
+			yu.*,
+			yf.follow_id,
+			yfa.favorite_id,
+			yc.collection_works_id
+		from yssp_interactive yu
+	  	LEFT JOIN yssp_follow yf ON yu.Interactive_memberId = yf.follow_concerned_people AND
+		yf.follow_to_people = #{userId,jdbcType=BIGINT}
+		LEFT JOIN yssp_favorite yfa ON yfa.favorite_works_id =yu.Interactive_id AND favorite_works_type =2
+		AND yfa.favorite_user_id =#{userId,jdbcType=BIGINT}
+		LEFT JOIN yssp_collection yc ON yc.collection_works_id =yu.Interactive_id AND collection_works_type =2
+		AND yc.collection_user_id =#{userId,jdbcType=BIGINT}
+		WHERE
+		yu.Interactive_id = #{interactiveId,jdbcType=BIGINT}
+		AND
+		yu.Interactive_status = 3
+		GROUP BY
+		yu.Interactive_id
+	</select>
+	
+</mapper>

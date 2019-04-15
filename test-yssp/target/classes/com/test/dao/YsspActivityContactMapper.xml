@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.YsspActivityContactMapper" >
+  <resultMap id="BaseResultMap" type="com.test.pojo.YsspActivityContact" >
+    <id column="activity_contact_id" property="activityContactId" jdbcType="BIGINT" />
+    <result column="activity_contact_order_id" property="activityContactOrderId" jdbcType="BIGINT" />
+    <result column="activity_contact_activity_id" property="activityContactActivityId" jdbcType="BIGINT" />
+    <result column="activity_contact_name" property="activityContactName" jdbcType="VARCHAR" />
+    <result column="activity_contact_sex" property="activityContactSex" jdbcType="VARCHAR" />
+    <result column="activity_contact_tel" property="activityContactTel" jdbcType="VARCHAR" />
+    <result column="activity_contact_address" property="activityContactAddress" jdbcType="VARCHAR" />
+    <result column="activity_contact_code_number" property="activityContactCodeNumber" jdbcType="VARCHAR" />
+    <result column="activity_contact_status" property="activityContactStatus" jdbcType="TINYINT" />
+    <result column="activity_contact_comit_personal" property="activityContactComitPersonal" jdbcType="BIGINT" />
+    <result column="activity_contact_createTime" property="activityContactCreatetime" jdbcType="VARCHAR" />
+    <result column="activity_contact_updateTime" property="activityContactUpdatetime" jdbcType="VARCHAR" />
+    <result column="activity_contact_remark" property="activityContactRemark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    activity_contact_id, activity_contact_order_id, activity_contact_activity_id, activity_contact_name, 
+    activity_contact_sex, activity_contact_tel, activity_contact_address, activity_contact_code_number, 
+    activity_contact_status, activity_contact_comit_personal, activity_contact_createTime, 
+    activity_contact_updateTime, activity_contact_remark
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.test.pojo.YsspActivityContactExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from yssp_activity_contact
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from yssp_activity_contact
+    where activity_contact_id = #{activityContactId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from yssp_activity_contact
+    where activity_contact_id = #{activityContactId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.test.pojo.YsspActivityContactExample" >
+    delete from yssp_activity_contact
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.test.pojo.YsspActivityContact" >
+    insert into yssp_activity_contact (activity_contact_id, activity_contact_order_id, 
+      activity_contact_activity_id, activity_contact_name, 
+      activity_contact_sex, activity_contact_tel, 
+      activity_contact_address, activity_contact_code_number, 
+      activity_contact_status, activity_contact_comit_personal, 
+      activity_contact_createTime, activity_contact_updateTime, 
+      activity_contact_remark)
+    values (#{activityContactId,jdbcType=BIGINT}, #{activityContactOrderId,jdbcType=BIGINT}, 
+      #{activityContactActivityId,jdbcType=BIGINT}, #{activityContactName,jdbcType=VARCHAR}, 
+      #{activityContactSex,jdbcType=VARCHAR}, #{activityContactTel,jdbcType=VARCHAR}, 
+      #{activityContactAddress,jdbcType=VARCHAR}, #{activityContactCodeNumber,jdbcType=VARCHAR}, 
+      #{activityContactStatus,jdbcType=TINYINT}, #{activityContactComitPersonal,jdbcType=BIGINT}, 
+      #{activityContactCreatetime,jdbcType=VARCHAR}, #{activityContactUpdatetime,jdbcType=VARCHAR}, 
+      #{activityContactRemark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.test.pojo.YsspActivityContact" >
+    insert into yssp_activity_contact
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="activityContactId != null" >
+        activity_contact_id,
+      </if>
+      <if test="activityContactOrderId != null" >
+        activity_contact_order_id,
+      </if>
+      <if test="activityContactActivityId != null" >
+        activity_contact_activity_id,
+      </if>
+      <if test="activityContactName != null" >
+        activity_contact_name,
+      </if>
+      <if test="activityContactSex != null" >
+        activity_contact_sex,
+      </if>
+      <if test="activityContactTel != null" >
+        activity_contact_tel,
+      </if>
+      <if test="activityContactAddress != null" >
+        activity_contact_address,
+      </if>
+      <if test="activityContactCodeNumber != null" >
+        activity_contact_code_number,
+      </if>
+      <if test="activityContactStatus != null" >
+        activity_contact_status,
+      </if>
+      <if test="activityContactComitPersonal != null" >
+        activity_contact_comit_personal,
+      </if>
+      <if test="activityContactCreatetime != null" >
+        activity_contact_createTime,
+      </if>
+      <if test="activityContactUpdatetime != null" >
+        activity_contact_updateTime,
+      </if>
+      <if test="activityContactRemark != null" >
+        activity_contact_remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="activityContactId != null" >
+        #{activityContactId,jdbcType=BIGINT},
+      </if>
+      <if test="activityContactOrderId != null" >
+        #{activityContactOrderId,jdbcType=BIGINT},
+      </if>
+      <if test="activityContactActivityId != null" >
+        #{activityContactActivityId,jdbcType=BIGINT},
+      </if>
+      <if test="activityContactName != null" >
+        #{activityContactName,jdbcType=VARCHAR},
+      </if>
+      <if test="activityContactSex != null" >
+        #{activityContactSex,jdbcType=VARCHAR},
+      </if>
+      <if test="activityContactTel != null" >
+        #{activityContactTel,jdbcType=VARCHAR},
+      </if>
+      <if test="activityContactAddress != null" >
+        #{activityContactAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="activityContactCodeNumber != null" >
+        #{activityContactCodeNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="activityContactStatus != null" >
+        #{activityContactStatus,jdbcType=TINYINT},
+      </if>
+      <if test="activityContactComitPersonal != null" >
+        #{activityContactComitPersonal,jdbcType=BIGINT},
+      </if>
+      <if test="activityContactCreatetime != null" >
+        #{activityContactCreatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="activityContactUpdatetime != null" >
+        #{activityContactUpdatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="activityContactRemark != null" >
+        #{activityContactRemark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.test.pojo.YsspActivityContactExample" resultType="java.lang.Integer" >
+    select count(*) from yssp_activity_contact
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update yssp_activity_contact
+    <set >
+      <if test="record.activityContactId != null" >
+        activity_contact_id = #{record.activityContactId,jdbcType=BIGINT},
+      </if>
+      <if test="record.activityContactOrderId != null" >
+        activity_contact_order_id = #{record.activityContactOrderId,jdbcType=BIGINT},
+      </if>
+      <if test="record.activityContactActivityId != null" >
+        activity_contact_activity_id = #{record.activityContactActivityId,jdbcType=BIGINT},
+      </if>
+      <if test="record.activityContactName != null" >
+        activity_contact_name = #{record.activityContactName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.activityContactSex != null" >
+        activity_contact_sex = #{record.activityContactSex,jdbcType=VARCHAR},
+      </if>
+      <if test="record.activityContactTel != null" >
+        activity_contact_tel = #{record.activityContactTel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.activityContactAddress != null" >
+        activity_contact_address = #{record.activityContactAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.activityContactCodeNumber != null" >
+        activity_contact_code_number = #{record.activityContactCodeNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.activityContactStatus != null" >
+        activity_contact_status = #{record.activityContactStatus,jdbcType=TINYINT},
+      </if>
+      <if test="record.activityContactComitPersonal != null" >
+        activity_contact_comit_personal = #{record.activityContactComitPersonal,jdbcType=BIGINT},
+      </if>
+      <if test="record.activityContactCreatetime != null" >
+        activity_contact_createTime = #{record.activityContactCreatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.activityContactUpdatetime != null" >
+        activity_contact_updateTime = #{record.activityContactUpdatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.activityContactRemark != null" >
+        activity_contact_remark = #{record.activityContactRemark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update yssp_activity_contact
+    set activity_contact_id = #{record.activityContactId,jdbcType=BIGINT},
+      activity_contact_order_id = #{record.activityContactOrderId,jdbcType=BIGINT},
+      activity_contact_activity_id = #{record.activityContactActivityId,jdbcType=BIGINT},
+      activity_contact_name = #{record.activityContactName,jdbcType=VARCHAR},
+      activity_contact_sex = #{record.activityContactSex,jdbcType=VARCHAR},
+      activity_contact_tel = #{record.activityContactTel,jdbcType=VARCHAR},
+      activity_contact_address = #{record.activityContactAddress,jdbcType=VARCHAR},
+      activity_contact_code_number = #{record.activityContactCodeNumber,jdbcType=VARCHAR},
+      activity_contact_status = #{record.activityContactStatus,jdbcType=TINYINT},
+      activity_contact_comit_personal = #{record.activityContactComitPersonal,jdbcType=BIGINT},
+      activity_contact_createTime = #{record.activityContactCreatetime,jdbcType=VARCHAR},
+      activity_contact_updateTime = #{record.activityContactUpdatetime,jdbcType=VARCHAR},
+      activity_contact_remark = #{record.activityContactRemark,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.test.pojo.YsspActivityContact" >
+    update yssp_activity_contact
+    <set >
+      <if test="activityContactOrderId != null" >
+        activity_contact_order_id = #{activityContactOrderId,jdbcType=BIGINT},
+      </if>
+      <if test="activityContactActivityId != null" >
+        activity_contact_activity_id = #{activityContactActivityId,jdbcType=BIGINT},
+      </if>
+      <if test="activityContactName != null" >
+        activity_contact_name = #{activityContactName,jdbcType=VARCHAR},
+      </if>
+      <if test="activityContactSex != null" >
+        activity_contact_sex = #{activityContactSex,jdbcType=VARCHAR},
+      </if>
+      <if test="activityContactTel != null" >
+        activity_contact_tel = #{activityContactTel,jdbcType=VARCHAR},
+      </if>
+      <if test="activityContactAddress != null" >
+        activity_contact_address = #{activityContactAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="activityContactCodeNumber != null" >
+        activity_contact_code_number = #{activityContactCodeNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="activityContactStatus != null" >
+        activity_contact_status = #{activityContactStatus,jdbcType=TINYINT},
+      </if>
+      <if test="activityContactComitPersonal != null" >
+        activity_contact_comit_personal = #{activityContactComitPersonal,jdbcType=BIGINT},
+      </if>
+      <if test="activityContactCreatetime != null" >
+        activity_contact_createTime = #{activityContactCreatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="activityContactUpdatetime != null" >
+        activity_contact_updateTime = #{activityContactUpdatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="activityContactRemark != null" >
+        activity_contact_remark = #{activityContactRemark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where activity_contact_id = #{activityContactId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.test.pojo.YsspActivityContact" >
+    update yssp_activity_contact
+    set activity_contact_order_id = #{activityContactOrderId,jdbcType=BIGINT},
+      activity_contact_activity_id = #{activityContactActivityId,jdbcType=BIGINT},
+      activity_contact_name = #{activityContactName,jdbcType=VARCHAR},
+      activity_contact_sex = #{activityContactSex,jdbcType=VARCHAR},
+      activity_contact_tel = #{activityContactTel,jdbcType=VARCHAR},
+      activity_contact_address = #{activityContactAddress,jdbcType=VARCHAR},
+      activity_contact_code_number = #{activityContactCodeNumber,jdbcType=VARCHAR},
+      activity_contact_status = #{activityContactStatus,jdbcType=TINYINT},
+      activity_contact_comit_personal = #{activityContactComitPersonal,jdbcType=BIGINT},
+      activity_contact_createTime = #{activityContactCreatetime,jdbcType=VARCHAR},
+      activity_contact_updateTime = #{activityContactUpdatetime,jdbcType=VARCHAR},
+      activity_contact_remark = #{activityContactRemark,jdbcType=VARCHAR}
+    where activity_contact_id = #{activityContactId,jdbcType=BIGINT}
+  </update>
+  
+  <insert id="insertContactList" parameterType="java.util.List" >
+    insert into 
+    yssp_activity_contact
+    ( activity_contact_order_id, 
+      activity_contact_activity_id, 
+      activity_contact_name, 
+      activity_contact_sex, 
+      activity_contact_tel,
+      activity_contact_code_number, 
+      activity_contact_status, 
+      activity_contact_comit_personal, 
+      activity_contact_createTime, 
+      activity_contact_updateTime)
+    values 
+    <foreach collection ="list" item="contact" index= "index" separator =",">
+    (
+      #{contact.activityContactOrderId,jdbcType=BIGINT}, 
+      #{contact.activityContactActivityId,jdbcType=BIGINT}, 
+      #{contact.activityContactName,jdbcType=VARCHAR}, 
+      #{contact.activityContactSex,jdbcType=VARCHAR}, 
+      #{contact.activityContactTel,jdbcType=VARCHAR}, 
+      #{contact.activityContactCodeNumber,jdbcType=VARCHAR}, 
+      #{contact.activityContactStatus,jdbcType=TINYINT}, 
+      #{contact.activityContactComitPersonal,jdbcType=BIGINT}, 
+      #{contact.activityContactCreatetime,jdbcType=VARCHAR}, 
+      #{contact.activityContactUpdatetime,jdbcType=VARCHAR}
+      )
+    </foreach >
+  </insert>
+</mapper>

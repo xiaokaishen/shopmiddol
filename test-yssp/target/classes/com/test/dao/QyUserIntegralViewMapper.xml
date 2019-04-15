@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.QyUserIntegralViewMapper">
+	<resultMap id="BaseResultMap" type="com.test.pojo.QyUserIntegralView">
+		<result column="ID" property="id" jdbcType="BIGINT" />
+		<result column="userID" property="userid" jdbcType="VARCHAR" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="openID" property="openid" jdbcType="VARCHAR" />
+		<result column="wxName" property="wxname" jdbcType="VARCHAR" />
+		<result column="Head_portrait_url" property="headPortraitUrl"
+			jdbcType="VARCHAR" />
+		<result column="telephone" property="telephone" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="sex" property="sex" jdbcType="VARCHAR" />
+		<result column="birthday" property="birthday" jdbcType="DATE" />
+		<result column="IDCard" property="idcard" jdbcType="VARCHAR" />
+		<result column="CreateTime" property="createtime" jdbcType="TIMESTAMP" />
+		<result column="UpdateTime" property="updatetime" jdbcType="TIMESTAMP" />
+		<result column="user_vip_level" property="userVipLevel"
+			jdbcType="VARCHAR" />
+		<result column="user_source" property="userSource" jdbcType="VARCHAR" />
+		<result column="user_address" property="userAddress" jdbcType="VARCHAR" />
+		<result column="user_father_name" property="userFatherName"
+			jdbcType="VARCHAR" />
+		<result column="user_father_id" property="userFatherId"
+			jdbcType="BIGINT" />
+		<result column="user_remark" property="userRemark" jdbcType="LONGVARCHAR" />
+		<result column="member_integral" property="memberIntegral"
+			jdbcType="INTEGER" />
+		<result column="member_accumulative_integral" property="memberAccumulativeIntegral"
+			jdbcType="BIGINT" />
+		<result column="member_accumulative_money" property="memberAccumulativeMoney"
+			jdbcType="BIGINT" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />
+		<result column="user_city" property="userCity" jdbcType="VARCHAR" />
+	</resultMap>
+
+
+	<resultMap id="theSelectQyUserAndFollowById" type="com.test.pojo.QyUserIntegralViewBelongs"
+		extends="BaseResultMap">
+		<association property="ysspFollow" javaType="com.test.pojo.YsspFollow">
+			<result column="follow_id" property="followId" jdbcType="BIGINT" />
+			<result column="follow_to_people" property="followToPeople"
+				jdbcType="BIGINT" />
+			<result column="follow_concerned_people" property="followConcernedPeople"
+				jdbcType="BIGINT" />
+			<result column="follow_status" property="followStatus"
+				jdbcType="TINYINT" />
+			<result column="follow_created_time" property="followCreatedTime"
+				jdbcType="VARCHAR" />
+		</association>
+	</resultMap>
+
+
+	<resultMap id="selectQyUserInfoByIdMap" type="com.test.pojo.QyUserIntegralViewInfo"
+		extends="BaseResultMap">
+		
+		<result column="followCount" property="followCount" jdbcType="BIGINT" />
+		<result column="fansCount" property="fansCount" jdbcType="BIGINT" />
+		<result column="collectionCount" property="collectionCount" jdbcType="BIGINT" />
+		<result column="favoriteCount" property="favoriteCount" jdbcType="BIGINT" />
+		<result column="noticeCount" property="noticeCount" jdbcType="BIGINT" />
+		<result column="commentCount" property="commentCount" jdbcType="BIGINT" />
+		<result column="replayCount" property="replayCount" jdbcType="BIGINT" />
+		
+		<association property="ysspArtist" javaType="com.test.pojo.YsspArtist">
+		    <result column="artist_id" property="artistId" jdbcType="BIGINT" />
+		    <result column="artist_artwork_num" property="artistArtworkNum" jdbcType="BIGINT" />
+		    <result column="artist_funs_num" property="artistFunsNum" jdbcType="BIGINT" />
+		    <result column="artist_synopsis" property="artistSynopsis" jdbcType="VARCHAR" />
+		    <result column="artist_identification" property="artistIdentification" jdbcType="TINYINT" />
+		    <result column="artist_status" property="artistStatus" jdbcType="TINYINT" />
+		    <result column="artist_created_time" property="artistCreatedTime" jdbcType="VARCHAR" />
+		    <result column="artist_job_identification" property="artistJobIdentification" jdbcType="TINYINT" />
+		    <result column="artist_update_time" property="artistUpdateTime" jdbcType="VARCHAR"/>
+		</association>
+
+		<association property="ysspUserRealName" javaType="com.test.pojo.YsspUserRealName">
+			<result column="real_name_userId" property="realNameUserid"
+				jdbcType="BIGINT" />
+			<result column="real_name_username" property="realNameUsername"
+				jdbcType="VARCHAR" />
+			<result column="real_name_DocumentType" property="realNameDocumenttype"
+				jdbcType="TINYINT" />
+			<result column="real_name_Document_num" property="realNameDocumentNum"
+				jdbcType="VARCHAR" />
+			<result column="real_name_Document_tel" property="realNameDocumentTel"
+				jdbcType="VARCHAR" />
+			<result column="real_name_email" property="realNameEmail"
+				jdbcType="VARCHAR" />
+			<result column="real_name_Country" property="realNameCountry"
+				jdbcType="VARCHAR" />
+			<result column="real_name_province" property="realNameProvince"
+				jdbcType="VARCHAR" />
+			<result column="real_name_city" property="realNameCity"
+				jdbcType="VARCHAR" />
+			<result column="real_name_createTime" property="realNameCreatetime"
+				jdbcType="VARCHAR" />
+			<result column="real_name_updateTime" property="realNameUpdatetime"
+				jdbcType="VARCHAR" />
+			<result column="real_name_status" property="realNameStatus"
+				jdbcType="TINYINT" />
+			<result column="real_name_remark" property="realNameRemark"
+				jdbcType="VARCHAR" />
+			<result column="Document_front" property="documentFront"
+				jdbcType="LONGVARCHAR" />
+			<result column="Document_Back" property="documentBack"
+				jdbcType="LONGVARCHAR" />
+		</association>
+		
+		  <association property="ysspAccredit" javaType="com.test.pojo.YsspAccredit" >
+		    <result column="accredit_id" property="accreditId" jdbcType="BIGINT" />
+		    <result column="accredit_to_people" property="accreditToPeople" jdbcType="BIGINT" />
+		    <result column="accredit_to_name" property="accreditToName" jdbcType="VARCHAR" />
+		    <result column="accredit_concerned_people" property="accreditConcernedPeople" jdbcType="BIGINT" />
+		    <result column="accredit_concerned_name" property="accreditConcernedName" jdbcType="VARCHAR" />
+		    <result column="accredit_status" property="accreditStatus" jdbcType="TINYINT" />
+		    <result column="accredit_created_time" property="accreditCreatedTime" jdbcType="VARCHAR" />
+		    <result column="accredit_updated_time" property="accreditUpdatedTime" jdbcType="VARCHAR" />
+  			</association>
+		
+	</resultMap>
+
+	<!-- 根据用户id查询用户积分详情 -->
+	<select id="selectQyUserIntegralVieByid" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+
+		select ID, userID, username, openID, wxName,
+		Head_portrait_url, telephone,
+		email, password,
+		sex, birthday, IDCard,
+		CreateTime, UpdateTime, user_vip_level,
+		user_source,
+		user_address,
+		user_father_name, user_father_id, user_remark, member_integral,
+		member_accumulative_integral,
+		member_accumulative_money, remark
+		from
+		qy_user_integral_view
+		where
+		ID=#{id,jdbcType=BIGINT}
+
+	</select>
+	<update id="updateUserPhone">
+		UPDATE
+		qy_user
+		SET
+		telephone =#{telephone}
+		WHERE
+		ID =#{userId}
+
+	</update>
+	
+	
+	<update id="updateUserUpdateTime">
+		UPDATE
+		qy_user
+		SET
+		UpdateTime =#{updateTime}
+		WHERE
+		ID =#{userId}
+
+	</update>
+
+	<update id="updateUserRemark">
+		UPDATE
+		qy_user
+		SET
+		user_remark =#{remark}
+		WHERE
+		ID =#{userId}
+
+	</update>
+
+	<select id="selectQyUserAndFollowById" resultMap="theSelectQyUserAndFollowById"
+		parameterType="java.lang.Long">
+		select u.*,f.* from qy_user_integral_view u left JOIN yssp_follow f on
+		f.follow_concerned_people =#{toUserId}
+		and f.follow_to_people=#{userId}
+		where u.ID = #{userId}
+
+	</select>
+
+	<select id="selectQyUserById" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+		select u.* from qy_user u
+		where u.ID = #{userId}
+	</select>
+
+	<select id="selectQyUserInfoById" resultMap="selectQyUserInfoByIdMap"
+		parameterType="java.lang.Long">
+	select u.*,n.*,a.* from qy_user u 
+	LEFT JOIN yssp_user_real_name n
+	 ON u.id=n.real_name_userId 
+	LEFT JOIN yssp_artist a 
+	ON u.ID = a.artist_id where u.id=#{userId}
+	</select>
+	
+	<select id="RzSelectQyUserInfoById" resultMap="selectQyUserInfoByIdMap">
+			select 
+				u.*,
+				n.*,
+				ya.*
+			from 
+				qy_user u 
+			INNER JOIN yssp_user_real_name n ON u.id=n.real_name_userId AND real_name_status =1
+			LEFT JOIN yssp_accredit ya ON u.ID = ya.accredit_concerned_people AND ya.accredit_status =1
+			AND ya.accredit_to_people =	#{userId,jdbcType=BIGINT}
+			where 
+				n.real_name_Document_tel = #{tel}
+			GROUP BY
+				u.ID
+			ORDER BY
+				n.real_name_updateTime
+	</select>
+	
+	
+	
+	<select id="queryAuthorizedWho" resultMap="selectQyUserInfoByIdMap">
+			select u.*,r.*,a.* from qy_user u 
+			INNER JOIN yssp_user_real_name r 
+			ON u.id = r.real_name_userId 
+			INNER JOIN yssp_accredit a 
+			ON u.id = a.accredit_concerned_people 
+			where a.accredit_to_people =#{userId} and a.accredit_status = 1
+	</select>
+	
+		<select id="selectQyAllUserInfoById" resultMap="selectQyUserInfoByIdMap" parameterType="java.lang.Long">
+			SELECT 
+			(SELECT 
+			COUNT(yf.follow_id) AS followCount FROM yssp_follow yf WHERE yf.follow_to_people =u.id AND yf.follow_concerned_people is not null AND yf.follow_status=1) followCount,
+			(SELECT 
+			COUNT(yfuns.follow_id) AS funsCount FROM yssp_follow yfuns WHERE yfuns.follow_concerned_people =u.id AND yfuns.follow_to_people is not null AND yfuns.follow_status=1) fansCount,
+			(SELECT 
+			COUNT(yc.collection_id) AS collectionCount FROM yssp_collection yc WHERE yc.collection_user_id =u.id  AND yc.collection_status=1) collectionCount,
+			(SELECT 
+			COUNT(yf.favorite_id) AS favoriteCount FROM yssp_favorite yf WHERE yf.favorite_user_id =u.id AND yf.favorite_status=1)favoriteCount,
+			(SELECT 
+			COUNT(yn.notice_id) AS noticeCount FROM yssp_notice yn WHERE yn.notice_to =u.id AND yn.notice_status =1)noticeCount,
+			(select count(*) from yssp_comment m  where m.comment_user_id = u.id and comment_status = 1) commentCount,
+			(select count(*) from yssp_comment_reply r  where r.reply_user_id = u.id and r.reply_status = 1)replayCount,
+			u.*,n.*  
+				from qy_user u LEFT JOIN yssp_user_real_name n ON u.id = n.real_name_userId and n.real_name_status=1
+		  <if test="userId != null and userId != ''" >
+				where u.id = #{userId}
+		  </if>
+		   ORDER BY u.UpdateTime DESC
+	</select>
+	
+	<update id="updateUserInfo">
+			UPDATE
+			qy_user
+			<set>
+				<if test="updateTime != null and updateTime != ''">
+				updateTime =#{updateTime},
+				</if>
+				<if test="telephone != null and telephone != ''">
+				telephone =#{telephone},
+				</if>
+				<if test="sex != null and sex != ''">
+				sex =#{sex},
+				</if>
+				<if test="userCity != null and userCity != ''">
+				user_city =#{userCity},
+				</if>
+				<if test="birthday != null and birthday != ''">
+				birthday =#{birthday},
+				</if>
+				<if test="wxname != null and wxname != ''">
+				wxName =#{wxname},
+				</if>
+			</set>
+			WHERE
+			ID =#{userId}
+	</update>
+
+	<select id="selectQyAllOpenId" resultMap="BaseResultMap">
+		select * from qy_user
+	</select>
+
+</mapper>

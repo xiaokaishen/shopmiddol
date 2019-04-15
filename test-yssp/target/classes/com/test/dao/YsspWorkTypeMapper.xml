@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.YsspWorkTypeMapper" >
+  <resultMap id="BaseResultMap" type="com.test.pojo.YsspWorkType" >
+    <id column="work_type_id" property="workTypeId" jdbcType="BIGINT" />
+    <result column="work_type_name" property="workTypeName" jdbcType="VARCHAR" />
+    <result column="work_type_status" property="workTypeStatus" jdbcType="TINYINT" />
+    <result column="work_type_created_time" property="workTypeCreatedTime" jdbcType="VARCHAR" />
+    <result column="work_type_update_time" property="workTypeUpdateTime" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    work_type_id, work_type_name, work_type_status, work_type_created_time, work_type_update_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.test.pojo.YsspWorkTypeExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from yssp_work_type
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from yssp_work_type
+    where work_type_id = #{workTypeId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from yssp_work_type
+    where work_type_id = #{workTypeId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.test.pojo.YsspWorkTypeExample" >
+    delete from yssp_work_type
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.test.pojo.YsspWorkType" >
+    insert into yssp_work_type (work_type_id, work_type_name, work_type_status, 
+      work_type_created_time, work_type_update_time
+      )
+    values (#{workTypeId,jdbcType=BIGINT}, #{workTypeName,jdbcType=VARCHAR}, #{workTypeStatus,jdbcType=TINYINT}, 
+      #{workTypeCreatedTime,jdbcType=VARCHAR}, #{workTypeUpdateTime,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.test.pojo.YsspWorkType" >
+    insert into yssp_work_type
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="workTypeId != null" >
+        work_type_id,
+      </if>
+      <if test="workTypeName != null" >
+        work_type_name,
+      </if>
+      <if test="workTypeStatus != null" >
+        work_type_status,
+      </if>
+      <if test="workTypeCreatedTime != null" >
+        work_type_created_time,
+      </if>
+      <if test="workTypeUpdateTime != null" >
+        work_type_update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="workTypeId != null" >
+        #{workTypeId,jdbcType=BIGINT},
+      </if>
+      <if test="workTypeName != null" >
+        #{workTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="workTypeStatus != null" >
+        #{workTypeStatus,jdbcType=TINYINT},
+      </if>
+      <if test="workTypeCreatedTime != null" >
+        #{workTypeCreatedTime,jdbcType=VARCHAR},
+      </if>
+      <if test="workTypeUpdateTime != null" >
+        #{workTypeUpdateTime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.test.pojo.YsspWorkTypeExample" resultType="java.lang.Integer" >
+    select count(*) from yssp_work_type
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update yssp_work_type
+    <set >
+      <if test="record.workTypeId != null" >
+        work_type_id = #{record.workTypeId,jdbcType=BIGINT},
+      </if>
+      <if test="record.workTypeName != null" >
+        work_type_name = #{record.workTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workTypeStatus != null" >
+        work_type_status = #{record.workTypeStatus,jdbcType=TINYINT},
+      </if>
+      <if test="record.workTypeCreatedTime != null" >
+        work_type_created_time = #{record.workTypeCreatedTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workTypeUpdateTime != null" >
+        work_type_update_time = #{record.workTypeUpdateTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update yssp_work_type
+    set work_type_id = #{record.workTypeId,jdbcType=BIGINT},
+      work_type_name = #{record.workTypeName,jdbcType=VARCHAR},
+      work_type_status = #{record.workTypeStatus,jdbcType=TINYINT},
+      work_type_created_time = #{record.workTypeCreatedTime,jdbcType=VARCHAR},
+      work_type_update_time = #{record.workTypeUpdateTime,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.test.pojo.YsspWorkType" >
+    update yssp_work_type
+    <set >
+      <if test="workTypeName != null" >
+        work_type_name = #{workTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="workTypeStatus != null" >
+        work_type_status = #{workTypeStatus,jdbcType=TINYINT},
+      </if>
+      <if test="workTypeCreatedTime != null" >
+        work_type_created_time = #{workTypeCreatedTime,jdbcType=VARCHAR},
+      </if>
+      <if test="workTypeUpdateTime != null" >
+        work_type_update_time = #{workTypeUpdateTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where work_type_id = #{workTypeId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.test.pojo.YsspWorkType" >
+    update yssp_work_type
+    set work_type_name = #{workTypeName,jdbcType=VARCHAR},
+      work_type_status = #{workTypeStatus,jdbcType=TINYINT},
+      work_type_created_time = #{workTypeCreatedTime,jdbcType=VARCHAR},
+      work_type_update_time = #{workTypeUpdateTime,jdbcType=VARCHAR}
+    where work_type_id = #{workTypeId,jdbcType=BIGINT}
+  </update>
+  <select id="selectAllWorkType" resultMap="BaseResultMap">
+  	SELECT 
+  		* 
+  	FROM 
+  		yssp_work_type 
+  	WHERE 
+  		work_type_status =1
+  </select>
+</mapper>

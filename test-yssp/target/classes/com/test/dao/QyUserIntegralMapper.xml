@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.QyUserIntegralMapper">
+	<resultMap id="BaseResultMap" type="com.test.pojo.QyUserIntegral">
+		<id column="member_id" property="memberId" jdbcType="BIGINT" />
+		<result column="member_integral" property="memberIntegral"
+			jdbcType="INTEGER" />
+		<result column="member_accumulative_integral" property="memberAccumulativeIntegral"
+			jdbcType="BIGINT" />
+		<result column="member_accumulative_money" property="memberAccumulativeMoney"
+			jdbcType="BIGINT" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		member_id, member_integral, member_accumulative_integral,
+		member_accumulative_money,
+		remark
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from qy_user_integral
+		where member_id = #{memberId,jdbcType=BIGINT}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+		delete from
+		qy_user_integral
+		where member_id = #{memberId,jdbcType=BIGINT}
+	</delete>
+	<insert id="insert" parameterType="com.test.pojo.QyUserIntegral">
+		insert into qy_user_integral
+		(member_id, member_integral,
+		member_accumulative_integral,
+		member_accumulative_money, remark)
+		values (#{memberId,jdbcType=BIGINT},
+		#{memberIntegral,jdbcType=INTEGER},
+		#{memberAccumulativeIntegral,jdbcType=BIGINT},
+		#{memberAccumulativeMoney,jdbcType=BIGINT},
+		#{remark,jdbcType=VARCHAR})
+	</insert>
+	<insert id="insertSelective" parameterType="com.test.pojo.QyUserIntegral">
+		insert into qy_user_integral
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="memberId != null">
+				member_id,
+			</if>
+			<if test="memberIntegral != null">
+				member_integral,
+			</if>
+			<if test="memberAccumulativeIntegral != null">
+				member_accumulative_integral,
+			</if>
+			<if test="memberAccumulativeMoney != null">
+				member_accumulative_money,
+			</if>
+			<if test="remark != null">
+				remark,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="memberId != null">
+				#{memberId,jdbcType=BIGINT},
+			</if>
+			<if test="memberIntegral != null">
+				#{memberIntegral,jdbcType=INTEGER},
+			</if>
+			<if test="memberAccumulativeIntegral != null">
+				#{memberAccumulativeIntegral,jdbcType=BIGINT},
+			</if>
+			<if test="memberAccumulativeMoney != null">
+				#{memberAccumulativeMoney,jdbcType=BIGINT},
+			</if>
+			<if test="remark != null">
+				#{remark,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.test.pojo.QyUserIntegral">
+		update qy_user_integral
+		<set>
+			<if test="memberIntegral != null">
+				member_integral = #{memberIntegral,jdbcType=INTEGER},
+			</if>
+			<if test="memberAccumulativeIntegral != null">
+				member_accumulative_integral =
+				#{memberAccumulativeIntegral,jdbcType=BIGINT},
+			</if>
+			<if test="memberAccumulativeMoney != null">
+				member_accumulative_money =
+				#{memberAccumulativeMoney,jdbcType=BIGINT},
+			</if>
+			<if test="remark != null">
+				remark = #{remark,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where member_id = #{memberId,jdbcType=BIGINT}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.test.pojo.QyUserIntegral">
+		update
+		qy_user_integral
+		set member_integral =
+		#{memberIntegral,jdbcType=INTEGER},
+		member_accumulative_integral =
+		#{memberAccumulativeIntegral,jdbcType=BIGINT},
+		member_accumulative_money =
+		#{memberAccumulativeMoney,jdbcType=BIGINT},
+		remark =
+		#{remark,jdbcType=VARCHAR}
+		where member_id =
+		#{memberId,jdbcType=BIGINT}
+	</update>
+
+	<!-- 变更数据差异 -->
+	<update id="change" parameterType="com.test.pojo.QyUserIntegral">
+		update qy_user_integral
+		<set>
+			<if test="memberIntegral != null">
+				member_integral = member_integral +
+				#{memberIntegral,jdbcType=INTEGER},
+			</if>
+			<if test="memberAccumulativeIntegral != null">
+				member_accumulative_integral =
+				member_accumulative_integral +
+				#{memberAccumulativeIntegral,jdbcType=BIGINT},
+			</if>
+			<if test="memberAccumulativeMoney != null">
+				member_accumulative_money = member_accumulative_money +
+				#{memberAccumulativeMoney,jdbcType=BIGINT},
+			</if>
+			<if test="remark != null">
+				remark = #{remark,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where member_id = #{memberId,jdbcType=BIGINT}
+	</update>
+</mapper>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.YsspSmallappBannerMapper">
+	<resultMap id="BaseResultMap" type="com.test.pojo.YsspSmallappBanner">
+		<id column="banner_id" property="bannerId" jdbcType="INTEGER" />
+		<result column="banner_img" property="bannerImg" jdbcType="VARCHAR" />
+		<result column="banner_url" property="bannerUrl" jdbcType="VARCHAR" />
+		<result column="banner_isShow" property="bannerIsshow"
+			jdbcType="TINYINT" />
+		<result column="banner_status" property="bannerStatus"
+			jdbcType="TINYINT" />
+		<result column="banner_createTime" property="bannerCreatetime"
+			jdbcType="VARCHAR" />
+		<result column="banner_updateTime" property="bannerUpdatetime"
+			jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		banner_id, banner_img, banner_url, banner_isShow,
+		banner_status,
+		banner_createTime,
+		banner_updateTime
+	</sql>
+	<!-- 根据banner id查询一个首页banner图 -->
+	<select id="selectByBannerId" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from yssp_smallapp_banner
+		where banner_id =
+		#{bannerId,jdbcType=INTEGER}
+	</select>
+
+	<!--分页查询首页banner图列表 -->
+	<select id="selectSmallAppBannerList" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from yssp_smallapp_banner
+		where banner_status = 1
+		ORDER BY
+		banner_updateTime DESC
+	</select>
+
+	<!-- 添加一个首页banner图 -->
+	<insert id="addSmallAppBanner" parameterType="com.test.pojo.YsspSmallappBanner">
+		insert into
+		yssp_smallapp_banner (banner_id, banner_img, banner_url,
+		banner_isShow, banner_status, banner_createTime,
+		banner_updateTime)
+		values (#{bannerId,jdbcType=INTEGER}, #{bannerImg,jdbcType=VARCHAR},
+		#{bannerUrl,jdbcType=VARCHAR},
+		#{bannerIsshow,jdbcType=TINYINT},
+		#{bannerStatus,jdbcType=TINYINT},
+		#{bannerCreatetime,jdbcType=VARCHAR},
+		#{bannerUpdatetime,jdbcType=VARCHAR})
+	</insert>
+
+	<!-- 修改一个首页banner图 -->
+	<update id="updateSmallBanner" parameterType="com.test.pojo.YsspSmallappBanner">
+		update yssp_smallapp_banner
+		<set>
+			<if test="bannerImg != null">
+				banner_img = #{bannerImg,jdbcType=VARCHAR},
+			</if>
+			<if test="bannerUrl != null">
+				banner_url = #{bannerUrl,jdbcType=VARCHAR},
+			</if>
+			<if test="bannerIsshow != null">
+				banner_isShow = #{bannerIsshow,jdbcType=TINYINT},
+			</if>
+			<if test="bannerStatus != null">
+				banner_status = #{bannerStatus,jdbcType=TINYINT},
+			</if>
+			<if test="bannerCreatetime != null">
+				banner_createTime = #{bannerCreatetime,jdbcType=VARCHAR},
+			</if>
+			<if test="bannerUpdatetime != null">
+				banner_updateTime = #{bannerUpdatetime,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where banner_id = #{bannerId,jdbcType=INTEGER}
+	</update>
+
+</mapper>

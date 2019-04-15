@@ -1,0 +1,78 @@
+
+.user-main{
+	width: 100%;
+	background: rgb(241,241,241);
+}
+.user-top{
+	background: rgb(128,125,110);
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 30rpx;
+	font-size:30rpx;
+	color: rgb(255,255,255);
+}
+.user-heard-img{
+	margin-right: 30rpx;
+}
+.user-heard-img >image{
+	width: 120rpx;
+	height: 120rpx;
+	border-radius: 50%;
+}
+.user-top-left{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin-left: 20rpx;
+}
+.user-div{
+	height: 30rpx;
+	background:rgb(241,241,241);
+}
+.user-option-list{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 30rpx;
+	font-size:30rpx;
+	background: rgb(255,255,255);
+	border-bottom: 1rpx solid rgb(241,241,241);
+}
+.user-option-left{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.user-option-image{
+	margin-right: 30rpx;
+}
+.user-option-image >image{
+	width: 35rpx;
+	height: 50rpx;
+}
+

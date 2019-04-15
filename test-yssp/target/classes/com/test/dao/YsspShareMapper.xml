@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.YsspShareMapper">
+	<resultMap id="BaseResultMap" type="com.test.pojo.YsspShare">
+		<id column="share_id" property="shareId" jdbcType="BIGINT" />
+		<result column="share_userid" property="shareUserid" jdbcType="BIGINT" />
+		<result column="share_to_userid" property="shareToUserid"
+			jdbcType="BIGINT" />
+		<result column="share_object_id" property="shareObjectId"
+			jdbcType="BIGINT" />
+		<result column="share_object_type" property="shareObjectType"
+			jdbcType="TINYINT" />
+		<result column="share_status" property="shareStatus" jdbcType="TINYINT" />
+		<result column="share_created_time" property="shareCreatedTime"
+			jdbcType="VARCHAR" />
+		<result column="share_updated_time" property="shareUpdatedTime"
+			jdbcType="VARCHAR" />
+	</resultMap>
+
+	<resultMap id="YsspShareWithBLOBsMap" type="com.test.pojo.YsspShareWithBLOBs"
+		extends="BaseResultMap">
+		<association column="share_userid" property="shareUser"
+                     javaType="com.test.pojo.QyUserIntegralView" select="com.test.dao.QyUserIntegralViewMapper.selectQyUserById" />
+		<association column="share_to_userid" property="shareToUser"
+                     javaType="com.test.pojo.QyUserIntegralView" select="com.test.dao.QyUserIntegralViewMapper.selectQyUserById" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		share_id, share_userid, share_to_userid, share_object_id,
+		share_object_type,
+		share_status,
+		share_created_time, share_updated_time
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from yssp_share
+		where share_id = #{shareId,jdbcType=BIGINT}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+		delete from
+		yssp_share
+		where share_id = #{shareId,jdbcType=BIGINT}
+	</delete>
+	<insert id="insert" parameterType="com.test.pojo.YsspShare">
+		insert into yssp_share
+		(share_id, share_userid, share_to_userid,
+		share_object_id,
+		share_object_type, share_status,
+		share_created_time,
+		share_updated_time)
+		values (#{shareId,jdbcType=BIGINT},
+		#{shareUserid,jdbcType=BIGINT},
+		#{shareToUserid,jdbcType=BIGINT},
+		#{shareObjectId,jdbcType=BIGINT}, #{shareObjectType,jdbcType=TINYINT},
+		#{shareStatus,jdbcType=TINYINT},
+		#{shareCreatedTime,jdbcType=VARCHAR},
+		#{shareUpdatedTime,jdbcType=VARCHAR})
+	</insert>
+	<insert id="insertSelective" parameterType="com.test.pojo.YsspShare">
+		insert into yssp_share
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="shareId != null">
+				share_id,
+			</if>
+			<if test="shareUserid != null">
+				share_userid,
+			</if>
+			<if test="shareToUserid != null">
+				share_to_userid,
+			</if>
+			<if test="shareObjectId != null">
+				share_object_id,
+			</if>
+			<if test="shareObjectType != null">
+				share_object_type,
+			</if>
+			<if test="shareStatus != null">
+				share_status,
+			</if>
+			<if test="shareCreatedTime != null">
+				share_created_time,
+			</if>
+			<if test="shareUpdatedTime != null">
+				share_updated_time,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="shareId != null">
+				#{shareId,jdbcType=BIGINT},
+			</if>
+			<if test="shareUserid != null">
+				#{shareUserid,jdbcType=BIGINT},
+			</if>
+			<if test="shareToUserid != null">
+				#{shareToUserid,jdbcType=BIGINT},
+			</if>
+			<if test="shareObjectId != null">
+				#{shareObjectId,jdbcType=BIGINT},
+			</if>
+			<if test="shareObjectType != null">
+				#{shareObjectType,jdbcType=TINYINT},
+			</if>
+			<if test="shareStatus != null">
+				#{shareStatus,jdbcType=TINYINT},
+			</if>
+			<if test="shareCreatedTime != null">
+				#{shareCreatedTime,jdbcType=VARCHAR},
+			</if>
+			<if test="shareUpdatedTime != null">
+				#{shareUpdatedTime,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.test.pojo.YsspShare">
+		update yssp_share
+		<set>
+			<if test="shareUserid != null">
+				share_userid = #{shareUserid,jdbcType=BIGINT},
+			</if>
+			<if test="shareToUserid != null">
+				share_to_userid = #{shareToUserid,jdbcType=BIGINT},
+			</if>
+			<if test="shareObjectId != null">
+				share_object_id = #{shareObjectId,jdbcType=BIGINT},
+			</if>
+			<if test="shareObjectType != null">
+				share_object_type = #{shareObjectType,jdbcType=TINYINT},
+			</if>
+			<if test="shareStatus != null">
+				share_status = #{shareStatus,jdbcType=TINYINT},
+			</if>
+			<if test="shareCreatedTime != null">
+				share_created_time =
+				#{shareCreatedTime,jdbcType=VARCHAR},
+			</if>
+			<if test="shareUpdatedTime != null">
+				share_updated_time =
+				#{shareUpdatedTime,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where share_id = #{shareId,jdbcType=BIGINT}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.test.pojo.YsspShare">
+		update yssp_share
+		set share_userid = #{shareUserid,jdbcType=BIGINT},
+		share_to_userid =
+		#{shareToUserid,jdbcType=BIGINT},
+		share_object_id =
+		#{shareObjectId,jdbcType=BIGINT},
+		share_object_type =
+		#{shareObjectType,jdbcType=TINYINT},
+		share_status =
+		#{shareStatus,jdbcType=TINYINT},
+		share_created_time =
+		#{shareCreatedTime,jdbcType=VARCHAR},
+		share_updated_time =
+		#{shareUpdatedTime,jdbcType=VARCHAR}
+		where share_id =
+		#{shareId,jdbcType=BIGINT}
+	</update>
+
+	<!-- 通过分享人id或者被分享人id或者分享对象id查询分享记录(传null可查所有) -->
+	<select id="selectByUseridOrToUseridOrObjectId" resultMap="YsspShareWithBLOBsMap"
+		parameterType="com.test.pojo.YsspShare">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM yssp_share
+		WHERE
+		share_status != -1
+		<if
+			test="shareToUserid != 0 and shareToUserid != null and shareToUserid != ''">
+			AND
+			share_to_userid = #{shareToUserid,jdbcType=BIGINT}
+		</if>
+		<if
+			test="shareObjectId != 0 and shareObjectId != null and shareObjectId != ''">
+			AND
+			share_object_id = #{shareObjectId,jdbcType=BIGINT}
+		</if>
+		<if
+			test="shareObjectType != 0 and shareObjectType != null and shareObjectType != ''">
+			AND
+			share_object_type = #{shareObjectType,jdbcType=TINYINT}
+		</if>
+		<if test="shareUserid != 0 and shareUserid != null and shareUserid != ''">
+			AND
+			share_userid = #{shareUserid,jdbcType=BIGINT}
+		</if>
+		<if test="shareUserid ==0">
+			GROUP BY
+			share_userid
+		</if>
+	</select>
+</mapper>

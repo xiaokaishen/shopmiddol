@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.YsspUserRealNameMapper">
+	<resultMap id="BaseResultMap" type="com.test.pojo.YsspUserRealName">
+		<id column="real_name_userId" property="realNameUserid" jdbcType="BIGINT" />
+		<result column="real_name_username" property="realNameUsername"
+			jdbcType="VARCHAR" />
+		<result column="real_name_DocumentType" property="realNameDocumenttype"
+			jdbcType="TINYINT" />
+		<result column="real_name_Document_num" property="realNameDocumentNum"
+			jdbcType="VARCHAR" />
+		<result column="real_name_Document_tel" property="realNameDocumentTel"
+			jdbcType="VARCHAR" />
+		<result column="real_name_email" property="realNameEmail"
+			jdbcType="VARCHAR" />
+		<result column="real_name_Country" property="realNameCountry"
+			jdbcType="VARCHAR" />
+		<result column="real_name_province" property="realNameProvince"
+			jdbcType="VARCHAR" />
+		<result column="real_name_city" property="realNameCity"
+			jdbcType="VARCHAR" />
+		<result column="real_name_createTime" property="realNameCreatetime"
+			jdbcType="VARCHAR" />
+		<result column="real_name_updateTime" property="realNameUpdatetime"
+			jdbcType="VARCHAR" />
+		<result column="real_name_status" property="realNameStatus"
+			jdbcType="TINYINT" />
+		<result column="real_name_remark" property="realNameRemark"
+			jdbcType="VARCHAR" />
+		<result column="Document_front" property="documentFront"
+			jdbcType="LONGVARCHAR" />
+		<result column="Document_Back" property="documentBack"
+			jdbcType="LONGVARCHAR" />
+	</resultMap>
+	<resultMap id="ResultMapWithBLOBs" type="com.test.pojo.YsspUserRealNameWithBLOBs"
+		extends="BaseResultMap">
+		<result column="Document_front" property="documentFront"
+			jdbcType="LONGVARCHAR" />
+		<result column="Document_Back" property="documentBack"
+			jdbcType="LONGVARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		real_name_userId, real_name_username,
+		real_name_DocumentType, real_name_Document_num,
+		real_name_Document_tel, real_name_email, real_name_Country,
+		real_name_province, real_name_city,
+		real_name_createTime,
+		real_name_updateTime, real_name_status, real_name_remark
+	</sql>
+	<sql id="Blob_Column_List">
+		Document_front, Document_Back
+	</sql>
+
+	<!-- 根据用户id查询实名认证详情 -->
+	<select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs"
+		parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		,
+		<include refid="Blob_Column_List" />
+		from yssp_user_real_name
+		where real_name_userId =
+		#{realNameUserid,jdbcType=BIGINT}
+	</select>
+	
+	
+	<!-- 根据用户id查询实名已认证的艺术家 -->
+	<select id="selectAlreadyUser" resultMap="ResultMapWithBLOBs"
+		parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		,
+		<include refid="Blob_Column_List" />
+		from yssp_user_real_name
+		where real_name_userId =
+		#{realNameUserid,jdbcType=BIGINT}
+		and real_name_status = 1
+	</select>
+
+	<!-- 根据实名状态查询审核列表 -->
+	<select id="selectListByRealNameStatus" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from yssp_user_real_name
+		where real_name_status =
+		#{realNameStatus,jdbcType=TINYINT}
+		ORDER BY real_name_updateTime DESC
+	</select>
+
+	<!--添加实名认证认证 -->
+	<insert id="insertRealName" parameterType="com.test.pojo.YsspUserRealNameWithBLOBs">
+		insert into
+		yssp_user_real_name (real_name_userId, real_name_username,
+		real_name_DocumentType, real_name_Document_num,
+		real_name_Document_tel, real_name_email, real_name_Country,
+		real_name_province, real_name_city, real_name_createTime,
+		real_name_updateTime, real_name_status, real_name_remark,
+		Document_front, Document_Back)
+		values
+		(#{realNameUserid,jdbcType=BIGINT},
+		#{realNameUsername,jdbcType=VARCHAR},
+		#{realNameDocumenttype,jdbcType=TINYINT},
+		#{realNameDocumentNum,jdbcType=VARCHAR},
+		#{realNameDocumentTel,jdbcType=VARCHAR},
+		#{realNameEmail,jdbcType=VARCHAR},
+		#{realNameCountry,jdbcType=VARCHAR},
+		#{realNameProvince,jdbcType=VARCHAR},
+		#{realNameCity,jdbcType=VARCHAR},
+		#{realNameCreatetime,jdbcType=VARCHAR},
+		#{realNameUpdatetime,jdbcType=VARCHAR},
+		#{realNameStatus,jdbcType=TINYINT},
+		#{realNameRemark,jdbcType=VARCHAR},
+		#{documentFront,jdbcType=LONGVARCHAR},
+		#{documentBack,jdbcType=LONGVARCHAR})
+	</insert>
+
+	<!-- 更新一个实名认证信息 -->
+	<update id="updateRealName" parameterType="com.test.pojo.YsspUserRealNameWithBLOBs">
+		update yssp_user_real_name
+		<set>
+			<if test="realNameUsername != null and realNameUsername != ''">
+				real_name_username =
+				#{realNameUsername,jdbcType=VARCHAR},
+			</if>
+			<if test="realNameDocumenttype != null and realNameDocumenttype != ''">
+				real_name_DocumentType =
+				#{realNameDocumenttype,jdbcType=TINYINT},
+			</if>
+			<if test="realNameDocumentNum != null and realNameDocumentNum != ''">
+				real_name_Document_num =
+				#{realNameDocumentNum,jdbcType=VARCHAR},
+			</if>
+			<if test="realNameDocumentTel != null and realNameDocumentTel != ''">
+				real_name_Document_tel =
+				#{realNameDocumentTel,jdbcType=VARCHAR},
+			</if>
+			<if test="realNameEmail != null and realNameEmail != ''">
+				real_name_email = #{realNameEmail,jdbcType=VARCHAR},
+			</if>
+			<if test="realNameCountry != null and realNameCountry != ''">
+				real_name_Country = #{realNameCountry,jdbcType=VARCHAR},
+			</if>
+			<if test="realNameProvince != null and realNameProvince != ''">
+				real_name_province =
+				#{realNameProvince,jdbcType=VARCHAR},
+			</if>
+			<if test="realNameCity != null and realNameCity != ''">
+				real_name_city = #{realNameCity,jdbcType=VARCHAR},
+			</if>
+			<if test="realNameCreatetime != null and realNameCreatetime != ''">
+				real_name_createTime =
+				#{realNameCreatetime,jdbcType=VARCHAR},
+			</if>
+			<if test="realNameUpdatetime != null and realNameUpdatetime != ''">
+				real_name_updateTime =
+				#{realNameUpdatetime,jdbcType=VARCHAR},
+			</if>
+			<if test="realNameStatus != null and realNameStatus != ''">
+				real_name_status = #{realNameStatus,jdbcType=TINYINT},
+			</if>
+			<if test="realNameRemark != null and realNameRemark != ''">
+				real_name_remark = #{realNameRemark,jdbcType=VARCHAR},
+			</if>
+			<if test="documentFront != null and documentFront != ''">
+				Document_front = #{documentFront,jdbcType=LONGVARCHAR},
+			</if>
+			<if test="documentBack != null and documentBack != ''">
+				Document_Back = #{documentBack,jdbcType=LONGVARCHAR},
+			</if>
+		</set>
+		where real_name_userId = #{realNameUserid,jdbcType=BIGINT}
+	</update>
+</mapper>

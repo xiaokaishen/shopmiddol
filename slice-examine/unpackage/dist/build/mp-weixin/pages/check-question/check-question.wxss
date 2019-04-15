@@ -1,0 +1,296 @@
+
+.check-zhezao{
+	pointer-events:none;
+	color:#cacaca;
+}
+.question-tools-option{
+	padding: 20rpx 30rpx;
+	border:2rpx solid #007AFF;
+}
+.question-tools-main{
+	padding: 30rpx 0rpx;
+}
+.bottom-main-hr{
+	background: #CACACA;
+	width: 4rpx;
+	height: 100%;
+}
+.bottom-margin{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
+	height: 100%;
+	background: #333333;
+	color: #FFFFFF;
+}
+.bottom-main-back{
+}
+.bottom-margin-confirm{
+}
+.bottom-main-margin{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	height: 100%;
+}
+.question-bottom-main{
+	position: fixed;
+	bottom: 0;
+	height: 90rpx;
+	width: 100%;
+	font-size: 30rpx;
+	background: #FFFFFF;
+	z-index: 100;
+}
+.swiper-tab-top{
+	height: 148rpx;
+	position:fixed;
+	width:100%;
+	background:#ffffff;
+	z-index:100;
+}
+.tab-circle-active{
+	position: absolute;
+	left: 50%;
+	border:2rpx solid #333333;
+	width: 15rpx;
+	height: 15rpx;
+	border-radius: 50%;
+	top:-5rpx;
+	background:#ffffff;
+}
+.tab-circle{
+	position: absolute;
+	left: 50%;
+	border:2rpx solid #CACACA;
+	width: 15rpx;
+	height: 15rpx;
+	border-radius: 50%;
+	top:-5rpx;
+	background:#ffffff;
+}
+.tab-line{
+	height: 4rpx;
+	width: 100%;
+	background: #CACACA;
+}
+.swiper-tab-line{
+	position: relative;
+	margin-top:30rpx;
+}
+.swiper-one{
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
+	text-align: center;
+}
+.swiper-tab{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+	font-size: 30rpx;
+	height:98rpx;
+	background:#ffffff;
+}
+.diamond-bottom-textarea{
+	border: 2rpx solid #CACACA;
+}
+.question-diamond-bottom>textarea{
+	width: 100%;
+}
+.question-diamond-bottom{
+	margin-top: 30rpx;
+}
+.detail-input{
+	border:2rpx solid #cacaca;
+	text-align: right;
+}
+.record-detail-input{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin-top: 20rpx;
+}
+.tab-color-0{
+	background: #65d89b;
+	color: rgb(255,255,255);
+}
+.tab-color-1{
+	background: #ed0000;
+	color: rgb(255,255,255);
+}
+.tab-color-2{
+	background: #dedede;
+	color: rgb(255,255,255);
+}
+.choose-item-word{
+	color: #dedede;
+}
+.question-diamond-top{
+	font-size: 30rpx;
+	padding:20rpx 30rpx;
+}
+.choose-item-hr{
+	height: auto;
+	width: 2rpx;
+	background: #f2f2f2;
+}
+.mission-choose-item{
+	padding:15rpx 40rpx;
+	border-radius:35rpx;
+	font-size:30rpx;
+	font-weight: bold;
+}
+.detail-choose-item{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.record-detail-choose{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+	padding-top: 20rpx;
+}
+.question-why-bottom{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	padding: 20rpx 30rpx 0rpx 30rpx;
+}
+.question-why-main{
+	margin-top: 30rpx;
+}
+.textarea-num{
+	font-size: 26rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+.question-why-list{
+	font-size: 30rpx;
+	border: 2rpx solid #CACACA;
+}
+.why-textarea{
+	width: 100%;
+	height: 60rpx;
+}
+.question-why-top{
+	position: relative;
+	padding: 20rpx 30rpx;
+	border-bottom:30rpx solid #f7f7f7;
+}
+.question-why-title{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	font-size: 32rpx;
+	font-weight: bold;
+}
+.question-swiper{
+	padding-top: 148rpx;
+	padding-bottom:90rpx;
+}
+.answer-list-title{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+	background:rgb(255,255,255);
+	font-size:30rpx;
+	height:100rpx;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+	font-weight: 500;
+}
+.question-main{
+	width: 100%;
+}
+.item-active{
+	color:#1592d9;
+	border-bottom:2rpx solid;
+}
+.answer-list-item{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	height:100%;
+}
+

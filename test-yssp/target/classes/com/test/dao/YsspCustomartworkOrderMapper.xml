@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.YsspCustomartworkOrderMapper">
+	<resultMap id="BaseResultMap" type="com.test.pojo.YsspCustomartworkOrder">
+		<id column="customArtwork_order_id" property="customartworkOrderId"
+			jdbcType="BIGINT" />
+		<result column="customArtwork_order_userid" property="customartworkOrderUserid"
+			jdbcType="BIGINT" />
+		<result column="customArtwork_order_shopId" property="customartworkOrderShopid"
+			jdbcType="BIGINT" />
+		<result column="customArtwork_order_number" property="customartworkOrderNumber"
+			jdbcType="BIGINT" />
+		<result column="customArtwork_order_price" property="customartworkOrderPrice"
+			jdbcType="DECIMAL" />
+		<result column="customArtwork_order_sumPrice" property="customartworkOrderSumprice"
+			jdbcType="DECIMAL" />
+		<result column="customArtwork_order_buyMessage" property="customartworkOrderBuymessage"
+			jdbcType="VARCHAR" />
+		<result column="customArtwork_order_ContactsName" property="customartworkOrderContactsname"
+			jdbcType="VARCHAR" />
+		<result column="customArtwork_order_ContactsTel" property="customartworkOrderContactstel"
+			jdbcType="VARCHAR" />
+		<result column="customArtwork_order_ContactsAddress" property="customartworkOrderContactsaddress"
+			jdbcType="VARCHAR" />
+		<result column="customArtwork_order_status" property="customartworkOrderStatus"
+			jdbcType="TINYINT" />
+		<result column="customArtwork_order_couponPrice" property="customartworkOrderCouponprice"
+			jdbcType="DECIMAL" />
+		<result column="customArtwork_order_express_id" property="customartworkOrderExpressId"
+			jdbcType="VARCHAR" />
+		<result column="customArtwork_order_express_number" property="customartworkOrderExpressNumber"
+			jdbcType="VARCHAR" />
+		<result column="customArtwork_order_createTime" property="customartworkOrderCreatetime"
+			jdbcType="VARCHAR" />
+		<result column="customArtwork_order_updateTime" property="customartworkOrderUpdatetime"
+			jdbcType="VARCHAR" />
+		<result column="customArtwork_order_remark" property="customartworkOrderRemark"
+			jdbcType="VARCHAR" />
+	</resultMap>
+	
+		<resultMap id="queryOrderInfo" type="com.test.pojo.YsspCustomartworkOrderBlongs" extends="BaseResultMap">
+			  <association property="qyUserIntegralView" javaType="com.test.pojo.QyUserIntegralView">
+				<result column="ID" property="id" jdbcType="BIGINT" />
+				<result column="userID" property="userid" jdbcType="VARCHAR" />
+				<result column="username" property="username" jdbcType="VARCHAR" />
+				<result column="openID" property="openid" jdbcType="VARCHAR" />
+				<result column="wxName" property="wxname" jdbcType="VARCHAR" />
+				<result column="Head_portrait_url" property="headPortraitUrl"
+					jdbcType="VARCHAR" />
+				<result column="telephone" property="telephone" jdbcType="VARCHAR" />
+				<result column="email" property="email" jdbcType="VARCHAR" />
+				<result column="password" property="password" jdbcType="VARCHAR" />
+				<result column="sex" property="sex" jdbcType="VARCHAR" />
+				<result column="birthday" property="birthday" jdbcType="DATE" />
+				<result column="IDCard" property="idcard" jdbcType="VARCHAR" />
+				<result column="CreateTime" property="createtime" jdbcType="TIMESTAMP" />
+				<result column="UpdateTime" property="updatetime" jdbcType="TIMESTAMP" />
+				<result column="user_vip_level" property="userVipLevel"
+					jdbcType="VARCHAR" />
+				<result column="user_source" property="userSource" jdbcType="VARCHAR" />
+				<result column="user_address" property="userAddress" jdbcType="VARCHAR" />
+				<result column="user_father_name" property="userFatherName"
+					jdbcType="VARCHAR" />
+				<result column="user_father_id" property="userFatherId"
+					jdbcType="BIGINT" />
+				<result column="user_remark" property="userRemark" jdbcType="LONGVARCHAR" />
+				<result column="member_integral" property="memberIntegral"
+					jdbcType="INTEGER" />
+				<result column="member_accumulative_integral" property="memberAccumulativeIntegral"
+					jdbcType="BIGINT" />
+				<result column="member_accumulative_money" property="memberAccumulativeMoney"
+					jdbcType="BIGINT" />
+				<result column="remark" property="remark" jdbcType="VARCHAR" />
+			</association>
+			
+			
+			<association property="ysspUserRealName" javaType="com.test.pojo.YsspUserRealName">
+				<result column="real_name_userId" property="realNameUserid" jdbcType="BIGINT" />
+				<result column="real_name_username" property="realNameUsername"
+					jdbcType="VARCHAR" />
+				<result column="real_name_DocumentType" property="realNameDocumenttype"
+					jdbcType="TINYINT" />
+				<result column="real_name_Document_num" property="realNameDocumentNum"
+					jdbcType="VARCHAR" />
+				<result column="real_name_Document_tel" property="realNameDocumentTel"
+					jdbcType="VARCHAR" />
+				<result column="real_name_email" property="realNameEmail"
+					jdbcType="VARCHAR" />
+				<result column="real_name_Country" property="realNameCountry"
+					jdbcType="VARCHAR" />
+				<result column="real_name_province" property="realNameProvince"
+					jdbcType="VARCHAR" />
+				<result column="real_name_city" property="realNameCity"
+					jdbcType="VARCHAR" />
+				<result column="real_name_createTime" property="realNameCreatetime"
+					jdbcType="VARCHAR" />
+				<result column="real_name_updateTime" property="realNameUpdatetime"
+					jdbcType="VARCHAR" />
+				<result column="real_name_status" property="realNameStatus"
+					jdbcType="TINYINT" />
+				<result column="real_name_remark" property="realNameRemark"
+					jdbcType="VARCHAR" />
+				<result column="Document_front" property="documentFront"
+					jdbcType="LONGVARCHAR" />
+				<result column="Document_Back" property="documentBack"
+					jdbcType="LONGVARCHAR" />
+		</association>
+			
+		<association property="ysspCustomArtwork" javaType="com.test.pojo.YsspCustomArtwork">
+				<result column="Custom_Artwork_id" property="customArtworkId" jdbcType="BIGINT" />
+				<result column="Custom_Artwork_name" property="customArtworkName"
+					jdbcType="VARCHAR" />
+				<result column="Custom_Artwork_type" property="customArtworkType"
+					jdbcType="TINYINT" />
+				<result column="Custom_Artwork_height" property="customArtworkHeight"
+					jdbcType="VARCHAR" />
+				<result column="Custom_Artwork_width" property="customArtworkWidth"
+					jdbcType="VARCHAR" />
+				<result column="Custom_Artwork_weight" property="customArtworkWeight"
+					jdbcType="VARCHAR" />
+				<result column="Custom_Artwork_years" property="customArtworkYears"
+					jdbcType="VARCHAR" />
+				<result column="Custom_Artwork_artist_img" property="customArtworkArtistImg"
+					jdbcType="VARCHAR" />
+				<result column="Custom_Artwork_vedio" property="customArtworkVedio"
+					jdbcType="VARCHAR" />
+				<result column="Custom_Artwork_createTime" property="customArtworkCreatetime"
+					jdbcType="VARCHAR" />
+				<result column="Custom_Artwork_updateTime" property="customArtworkUpdatetime"
+					jdbcType="VARCHAR" />
+				<result column="Custom_Artwork_Stock" property="customArtworkStock"
+					jdbcType="INTEGER" />
+				<result column="Custom_Artwork_status" property="customArtworkStatus"
+					jdbcType="TINYINT" />
+				<result column="Custom_Artwork_remark" property="customArtworkRemark"
+					jdbcType="VARCHAR" />
+				<result column="Custom_Artwork_authName" property="customArtworkAuthname"
+					jdbcType="VARCHAR" />
+				<result column="Custom_Artwork_smallCode" property="customArtworkSmallcode"
+					jdbcType="VARCHAR" />
+				<result column="Custom_Artwork_artId" property="customArtworkArtId"    
+					jdbcType="BIGINT" />
+			</association>
+			
+		<association property="ysspArtwork" javaType="com.test.pojo.YsspArtwork">
+			<result column="artwork_id" property="artworkId" jdbcType="BIGINT" />
+			<result column="artwork_name" property="artworkName" jdbcType="VARCHAR" />
+			<result column="artwork_authorId" property="artworkAuthorid"
+				jdbcType="BIGINT" />
+			<result column="artwork_type" property="artworkType" jdbcType="TINYINT" />
+			<result column="artwork_width" property="artworkWidth"
+				jdbcType="VARCHAR" />
+			<result column="artwork_height" property="artworkHeight"
+				jdbcType="VARCHAR" />
+			<result column="artwork_weigth" property="artworkWeigth"
+				jdbcType="VARCHAR" />
+			<result column="artwork_year" property="artworkYear" jdbcType="VARCHAR" />
+			<result column="artwork_Label" property="artworkLabel"
+				jdbcType="VARCHAR" />
+			<result column="artwork_examine_status" property="artworkExamineStatus"
+				jdbcType="TINYINT" />
+			<result column="artwork_status" property="artworkStatus"
+				jdbcType="TINYINT" />
+			<result column="artwork_createTime" property="artworkCreatetime"
+				jdbcType="VARCHAR" />
+			<result column="artwork_updateTime" property="artworkUpdatetime"
+				jdbcType="VARCHAR" />
+			<result column="artwork_Auditor" property="artworkAuditor"
+				jdbcType="BIGINT" />
+			<result column="artwork_browse_Number" property="artworkBrowseNumber"
+				jdbcType="BIGINT" />
+			<result column="artwork_comment_Number" property="artworkCommentNumber"
+				jdbcType="BIGINT" />
+			<result column="artwork_likes_Number" property="artworkLikesNumber"
+				jdbcType="BIGINT" />
+			<result column="artwork_share_Number" property="artworkShareNumber"
+				jdbcType="BIGINT" />
+			<result column="artwork_remark" property="artworkRemark"
+				jdbcType="VARCHAR" />
+			<result column="artwork_accredit_user" property="artworkAccreditUser" 
+				jdbcType="BIGINT" />
+		</association>
+	</resultMap>
+	
+	<sql id="Base_Column_List">
+		customArtwork_order_id, customArtwork_order_userid, customArtwork_order_shopId,
+		customArtwork_order_number,
+		customArtwork_order_price, customArtwork_order_sumPrice, customArtwork_order_buyMessage,
+		customArtwork_order_ContactsName, customArtwork_order_ContactsTel,
+		customArtwork_order_ContactsAddress,
+		customArtwork_order_status, customArtwork_order_couponPrice, customArtwork_order_express_id,
+		customArtwork_order_express_number, customArtwork_order_createTime,
+		customArtwork_order_updateTime,
+		customArtwork_order_remark
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from yssp_customartwork_order
+		where customArtwork_order_id = #{customartworkOrderId,jdbcType=BIGINT}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+		delete from yssp_customartwork_order
+		where customArtwork_order_id = #{customartworkOrderId,jdbcType=BIGINT}
+	</delete>
+	<insert id="insert"  useGeneratedKeys="true" keyProperty="customartworkOrderId" parameterType="com.test.pojo.YsspCustomartworkOrder">
+		insert into yssp_customartwork_order (customArtwork_order_id,
+		customArtwork_order_userid,
+		customArtwork_order_shopId, customArtwork_order_number,
+		customArtwork_order_price, customArtwork_order_sumPrice,
+		customArtwork_order_buyMessage, customArtwork_order_ContactsName,
+		customArtwork_order_ContactsTel, customArtwork_order_ContactsAddress,
+		customArtwork_order_status, customArtwork_order_couponPrice,
+		customArtwork_order_express_id, customArtwork_order_express_number,
+		customArtwork_order_createTime, customArtwork_order_updateTime,
+		customArtwork_order_remark)
+		values (#{customartworkOrderId,jdbcType=BIGINT},
+		#{customartworkOrderUserid,jdbcType=BIGINT},
+		#{customartworkOrderShopid,jdbcType=BIGINT},
+		#{customartworkOrderNumber,jdbcType=BIGINT},
+		#{customartworkOrderPrice,jdbcType=DECIMAL},
+		#{customartworkOrderSumprice,jdbcType=DECIMAL},
+		#{customartworkOrderBuymessage,jdbcType=VARCHAR},
+		#{customartworkOrderContactsname,jdbcType=VARCHAR},
+		#{customartworkOrderContactstel,jdbcType=VARCHAR},
+		#{customartworkOrderContactsaddress,jdbcType=VARCHAR},
+		#{customartworkOrderStatus,jdbcType=TINYINT},
+		#{customartworkOrderCouponprice,jdbcType=DECIMAL},
+		#{customartworkOrderExpressId,jdbcType=VARCHAR},
+		#{customartworkOrderExpressNumber,jdbcType=VARCHAR},
+		#{customartworkOrderCreatetime,jdbcType=VARCHAR},
+		#{customartworkOrderUpdatetime,jdbcType=VARCHAR},
+		#{customartworkOrderRemark,jdbcType=VARCHAR})
+	</insert>
+	<insert id="insertSelective" parameterType="com.test.pojo.YsspCustomartworkOrder">
+		insert into yssp_customartwork_order
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="customartworkOrderId != null">
+				customArtwork_order_id,
+			</if>
+			<if test="customartworkOrderUserid != null">
+				customArtwork_order_userid,
+			</if>
+			<if test="customartworkOrderShopid != null">
+				customArtwork_order_shopId,
+			</if>
+			<if test="customartworkOrderNumber != null">
+				customArtwork_order_number,
+			</if>
+			<if test="customartworkOrderPrice != null">
+				customArtwork_order_price,
+			</if>
+			<if test="customartworkOrderSumprice != null">
+				customArtwork_order_sumPrice,
+			</if>
+			<if test="customartworkOrderBuymessage != null">
+				customArtwork_order_buyMessage,
+			</if>
+			<if test="customartworkOrderContactsname != null">
+				customArtwork_order_ContactsName,
+			</if>
+			<if test="customartworkOrderContactstel != null">
+				customArtwork_order_ContactsTel,
+			</if>
+			<if test="customartworkOrderContactsaddress != null">
+				customArtwork_order_ContactsAddress,
+			</if>
+			<if test="customartworkOrderStatus != null">
+				customArtwork_order_status,
+			</if>
+			<if test="customartworkOrderCouponprice != null">
+				customArtwork_order_couponPrice,
+			</if>
+			<if test="customartworkOrderExpressId != null">
+				customArtwork_order_express_id,
+			</if>
+			<if test="customartworkOrderExpressNumber != null">
+				customArtwork_order_express_number,
+			</if>
+			<if test="customartworkOrderCreatetime != null">
+				customArtwork_order_createTime,
+			</if>
+			<if test="customartworkOrderUpdatetime != null">
+				customArtwork_order_updateTime,
+			</if>
+			<if test="customartworkOrderRemark != null">
+				customArtwork_order_remark,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="customartworkOrderId != null">
+				#{customartworkOrderId,jdbcType=BIGINT},
+			</if>
+			<if test="customartworkOrderUserid != null">
+				#{customartworkOrderUserid,jdbcType=BIGINT},
+			</if>
+			<if test="customartworkOrderShopid != null">
+				#{customartworkOrderShopid,jdbcType=BIGINT},
+			</if>
+			<if test="customartworkOrderNumber != null">
+				#{customartworkOrderNumber,jdbcType=BIGINT},
+			</if>
+			<if test="customartworkOrderPrice != null">
+				#{customartworkOrderPrice,jdbcType=DECIMAL},
+			</if>
+			<if test="customartworkOrderSumprice != null">
+				#{customartworkOrderSumprice,jdbcType=DECIMAL},
+			</if>
+			<if test="customartworkOrderBuymessage != null">
+				#{customartworkOrderBuymessage,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderContactsname != null">
+				#{customartworkOrderContactsname,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderContactstel != null">
+				#{customartworkOrderContactstel,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderContactsaddress != null">
+				#{customartworkOrderContactsaddress,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderStatus != null">
+				#{customartworkOrderStatus,jdbcType=TINYINT},
+			</if>
+			<if test="customartworkOrderCouponprice != null">
+				#{customartworkOrderCouponprice,jdbcType=DECIMAL},
+			</if>
+			<if test="customartworkOrderExpressId != null">
+				#{customartworkOrderExpressId,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderExpressNumber != null">
+				#{customartworkOrderExpressNumber,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderCreatetime != null">
+				#{customartworkOrderCreatetime,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderUpdatetime != null">
+				#{customartworkOrderUpdatetime,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderRemark != null">
+				#{customartworkOrderRemark,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.test.pojo.YsspCustomartworkOrder">
+		update yssp_customartwork_order
+		<set>
+			<if test="customartworkOrderUserid != null">
+				customArtwork_order_userid =
+				#{customartworkOrderUserid,jdbcType=BIGINT},
+			</if>
+			<if test="customartworkOrderShopid != null">
+				customArtwork_order_shopId =
+				#{customartworkOrderShopid,jdbcType=BIGINT},
+			</if>
+			<if test="customartworkOrderNumber != null">
+				customArtwork_order_number =
+				#{customartworkOrderNumber,jdbcType=BIGINT},
+			</if>
+			<if test="customartworkOrderPrice != null">
+				customArtwork_order_price =
+				#{customartworkOrderPrice,jdbcType=DECIMAL},
+			</if>
+			<if test="customartworkOrderSumprice != null">
+				customArtwork_order_sumPrice =
+				#{customartworkOrderSumprice,jdbcType=DECIMAL},
+			</if>
+			<if test="customartworkOrderBuymessage != null">
+				customArtwork_order_buyMessage =
+				#{customartworkOrderBuymessage,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderContactsname != null">
+				customArtwork_order_ContactsName =
+				#{customartworkOrderContactsname,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderContactstel != null">
+				customArtwork_order_ContactsTel =
+				#{customartworkOrderContactstel,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderContactsaddress != null">
+				customArtwork_order_ContactsAddress =
+				#{customartworkOrderContactsaddress,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderStatus != null">
+				customArtwork_order_status =
+				#{customartworkOrderStatus,jdbcType=TINYINT},
+			</if>
+			<if test="customartworkOrderCouponprice != null">
+				customArtwork_order_couponPrice =
+				#{customartworkOrderCouponprice,jdbcType=DECIMAL},
+			</if>
+			<if test="customartworkOrderExpressId != null">
+				customArtwork_order_express_id =
+				#{customartworkOrderExpressId,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderExpressNumber != null">
+				customArtwork_order_express_number =
+				#{customartworkOrderExpressNumber,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderCreatetime != null">
+				customArtwork_order_createTime =
+				#{customartworkOrderCreatetime,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderUpdatetime != null">
+				customArtwork_order_updateTime =
+				#{customartworkOrderUpdatetime,jdbcType=VARCHAR},
+			</if>
+			<if test="customartworkOrderRemark != null">
+				customArtwork_order_remark =
+				#{customartworkOrderRemark,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where customArtwork_order_id = #{customartworkOrderId,jdbcType=BIGINT}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.test.pojo.YsspCustomartworkOrder">
+		update yssp_customartwork_order
+		set customArtwork_order_userid =
+		#{customartworkOrderUserid,jdbcType=BIGINT},
+		customArtwork_order_shopId =
+		#{customartworkOrderShopid,jdbcType=BIGINT},
+		customArtwork_order_number =
+		#{customartworkOrderNumber,jdbcType=BIGINT},
+		customArtwork_order_price = #{customartworkOrderPrice,jdbcType=DECIMAL},
+		customArtwork_order_sumPrice =
+		#{customartworkOrderSumprice,jdbcType=DECIMAL},
+		customArtwork_order_buyMessage =
+		#{customartworkOrderBuymessage,jdbcType=VARCHAR},
+		customArtwork_order_ContactsName =
+		#{customartworkOrderContactsname,jdbcType=VARCHAR},
+		customArtwork_order_ContactsTel =
+		#{customartworkOrderContactstel,jdbcType=VARCHAR},
+		customArtwork_order_ContactsAddress =
+		#{customartworkOrderContactsaddress,jdbcType=VARCHAR},
+		customArtwork_order_status =
+		#{customartworkOrderStatus,jdbcType=TINYINT},
+		customArtwork_order_couponPrice =
+		#{customartworkOrderCouponprice,jdbcType=DECIMAL},
+		customArtwork_order_express_id =
+		#{customartworkOrderExpressId,jdbcType=VARCHAR},
+		customArtwork_order_express_number =
+		#{customartworkOrderExpressNumber,jdbcType=VARCHAR},
+		customArtwork_order_createTime =
+		#{customartworkOrderCreatetime,jdbcType=VARCHAR},
+		customArtwork_order_updateTime =
+		#{customartworkOrderUpdatetime,jdbcType=VARCHAR},
+		customArtwork_order_remark =
+		#{customartworkOrderRemark,jdbcType=VARCHAR}
+		where customArtwork_order_id = #{customartworkOrderId,jdbcType=BIGINT}
+	</update>
+	
+	
+	<select id="queryOrderInfo" resultMap="queryOrderInfo">
+<!-- 		select o.*,u.*,r.* from yssp_customartwork_order o INNER JOIN
+		qy_user u ON o.customArtwork_order_userid =u.id 
+		LEFT JOIN yssp_user_real_name r ON u.id = real_name_userId
+		where o.customArtwork_order_status = 1
+		<if test="artId != null and artId !=0">
+			o.customartwork_order_shopid = #{artId}
+		</if> -->
+		select o.*,c.* from yssp_customartwork_order o 
+		inner join yssp_custom_artwork c
+		on c.Custom_Artwork_id = o.customArtwork_order_shopId 
+		 order by o.customArtwork_order_createTime DESC
+	</select>
+</mapper>

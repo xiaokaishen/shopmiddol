@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.YsspMessageCountMapper" >
+  	<resultMap id="BaseResultMap" type="com.test.pojo.YsspMessageCount">
+  		<result column="followCount" property="followCount" jdbcType="BIGINT" />
+  		<result column="funsCount" property="funsCount" jdbcType="BIGINT" />
+  		<result column="collectionCount" property="collectionCount" jdbcType="BIGINT" />
+  		<result column="favoriteCount" property="favoriteCount" jdbcType="BIGINT" />
+		<result column="noticeCount" property="noticeCount" jdbcType="BIGINT" />
+	</resultMap>
+	<select id="selectPersonalCenterCountList" resultMap="BaseResultMap">
+		SELECT 
+			a.followCount,
+			b.funsCount,
+			e.noticeCount
+		FROM 
+			(SELECT 
+			COUNT(yf.follow_id) AS followCount FROM yssp_follow yf WHERE yf.follow_to_people =#{userId} AND yf.follow_concerned_people is not null AND yf.follow_status=1)a,
+			(SELECT 
+			COUNT(yfuns.follow_id) AS funsCount FROM yssp_follow yfuns WHERE yfuns.follow_concerned_people =#{userId} AND yfuns.follow_to_people is not null AND yfuns.follow_status=1)b,
+			(SELECT 
+			COUNT(yn.notice_id) AS noticeCount FROM yssp_notice yn WHERE yn.notice_to =#{userId} AND yn.notice_status =1)e
+	</select>
+	<select id="selectFavoriteCount" resultType="java.lang.Long">
+		SELECT 
+			sum(d.favoriteCount)
+		FROM
+			(	
+				SELECT 
+				COUNT(yf.favorite_id) AS favoriteCount 
+				FROM yssp_favorite yf 
+				INNER JOIN yssp_interactive yin ON yin.Interactive_id = yf.favorite_works_id
+				WHERE 
+				yf.favorite_user_id =#{userId,jdbcType=BIGINT} 
+				AND yf.favorite_status=1
+				AND yf.favorite_works_type =2
+				UNION
+				SELECT 
+				COUNT(yf.favorite_id) AS favoriteCount 
+				FROM yssp_favorite yf 
+				INNER JOIN yssp_artwork yar ON yar.artwork_id = yf.favorite_works_id
+				WHERE 
+				yf.favorite_user_id =#{userId,jdbcType=BIGINT} 
+				AND yf.favorite_status=1
+				AND yf.favorite_works_type =1
+			)d
+	</select>
+	<select id="selectCollectionCount" resultType="java.lang.Long">
+		SELECT 
+			sum(c.collectionCount)
+			FROM
+			(
+				SELECT 
+					COUNT(yc.collection_id) AS collectionCount
+				FROM yssp_collection yc 
+				INNER JOIN yssp_interactive yi ON yi.Interactive_id = yc.collection_works_id 
+				WHERE yc.collection_user_id =#{userId,jdbcType=BIGINT}  
+				AND yc.collection_status=1
+				AND yc.collection_works_type =2
+				UNION ALL
+				SELECT 
+					COUNT(yc.collection_id) AS collectionCount
+				FROM yssp_collection yc 
+				INNER JOIN yssp_artwork ya ON ya.artwork_id = yc.collection_works_id 
+				WHERE yc.collection_user_id =#{userId,jdbcType=BIGINT}  
+				AND yc.collection_status=1
+				AND yc.collection_works_type =1
+			)c
+	</select>
+	<select id="selectNoticeCountList" resultMap="BaseResultMap">
+	SELECT 
+		a.followCount,
+		b.noticeCount,
+		c.favoriteCount
+		FROM
+		(		SELECT
+				COUNT(n.notice_id) AS followCount
+				FROM
+					yssp_notice n
+				WHERE 
+					notice_to =#{userId}
+				AND
+					n.notice_type =1
+				AND 
+					n.notice_status =1
+		)a,
+		(
+				SELECT
+					COUNT(n.notice_id) AS noticeCount
+				FROM
+					yssp_notice n
+				WHERE 
+					notice_to =#{userId}
+				AND
+					n.notice_type =2
+				AND 
+					n.notice_status =1
+		)b,
+		(
+				SELECT
+				 COUNT(n.notice_id) AS favoriteCount
+				FROM
+					yssp_notice n
+				WHERE 
+					notice_to =#{userId}
+				AND
+					n.notice_type =3
+				AND 
+					n.notice_status =1
+		)c
+	</select>
+	
+	<select id="selectMessageCount" resultType="java.lang.Long">
+		SELECT 
+			e.noticeCount
+		FROM 
+			(SELECT 
+			COUNT(yn.notice_id) AS noticeCount FROM yssp_notice yn WHERE yn.notice_to =#{userId} AND yn.notice_status =1)e
+	</select>
+</mapper>
