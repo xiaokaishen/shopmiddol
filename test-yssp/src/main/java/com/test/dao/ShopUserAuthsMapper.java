@@ -33,4 +33,5 @@ public interface ShopUserAuthsMapper {
     List<ShopUserAuths> selectByShopUserAuthsList(@Param("identityType") String identityType,
                                                 @Param("identifier") String id);
 
+    int insertListShopUserAuths(List<ShopUserAuths> list);
 }

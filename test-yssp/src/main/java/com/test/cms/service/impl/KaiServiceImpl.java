@@ -77,12 +77,11 @@ public class KaiServiceImpl implements KaiService {
                 String sex = decryptData.getString("gender");
                 String headImgUrl = decryptData.getString("avatarUrl");
                 String usercity = decryptData.getString("province");
-                System.out.println("来这儿了上1");
+
                 List<ShopUserAuths> unionAuthsList = shopUserAuthsMapper.selectByShopUserAuthsList("UNIDONID", unionId);
                 List<ShopUserAuths> openIdAuthsList = shopUserAuthsMapper.selectByShopUserAuthsList("YSSP_XCX_OPENID", openId);
-                System.out.println(unionAuthsList.size());
-                System.out.println(openIdAuthsList.size());
-                System.out.println("来这儿了上2");
+                System.out.println("unionAuthsList长度："+unionAuthsList.size());
+                System.out.println("openIdAuthsList长度："+openIdAuthsList.size());
                 /**
                  * // 用户从未在开放平台授权过
                  */
@@ -101,12 +100,11 @@ public class KaiServiceImpl implements KaiService {
                     //用户添加成功
                     if(addShopUser==1){
                         System.out.println("添加成功的主键："+shopUser.getId());
-                    }
 
-                    /*if(addShopUser == 1){
                         List<ShopUserAuths> auths = new ArrayList<>();
 
-                        ShopUserAuths openidAuths = new ShopUserAuths();// 用户登录权限表信息
+                        // 用户登录权限表信息
+                        ShopUserAuths openidAuths = new ShopUserAuths();
                         openidAuths.setCredential(UUID.randomUUID().toString());
                         openidAuths.setIdentifier(openId);
                         openidAuths.setIdentityType("YSSP_XCX_OPENID");
@@ -117,20 +115,73 @@ public class KaiServiceImpl implements KaiService {
 
                         ShopUserAuths unionAuths = new ShopUserAuths();// 用户登录权限表信息
                         unionAuths.setCredential(UUID.randomUUID().toString());
-                        unionAuths.setIdentifier(unionId);
+                        if("".equals(unionId)||unionId == null){
+                            unionAuths.setIdentifier("空的，没有");
+                        }
                         unionAuths.setIdentityType("UNIDONID");
                         unionAuths.setPrimarykeyid(userid);
                         unionAuths.setVerified((byte) 1);// 默认为1，授权登录
 
                         auths.add(unionAuths);
 
-                        int insert = shopUserAuthsMapper.insert(auths);
+                        int insert = shopUserAuthsMapper.insertListShopUserAuths(auths);
+                        System.out.println("插入"+insert);
+                        if (insert == 2) {
+                            ShopUser user = shopUserMapper.selectShopUserIntegralVieByid(userid);
+                            String wxname =user.getWxname();
+                            if(wxname!=null) {
+                                wxname =user.getWxname();
+                                user.setWxname(HtmlCapeUtil.unescapeHtml(wxname));
+                            }
+                            return QingYinResult.ok(user);
+                        } else {
+                            shopUserMapper.deleteByPrimaryKey(userid);// 删除添加的用户
+                            return QingYinResult.build(400, "添加用户失败");
+                        }
+                    } else {
+                        return QingYinResult.build(400, "添加用户失败");
+                    }
+                } else if (unionAuthsList.size() == 1 && (openIdAuthsList.size() == 0 || openIdAuthsList == null)) {// 授权登录过
+                    // unionId授权过
+                    // 查询用户id
+                    userid = unionAuthsList.get(0).getPrimarykeyid();
+                    // 授权该openid登录
+                    List<ShopUserAuths> auths = new ArrayList<>();
+                    ShopUserAuths openidAuths = new ShopUserAuths();// 用户登录权限表信息
+                    openidAuths.setCredential(UUID.randomUUID().toString());
+                    openidAuths.setIdentifier(openId);
+                    openidAuths.setIdentityType("YSSP_XCX_OPENID");
+                    openidAuths.setPrimarykeyid(userid);
+                    openidAuths.setVerified((byte) 1);// 默认为1，授权登录
 
-                    }*/
+                    auths.add(openidAuths);
+                    shopUserAuthsMapper.insertListShopUserAuths(auths);// 添加授权
+
+                    ShopUser user = shopUserMapper.selectShopUserIntegralVieByid(userid);// 查询用户信息
+                    String wxname =user.getWxname();
+                    if(wxname!=null) {
+                        wxname =user.getWxname();
+                        user.setWxname(HtmlCapeUtil.unescapeHtml(wxname));
+                    }
+                    return QingYinResult.ok(user);
+                } else if (openIdAuthsList.size() == 1 && unionAuthsList.size() == 1) {// 授权登录过
+
+                    userid = openIdAuthsList.get(0).getPrimarykeyid();
+                    ShopUser user = shopUserMapper.selectShopUserIntegralVieByid(userid);// 查询用户信息
+                    String wxname =user.getWxname();
+                    if(wxname!=null) {
+                        wxname =user.getWxname();
+                        user.setWxname(HtmlCapeUtil.unescapeHtml(wxname));
+                    }
+                    return QingYinResult.ok(user);
+                } else {
+                    return QingYinResult.build(500, "授权出错了,请联系管理员");
                 }
+
+            } else {// unionid为空
+                return QingYinResult.build(500, "添加微信用户出错了,请联系网站管理员");
             }
 
-            return QingYinResult.ok(decryptData);
         } catch (Exception e) {
             return QingYinResult.build(501, ExceptionUtil.getStackTrace(e));
         }

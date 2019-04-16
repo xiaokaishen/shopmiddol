@@ -384,4 +384,10 @@
       user_city = #{userCity,jdbcType=VARCHAR}
     where ID = #{id,jdbcType=BIGINT}
   </update>
+  <select id="selectShopUserIntegralVieByid" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from shop_user
+    where ID = #{userid,jdbcType=BIGINT}
+  </select>
 </mapper>

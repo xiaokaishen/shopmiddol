@@ -2,44 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f08d8b73-6c7f-4624-b7b9-f5dc46ebe67c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/pojo/ShopUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/pojo/ShopUserAuths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/pojo/ShopUserAuthsExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/pojo/ShopUserExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/utils/JsonUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logs/app.log_ 2019-04-15" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/test/dao/ShopUserAuthsMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/test/dao/ShopUserAuthsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/test/dao/ShopUserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/test/dao/ShopUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/test/pojo/ShopUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/test/pojo/ShopUserAuths.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/test/pojo/ShopUserAuthsExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/test/pojo/ShopUserAuthsExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/test/pojo/ShopUserAuthsExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/test/pojo/ShopUserAuthsExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/test/pojo/ShopUserExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/test/pojo/ShopUserExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/test/pojo/ShopUserExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/test/pojo/ShopUserExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-04-16" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/cms/service/KaiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/cms/service/KaiService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/properties/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/properties/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/cms/controller/KaiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/cms/controller/KaiController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/cms/service/KaiService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/cms/service/KaiService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/cms/service/impl/KaiServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/cms/service/impl/KaiServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/properties/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/properties/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-04-15" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-04-15" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
-              <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
+              <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,39 +51,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="102" column="72" selection-start-line="102" selection-start-column="72" selection-end-line="102" selection-end-column="72" />
+            <state relative-caret-position="-696">
+              <caret line="143" column="62" selection-start-line="143" selection-start-column="62" selection-end-line="143" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4627#5788#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="131" column="29" lean-forward="true" selection-start-line="131" selection-start-column="29" selection-end-line="131" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/service/KaiService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -122,8 +63,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+            <state relative-caret-position="299">
+              <caret line="35" column="31" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/service/KaiService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="390" column="40" selection-start-line="390" selection-start-column="40" selection-end-line="390" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -131,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+            <state relative-caret-position="189">
+              <caret line="255" column="57" selection-start-line="255" selection-start-column="47" selection-end-line="255" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -161,6 +129,7 @@
       <find>192.168.1.70</find>
       <find>YSSPSmallAppConfig</find>
       <find>selectOrderInfoByOrderId</find>
+      <find>Base_Column_List</find>
     </findStrings>
     <replaceStrings>
       <replace>com.test.smallApp</replace>
@@ -198,11 +167,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/test/cms/service/KaiService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/utils/JsonUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/properties/db.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java" />
       </list>
     </option>
@@ -537,12 +506,20 @@
       <workItem from="1555313369663" duration="27000" />
       <workItem from="1555314236751" duration="2529000" />
       <workItem from="1555318044913" duration="6914000" />
-      <workItem from="1555378186179" duration="11753000" />
+      <workItem from="1555378186179" duration="16159000" />
     </task>
+    <task id="LOCAL-00001" summary="注册完成，权限注册未完成">
+      <created>1555398330831</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1555398330831</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104411000" />
+    <option name="totallyTimeSpent" value="108817000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -570,8 +547,8 @@
       <window_info anchor="bottom" id="JRebel Executor" order="1" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.36260623" />
-      <window_info active="true" anchor="bottom" id="Debug" order="5" visible="true" weight="0.37677053" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.37677053" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32786885" />
@@ -597,22 +574,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="注册完成，权限注册未完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="注册完成，权限注册未完成" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/impl/JedisClientPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/impl/JedisClientCluster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/QyIntegralChangeMapper.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/QyIntegralChangeMapper.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/pojo/QyIntegralChange.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/front/service/IUserService.java" />
@@ -793,30 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/properties/db.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -824,34 +766,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="131" column="29" lean-forward="true" selection-start-line="131" selection-start-column="29" selection-end-line="131" selection-end-column="29" />
+        <state relative-caret-position="217">
+          <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/service/KaiService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="176">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="390" column="40" selection-start-line="390" selection-start-column="40" selection-end-line="390" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="255" column="57" selection-start-line="255" selection-start-column="47" selection-end-line="255" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar!/org/apache/commons/lang3/text/translate/CharSequenceTranslator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-279">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar!/org/apache/commons/lang3/StringEscapeUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="77" column="35" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
+          <folding>
+            <element signature="e#5884#5885#0" expanded="true" />
+            <element signature="e#5938#5939#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/test/tools/test-tools/0.0.1-SNAPSHOT/test-tools-0.0.1-SNAPSHOT.jar!/com/test/tools/util/HtmlCapeUtil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="35" column="31" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="102" column="72" selection-start-line="102" selection-start-column="72" selection-end-line="102" selection-end-column="72" />
+        <state relative-caret-position="-696">
+          <caret line="143" column="62" selection-start-line="143" selection-start-column="62" selection-end-line="143" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4627#5788#0" />
           </folding>
         </state>
       </provider>

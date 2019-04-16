@@ -251,4 +251,18 @@
     identifier=#{identifier,jdbcType=VARCHAR}
   </select>
 
+  <insert id="insertListShopUserAuths">
+    insert into shop_user_auths
+    (user_auths_id, primaryKeyId,identity_type,identifier,credential,verified,auths_remark)
+    values
+    <foreach collection="list" item="userAuth" separator=",">
+      (#{userAuth.userAuthsId},
+      #{userAuth.primarykeyid},
+      #{userAuth.identityType},
+      #{userAuth.identifier},
+      #{userAuth.credential},
+      #{userAuth.verified},
+      #{userAuth.authsRemark})
+    </foreach>
+  </insert>
 </mapper>
