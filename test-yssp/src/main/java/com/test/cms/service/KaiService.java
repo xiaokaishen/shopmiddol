@@ -12,4 +12,6 @@ public interface KaiService {
      * @return
      */
     QingYinResult WXLoginRegist(Map<String, String> userMap);
+
+    QingYinResult userAdd(String temporaryBill, String encryptedData, String iv,String sessionKeys);
 }
