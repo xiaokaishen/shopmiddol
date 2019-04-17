@@ -1,56 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f08d8b73-6c7f-4624-b7b9-f5dc46ebe67c" name="Default Changelist" comment="注册完成，权限注册未完成">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="f08d8b73-6c7f-4624-b7b9-f5dc46ebe67c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../test-tools/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-tools/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-tools/target/classes/com/test/smallApp/utils/SmallAppAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/classes/com/test/smallApp/utils/SmallAppAdvice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-tools/target/classes/com/test/smallApp/utils/SmallAppConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/classes/com/test/smallApp/utils/SmallAppConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-tools/target/classes/com/test/smallApp/utils/SmallTokenThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/classes/com/test/smallApp/utils/SmallTokenThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-tools/target/classes/com/test/smallApp/utils/YSSPSmallPaaWeChatUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/classes/com/test/smallApp/utils/YSSPSmallPaaWeChatUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-tools/target/classes/com/test/weixin/utils/MenuCurrencyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/classes/com/test/weixin/utils/MenuCurrencyManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-tools/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-tools/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-tools/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-tools/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-tools/target/test-tools.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/test-tools.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/pojo/UserResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/pojo/UserResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/QyIntegralChangeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/QyUserAuthsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/QyUserIntegralMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/QyUserIntegralViewMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/QyUserOperationMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspAccreditMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspActivityContactMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspActivityMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspActivityOrderMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspArtistMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspArtworkMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspArtworkRecordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspCmsImgUploadMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspCmsUserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspCollectionMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspCommentMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspCommentReplyMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspCustomArtworkMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspCustomartworkOrderMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspFavoriteMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspFollowMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspInteractiveMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspMessageCountMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspNoticeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspPayInfoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspPayRecordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspRefundInfoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspRefundRecordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspRepostMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspShareMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspSmallappBannerMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspUserRealNameMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspUserRealNameRecordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/dao/YsspWorkTypeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/cms/service/impl/KaiServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/cms/service/impl/KaiServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/test/pojo/UserResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/pojo/UserResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-04-10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-04-11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-04-12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-04-15" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-04-16" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,42 +49,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
+            <state relative-caret-position="-355">
+              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="71" column="32" lean-forward="true" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2602#2632#1" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/pojo/UserResult.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="351">
+              <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
               <folding>
-                <element signature="e#288#289#0" expanded="true" />
-                <element signature="e#324#325#0" expanded="true" />
-                <element signature="e#382#383#0" expanded="true" />
-                <element signature="e#432#433#0" expanded="true" />
-                <element signature="e#469#470#0" expanded="true" />
-                <element signature="e#502#503#0" expanded="true" />
-                <element signature="e#554#555#0" expanded="true" />
-                <element signature="e#598#599#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2602#2632#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,8 +146,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/pojo/UserResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -231,7 +180,13 @@
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="test-yssp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Run Configurations" type="21c1f71a:MavenProjectsStructure$RunConfigurationsNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="test-yssp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="tomcat7" type="36feed69:MavenProjectsStructure$PluginNode" />
         </path>
       </expand>
       <select />
@@ -248,8 +203,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -300,18 +253,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="cms" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test-yssp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test-yssp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="cms" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="test-yssp" type="b2602c69:ProjectViewProjectNode" />
@@ -335,14 +277,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554872902188" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555490745237" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../wx01/test-yssp" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -527,6 +471,7 @@
       <workItem from="1555318044913" duration="6914000" />
       <workItem from="1555378186179" duration="16159000" />
       <workItem from="1555483090658" duration="836000" />
+      <workItem from="1555483973762" duration="3735000" />
     </task>
     <task id="LOCAL-00001" summary="注册完成，权限注册未完成">
       <created>1555398330831</created>
@@ -535,11 +480,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555398330831</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="。。。">
+      <created>1555484019609</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1555484019609</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109653000" />
+    <option name="totallyTimeSpent" value="113388000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -551,10 +503,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="JRebel" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19839142" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20107238" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
@@ -566,8 +519,8 @@
       <window_info anchor="bottom" id="JRebel Executor" order="1" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.3274596" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.37677053" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.5550661" />
+      <window_info anchor="bottom" id="Debug" order="5" visible="true" weight="0.37591776" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32786885" />
@@ -578,7 +531,6 @@
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" weight="0.24362606" />
-      <window_info anchor="right" id="Maven Projects" weight="0.3297587" />
       <window_info anchor="right" id="Translate" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -586,9 +538,10 @@
       <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.16487935" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="7" weight="0.3297587" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Maven Projects" order="10" weight="0.3297587" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,10 +555,10 @@
       <path value="F:/" />
     </ignored-roots>
     <MESSAGE value="注册完成，权限注册未完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="注册完成，权限注册未完成" />
+    <MESSAGE value="。。。" />
+    <option name="LAST_COMMIT_MESSAGE" value="。。。" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/QyIntegralChangeMapper.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/pojo/QyIntegralChange.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/front/service/IUserService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/IJedisClient.java">
@@ -790,16 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserAuthsMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
@@ -828,24 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/service/KaiService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="71" column="32" lean-forward="true" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2602#2632#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/pojo/ShopUserExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -860,19 +785,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/pojo/UserResult.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/service/KaiService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/pojo/UserResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/lk-maven/repository/test/tools/test-tools/0.0.1-SNAPSHOT/test-tools-0.0.1-SNAPSHOT.jar!/com/test/smallApp/utils/SmallAppAdvice.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-355">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
           <folding>
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#554#555#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2602#2632#1" expanded="true" />
           </folding>
         </state>
       </provider>

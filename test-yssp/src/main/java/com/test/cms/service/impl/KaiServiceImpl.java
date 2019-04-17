@@ -14,7 +14,11 @@ import com.test.tools.util.*;
 import com.test.utils.JsonUtil;
 import com.vdurmont.emoji.EmojiParser;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.TransactionDefinition;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 import java.util.*;
 
@@ -25,7 +29,10 @@ public class KaiServiceImpl implements KaiService {
     private ShopUserAuthsMapper shopUserAuthsMapper;
     @Autowired
     private ShopUserMapper shopUserMapper;
-    //你好啊
+
+    @Autowired
+    private DataSourceTransactionManager txManager;
+
     @Override
     public QingYinResult WXLoginRegist(Map<String, String> userMap) {
         UserResult userResult = new UserResult();
@@ -60,6 +67,9 @@ public class KaiServiceImpl implements KaiService {
 
     @Override
     public QingYinResult userAdd(String temporaryBill, String encryptedData, String iv,String sessionKey) {
+        DefaultTransactionDefinition def = new DefaultTransactionDefinition();
+        def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRES_NEW);// 事物隔离级别，开启新事务
+        TransactionStatus status = txManager.getTransaction(def); // 获得事务状态
         try {
             @SuppressWarnings("unchecked")
             JSONObject decryptData = SmallAppUtils.decryptData(encryptedData, iv, sessionKey);
@@ -118,6 +128,9 @@ public class KaiServiceImpl implements KaiService {
                         if("".equals(unionId)||unionId == null){
                             unionAuths.setIdentifier("空的，没有");
                         }
+                        else{
+                            unionAuths.setIdentifier(unionId);
+                        }
                         unionAuths.setIdentityType("UNIDONID");
                         unionAuths.setPrimarykeyid(userid);
                         unionAuths.setVerified((byte) 1);// 默认为1，授权登录
@@ -133,12 +146,16 @@ public class KaiServiceImpl implements KaiService {
                                 wxname =user.getWxname();
                                 user.setWxname(HtmlCapeUtil.unescapeHtml(wxname));
                             }
+
+                            txManager.commit(status);
                             return QingYinResult.ok(user);
                         } else {
+                            txManager.rollback(status);
                             shopUserMapper.deleteByPrimaryKey(userid);// 删除添加的用户
                             return QingYinResult.build(400, "添加用户失败");
                         }
                     } else {
+                        txManager.rollback(status);
                         return QingYinResult.build(400, "添加用户失败");
                     }
                 } else if (unionAuthsList.size() == 1 && (openIdAuthsList.size() == 0 || openIdAuthsList == null)) {// 授权登录过
@@ -163,6 +180,7 @@ public class KaiServiceImpl implements KaiService {
                         wxname =user.getWxname();
                         user.setWxname(HtmlCapeUtil.unescapeHtml(wxname));
                     }
+                    txManager.commit(status);
                     return QingYinResult.ok(user);
                 } else if (openIdAuthsList.size() == 1 && unionAuthsList.size() == 1) {// 授权登录过
 
@@ -173,16 +191,20 @@ public class KaiServiceImpl implements KaiService {
                         wxname =user.getWxname();
                         user.setWxname(HtmlCapeUtil.unescapeHtml(wxname));
                     }
+                    txManager.commit(status);
                     return QingYinResult.ok(user);
                 } else {
+                    txManager.rollback(status);
                     return QingYinResult.build(500, "授权出错了,请联系管理员");
                 }
 
             } else {// unionid为空
+                txManager.rollback(status);
                 return QingYinResult.build(500, "添加微信用户出错了,请联系网站管理员");
             }
 
         } catch (Exception e) {
+            txManager.rollback(status);
             return QingYinResult.build(501, ExceptionUtil.getStackTrace(e));
         }
 
