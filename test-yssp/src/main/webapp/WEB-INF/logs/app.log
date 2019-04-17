@@ -9265,4 +9265,369 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationExce
   <2019-04-16 16:17:33:814 [DEBUG]>[QY-INFO] -: Null ModelAndView returned to DispatcherServlet with name 'qingyin-yssp': assuming HandlerAdapter completed request handling
   <2019-04-16 16:17:33:814 [DEBUG]>[QY-INFO] -: Successfully completed request
   <2019-04-16 16:17:33:815 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'sqlSessionFactory'
+  <2019-04-17 14:45:12:114 [DEBUG]>[QY-INFO] -: Adding [servletConfigInitParams] PropertySource with lowest search precedence
+  <2019-04-17 14:45:12:116 [DEBUG]>[QY-INFO] -: Adding [servletContextInitParams] PropertySource with lowest search precedence
+  <2019-04-17 14:45:12:116 [DEBUG]>[QY-INFO] -: Adding [jndiProperties] PropertySource with lowest search precedence
+  <2019-04-17 14:45:12:116 [DEBUG]>[QY-INFO] -: Adding [systemProperties] PropertySource with lowest search precedence
+  <2019-04-17 14:45:12:116 [DEBUG]>[QY-INFO] -: Adding [systemEnvironment] PropertySource with lowest search precedence
+  <2019-04-17 14:45:12:116 [DEBUG]>[QY-INFO] -: Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
+  <2019-04-17 14:45:12:117 [DEBUG]>[QY-INFO] -: Initializing filter 'CharacterEncodingFilter'
+  <2019-04-17 14:45:12:120 [DEBUG]>[QY-INFO] -: Filter 'CharacterEncodingFilter' configured successfully
+  <2019-04-17 14:45:12:125 [DEBUG]>[QY-INFO] -: Initializing servlet 'qingyin-yssp'
+  <2019-04-17 14:45:12:126 [DEBUG]>[QY-INFO] -: Adding [servletConfigInitParams] PropertySource with lowest search precedence
+  <2019-04-17 14:45:12:126 [DEBUG]>[QY-INFO] -: Adding [servletContextInitParams] PropertySource with lowest search precedence
+  <2019-04-17 14:45:12:127 [DEBUG]>[QY-INFO] -: Adding [jndiProperties] PropertySource with lowest search precedence
+  <2019-04-17 14:45:12:127 [DEBUG]>[QY-INFO] -: Adding [systemProperties] PropertySource with lowest search precedence
+  <2019-04-17 14:45:12:127 [DEBUG]>[QY-INFO] -: Adding [systemEnvironment] PropertySource with lowest search precedence
+  <2019-04-17 14:45:12:127 [DEBUG]>[QY-INFO] -: Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
+  <2019-04-17 14:45:12:131 [INFO]>[QY-INFO] -: FrameworkServlet 'qingyin-yssp': initialization started
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Servlet with name 'qingyin-yssp' will try to create custom WebApplicationContext context of class 'org.springframework.web.context.support.XmlWebApplicationContext', using parent context [Root WebApplicationContext: startup date [Wed Apr 17 14:45:10 CST 2019]; root of context hierarchy]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Searching for key 'spring.profiles.active' in [servletConfigInitParams]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Searching for key 'spring.profiles.active' in [servletContextInitParams]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Searching for key 'spring.profiles.active' in [jndiProperties]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Looking up JNDI object with name [java:comp/env/spring.profiles.active]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Converted JNDI name [java:comp/env/spring.profiles.active] not found - trying original name [spring.profiles.active]. javax.naming.NameNotFoundException: Name [spring.profiles.active] is not bound in this Context. Unable to find [spring.profiles.active].
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Looking up JNDI object with name [spring.profiles.active]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: JNDI lookup for name [spring.profiles.active] threw NamingException with message: Name [spring.profiles.active] is not bound in this Context. Unable to find [spring.profiles.active].. Returning null.
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Searching for key 'spring.profiles.active' in [systemProperties]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Searching for key 'spring.profiles.active' in [systemEnvironment]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Could not find key 'spring.profiles.active' in any property source. Returning [null]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Searching for key 'spring.profiles.default' in [servletConfigInitParams]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Searching for key 'spring.profiles.default' in [servletContextInitParams]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Searching for key 'spring.profiles.default' in [jndiProperties]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Looking up JNDI object with name [java:comp/env/spring.profiles.default]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Converted JNDI name [java:comp/env/spring.profiles.default] not found - trying original name [spring.profiles.default]. javax.naming.NameNotFoundException: Name [spring.profiles.default] is not bound in this Context. Unable to find [spring.profiles.default].
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Looking up JNDI object with name [spring.profiles.default]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: JNDI lookup for name [spring.profiles.default] threw NamingException with message: Name [spring.profiles.default] is not bound in this Context. Unable to find [spring.profiles.default].. Returning null.
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Searching for key 'spring.profiles.default' in [systemProperties]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Searching for key 'spring.profiles.default' in [systemEnvironment]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Could not find key 'spring.profiles.default' in any property source. Returning [null]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Searching for key 'spring.profiles.default' in [servletConfigInitParams]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Searching for key 'spring.profiles.default' in [servletContextInitParams]
+  <2019-04-17 14:45:12:131 [DEBUG]>[QY-INFO] -: Searching for key 'spring.profiles.default' in [jndiProperties]
+  <2019-04-17 14:45:12:141 [DEBUG]>[QY-INFO] -: Looking up JNDI object with name [java:comp/env/spring.profiles.default]
+  <2019-04-17 14:45:12:141 [DEBUG]>[QY-INFO] -: Converted JNDI name [java:comp/env/spring.profiles.default] not found - trying original name [spring.profiles.default]. javax.naming.NameNotFoundException: Name [spring.profiles.default] is not bound in this Context. Unable to find [spring.profiles.default].
+  <2019-04-17 14:45:12:141 [DEBUG]>[QY-INFO] -: Looking up JNDI object with name [spring.profiles.default]
+  <2019-04-17 14:45:12:141 [DEBUG]>[QY-INFO] -: JNDI lookup for name [spring.profiles.default] threw NamingException with message: Name [spring.profiles.default] is not bound in this Context. Unable to find [spring.profiles.default].. Returning null.
+  <2019-04-17 14:45:12:141 [DEBUG]>[QY-INFO] -: Searching for key 'spring.profiles.default' in [systemProperties]
+  <2019-04-17 14:45:12:141 [DEBUG]>[QY-INFO] -: Searching for key 'spring.profiles.default' in [systemEnvironment]
+  <2019-04-17 14:45:12:141 [DEBUG]>[QY-INFO] -: Could not find key 'spring.profiles.default' in any property source. Returning [null]
+  <2019-04-17 14:45:12:141 [DEBUG]>[QY-INFO] -: Replacing [servletContextInitParams] PropertySource with [servletContextInitParams]
+  <2019-04-17 14:45:12:141 [DEBUG]>[QY-INFO] -: Replacing [servletConfigInitParams] PropertySource with [servletConfigInitParams]
+  <2019-04-17 14:45:12:141 [INFO]>[QY-INFO] -: Refreshing WebApplicationContext for namespace 'qingyin-yssp-servlet': startup date [Wed Apr 17 14:45:12 CST 2019]; parent: Root WebApplicationContext
+  <2019-04-17 14:45:12:141 [DEBUG]>[QY-INFO] -: Adding [systemProperties] PropertySource with lowest search precedence
+  <2019-04-17 14:45:12:141 [DEBUG]>[QY-INFO] -: Adding [systemEnvironment] PropertySource with lowest search precedence
+  <2019-04-17 14:45:12:141 [DEBUG]>[QY-INFO] -: Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+  <2019-04-17 14:45:12:141 [INFO]>[QY-INFO] -: Loading XML bean definitions from class path resource [spring/springmvc.xml]
+  <2019-04-17 14:45:12:145 [DEBUG]>[QY-INFO] -: Using JAXP provider [org.apache.xerces.jaxp.DocumentBuilderFactoryImpl]
+  <2019-04-17 14:45:12:145 [DEBUG]>[QY-INFO] -: Loading schema mappings from [META-INF/spring.schemas]
+  <2019-04-17 14:45:12:145 [DEBUG]>[QY-INFO] -: Loaded schema mappings: {http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/cache/spring-cache-4.2.xsd=org/springframework/cache/config/spring-cache-4.2.xsd, http://www.springframework.org/schema/aop/spring-aop-4.1.xsd=org/springframework/aop/config/spring-aop-4.1.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-4.1.xsd=org/springframework/jdbc/config/spring-jdbc-4.1.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd=org/springframework/web/servlet/config/spring-mvc-4.1.xsd, http://mybatis.org/schema/mybatis-spring-1.2.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-4.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang-4.1.xsd=org/springframework/scripting/config/spring-lang-4.1.xsd, http://www.springframework.org/schema/context/spring-context-4.0.xsd=org/springframework/context/config/spring-context-4.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-4.2.xsd=org/springframework/beans/factory/xml/spring-beans-4.2.xsd, http://www.springframework.org/schema/tool/spring-tool-4.1.xsd=org/springframework/beans/factory/xml/spring-tool-4.1.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-4.1.xsd=org/springframework/ejb/config/spring-jee-4.1.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd=org/springframework/jdbc/config/spring-jdbc-3.1.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/task/spring-task-4.2.xsd=org/springframework/scheduling/config/spring-task-4.2.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-4.2.xsd, http://www.springframework.org/schema/cache/spring-cache-4.1.xsd=org/springframework/cache/config/spring-cache-4.1.xsd, http://www.springframework.org/schema/aop/spring-aop-4.0.xsd=org/springframework/aop/config/spring-aop-4.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd=org/springframework/jdbc/config/spring-jdbc-4.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd=org/springframework/web/servlet/config/spring-mvc-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-4.0.xsd=org/springframework/scripting/config/spring-lang-4.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-4.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd=org/springframework/web/servlet/config/spring-mvc-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-4.1.xsd=org/springframework/beans/factory/xml/spring-beans-4.1.xsd, http://www.springframework.org/schema/tool/spring-tool-4.0.xsd=org/springframework/beans/factory/xml/spring-tool-4.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-4.0.xsd=org/springframework/ejb/config/spring-jee-4.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/task/spring-task-4.1.xsd=org/springframework/scheduling/config/spring-task-4.1.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-4.2.xsd, http://www.springframework.org/schema/tx/spring-tx-4.1.xsd=org/springframework/transaction/config/spring-tx-4.1.xsd, http://www.springframework.org/schema/cache/spring-cache-4.0.xsd=org/springframework/cache/config/spring-cache-4.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/util/spring-util-4.2.xsd=org/springframework/beans/factory/xml/spring-util-4.2.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-4.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-4.0.xsd=org/springframework/beans/factory/xml/spring-beans-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-4.2.xsd, http://mybatis.org/schema/mybatis-spring.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/task/spring-task-4.0.xsd=org/springframework/scheduling/config/spring-task-4.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-4.0.xsd=org/springframework/transaction/config/spring-tx-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/util/spring-util-4.1.xsd=org/springframework/beans/factory/xml/spring-util-4.1.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-4.2.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-4.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/context/spring-context-4.2.xsd=org/springframework/context/config/spring-context-4.2.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/util/spring-util-4.0.xsd=org/springframework/beans/factory/xml/spring-util-4.0.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-4.2.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-4.2.xsd=org/springframework/jdbc/config/spring-jdbc-4.2.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd=org/springframework/web/servlet/config/spring-mvc-4.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-4.2.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-4.1.xsd, http://www.springframework.org/schema/lang/spring-lang-4.2.xsd=org/springframework/scripting/config/spring-lang-4.2.xsd, http://www.springframework.org/schema/context/spring-context-4.1.xsd=org/springframework/context/config/spring-context-4.1.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd, http://www.springframework.org/schema/tool/spring-tool-4.2.xsd=org/springframework/beans/factory/xml/spring-tool-4.2.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/jee/spring-jee-4.2.xsd=org/springframework/ejb/config/spring-jee-4.2.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-4.1.xsd}
+  <2019-04-17 14:45:12:151 [DEBUG]>[QY-INFO] -: Found XML schema [http://www.springframework.org/schema/beans/spring-beans.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-4.2.xsd
+  <2019-04-17 14:45:12:151 [DEBUG]>[QY-INFO] -: Found XML schema [http://www.springframework.org/schema/context/spring-context.xsd] in classpath: org/springframework/context/config/spring-context-4.2.xsd
+  <2019-04-17 14:45:12:151 [DEBUG]>[QY-INFO] -: Found XML schema [http://www.springframework.org/schema/tool/spring-tool-4.1.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-4.1.xsd
+  <2019-04-17 14:45:12:151 [DEBUG]>[QY-INFO] -: Found XML schema [http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd] in classpath: org/springframework/web/servlet/config/spring-mvc-4.0.xsd
+  <2019-04-17 14:45:12:151 [DEBUG]>[QY-INFO] -: Loading bean definitions
+  <2019-04-17 14:45:12:161 [DEBUG]>[QY-INFO] -: Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://mybatis.org/schema/mybatis-spring=org.mybatis.spring.config.NamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+  <2019-04-17 14:45:12:161 [DEBUG]>[QY-INFO] -: Adding [systemProperties] PropertySource with lowest search precedence
+  <2019-04-17 14:45:12:161 [DEBUG]>[QY-INFO] -: Adding [systemEnvironment] PropertySource with lowest search precedence
+  <2019-04-17 14:45:12:161 [DEBUG]>[QY-INFO] -: Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+  <2019-04-17 14:45:12:161 [DEBUG]>[QY-INFO] -: JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+  <2019-04-17 14:45:12:161 [DEBUG]>[QY-INFO] -: JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+  <2019-04-17 14:45:12:161 [DEBUG]>[QY-INFO] -: Looking for matching resources in directory tree [E:\idealiangkai\shopmiddol\test-yssp\target\classes\com\test]
+  <2019-04-17 14:45:12:161 [DEBUG]>[QY-INFO] -: Searching directory [E:\idealiangkai\shopmiddol\test-yssp\target\classes\com\test] for files matching pattern [E:/idealiangkai/shopmiddol/test-yssp/target/classes/com/test/*/controller/**/*.class]
+  <2019-04-17 14:45:12:161 [DEBUG]>[QY-INFO] -: Searching directory [E:\idealiangkai\shopmiddol\test-yssp\target\classes\com\test\cms] for files matching pattern [E:/idealiangkai/shopmiddol/test-yssp/target/classes/com/test/*/controller/**/*.class]
+  <2019-04-17 14:45:12:161 [DEBUG]>[QY-INFO] -: Searching directory [E:\idealiangkai\shopmiddol\test-yssp\target\classes\com\test\cms\controller] for files matching pattern [E:/idealiangkai/shopmiddol/test-yssp/target/classes/com/test/*/controller/**/*.class]
+  <2019-04-17 14:45:12:161 [DEBUG]>[QY-INFO] -: Searching directory [E:\idealiangkai\shopmiddol\test-yssp\target\classes\com\test\dao] for files matching pattern [E:/idealiangkai/shopmiddol/test-yssp/target/classes/com/test/*/controller/**/*.class]
+  <2019-04-17 14:45:12:165 [DEBUG]>[QY-INFO] -: Searching directory [E:\idealiangkai\shopmiddol\test-yssp\target\classes\com\test\pojo] for files matching pattern [E:/idealiangkai/shopmiddol/test-yssp/target/classes/com/test/*/controller/**/*.class]
+  <2019-04-17 14:45:12:165 [DEBUG]>[QY-INFO] -: Searching directory [E:\idealiangkai\shopmiddol\test-yssp\target\classes\com\test\utils] for files matching pattern [E:/idealiangkai/shopmiddol/test-yssp/target/classes/com/test/*/controller/**/*.class]
+  <2019-04-17 14:45:12:165 [DEBUG]>[QY-INFO] -: Looking for matching resources in jar file [file:/E:/lk-maven/repository/test/tools/test-tools/0.0.1-SNAPSHOT/test-tools-0.0.1-SNAPSHOT.jar]
+  <2019-04-17 14:45:12:170 [DEBUG]>[QY-INFO] -: Resolved location pattern [classpath*:com/test/*/controller/**/*.class] to resources [file [E:\idealiangkai\shopmiddol\test-yssp\target\classes\com\test\cms\controller\KaiController.class]]
+  <2019-04-17 14:45:12:175 [DEBUG]>[QY-INFO] -: Identified candidate component class: file [E:\idealiangkai\shopmiddol\test-yssp\target\classes\com\test\cms\controller\KaiController.class]
+  <2019-04-17 14:45:12:245 [DEBUG]>[QY-INFO] -: Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.web.servlet.view.InternalResourceViewResolver#0]
+  <2019-04-17 14:45:12:245 [DEBUG]>[QY-INFO] -: Loaded 22 bean definitions from location pattern [classpath:spring/springmvc.xml]
+  <2019-04-17 14:45:12:245 [DEBUG]>[QY-INFO] -: Bean factory for WebApplicationContext for namespace 'qingyin-yssp-servlet': org.springframework.beans.factory.support.DefaultListableBeanFactory@60a7c2: defining beans [kaiController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,mvcCorsConfigurations,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,mvcUriComponentsContributor,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,multipartResolver]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@8b94a
+  <2019-04-17 14:45:12:245 [DEBUG]>[QY-INFO] -: Registering scope 'request' with implementation [org.springframework.web.context.request.RequestScope@e632e8]
+  <2019-04-17 14:45:12:245 [DEBUG]>[QY-INFO] -: Registering scope 'session' with implementation [org.springframework.web.context.request.SessionScope@a342fe]
+  <2019-04-17 14:45:12:245 [DEBUG]>[QY-INFO] -: Registering scope 'globalSession' with implementation [org.springframework.web.context.request.SessionScope@184b6df]
+  <2019-04-17 14:45:12:245 [DEBUG]>[QY-INFO] -: Registering scope 'application' with implementation [org.springframework.web.context.support.ServletContextScope@10bec6a]
+  <2019-04-17 14:45:12:251 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+  <2019-04-17 14:45:12:251 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+  <2019-04-17 14:45:12:251 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:251 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+  <2019-04-17 14:45:12:301 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+  <2019-04-17 14:45:12:301 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+  <2019-04-17 14:45:12:301 [INFO]>[QY-INFO] -: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+  <2019-04-17 14:45:12:301 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:301 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+  <2019-04-17 14:45:12:301 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+  <2019-04-17 14:45:12:301 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+  <2019-04-17 14:45:12:301 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:301 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+  <2019-04-17 14:45:12:301 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+  <2019-04-17 14:45:12:301 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+  <2019-04-17 14:45:12:301 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:304 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+  <2019-04-17 14:45:12:304 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+  <2019-04-17 14:45:12:304 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+  <2019-04-17 14:45:12:304 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:304 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+  <2019-04-17 14:45:12:304 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+  <2019-04-17 14:45:12:304 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+  <2019-04-17 14:45:12:304 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:304 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+  <2019-04-17 14:45:12:304 [DEBUG]>[QY-INFO] -: Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@12cf549]
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@1a29f97]
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.DelegatingThemeSource@1bcca0f]
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@60a7c2: defining beans [kaiController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,mvcCorsConfigurations,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,mvcUriComponentsContributor,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,multipartResolver,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@8b94a
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'kaiController'
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Creating instance of bean 'kaiController'
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Registered injected element on class [com.test.cms.controller.KaiController]: AutowiredFieldElement for private com.test.cms.service.KaiService com.test.cms.controller.KaiController.kaiService
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'kaiController' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Processing injected element of bean 'kaiController': AutowiredFieldElement for private com.test.cms.service.KaiService com.test.cms.controller.KaiController.kaiService
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'kaiServiceImpl'
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Autowiring by type from bean name 'kaiController' to bean named 'kaiServiceImpl'
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'kaiController'
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+  <2019-04-17 14:45:12:311 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+  <2019-04-17 14:45:12:321 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.context.event.internalEventListenerProcessor'
+  <2019-04-17 14:45:12:321 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.context.event.internalEventListenerProcessor' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:321 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.context.event.internalEventListenerProcessor'
+  <2019-04-17 14:45:12:321 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+  <2019-04-17 14:45:12:321 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.context.event.internalEventListenerFactory'
+  <2019-04-17 14:45:12:321 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.context.event.internalEventListenerFactory' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:321 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.context.event.internalEventListenerFactory'
+  <2019-04-17 14:45:12:321 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'mvcContentNegotiationManager'
+  <2019-04-17 14:45:12:321 [DEBUG]>[QY-INFO] -: Creating instance of bean 'mvcContentNegotiationManager'
+  <2019-04-17 14:45:12:321 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'mvcContentNegotiationManager' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:321 [DEBUG]>[QY-INFO] -: Invoking afterPropertiesSet() on bean with name 'mvcContentNegotiationManager'
+  <2019-04-17 14:45:12:330 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'mvcContentNegotiationManager'
+  <2019-04-17 14:45:12:330 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0'
+  <2019-04-17 14:45:12:330 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0'
+  <2019-04-17 14:45:12:340 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:355 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'mvcContentNegotiationManager'
+  <2019-04-17 14:45:12:355 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'mvcCorsConfigurations'
+  <2019-04-17 14:45:12:355 [DEBUG]>[QY-INFO] -: Creating instance of bean 'mvcCorsConfigurations'
+  <2019-04-17 14:45:12:355 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'mvcCorsConfigurations' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:365 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'mvcCorsConfigurations'
+  <2019-04-17 14:45:12:365 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#0'
+  <2019-04-17 14:45:12:365 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.web.servlet.handler.MappedInterceptor#0'
+  <2019-04-17 14:45:12:365 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#11e60d4'
+  <2019-04-17 14:45:12:365 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0'
+  <2019-04-17 14:45:12:365 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0'
+  <2019-04-17 14:45:12:365 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:370 [DEBUG]>[QY-INFO] -: Invoking afterPropertiesSet() on bean with name 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0'
+  <2019-04-17 14:45:12:438 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0'
+  <2019-04-17 14:45:12:442 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#11e60d4'
+  <2019-04-17 14:45:12:443 [DEBUG]>[QY-INFO] -: No property editor [org.springframework.web.context.request.WebRequestInterceptorEditor] found for type org.springframework.web.context.request.WebRequestInterceptor according to 'Editor' suffix convention
+  <2019-04-17 14:45:12:444 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.web.servlet.handler.MappedInterceptor#0' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:446 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.web.servlet.handler.MappedInterceptor#0'
+  <2019-04-17 14:45:12:446 [DEBUG]>[QY-INFO] -: Invoking afterPropertiesSet() on bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0'
+  <2019-04-17 14:45:12:447 [DEBUG]>[QY-INFO] -: Looking for request mappings in application context: WebApplicationContext for namespace 'qingyin-yssp-servlet': startup date [Wed Apr 17 14:45:12 CST 2019]; parent: Root WebApplicationContext
+  <2019-04-17 14:45:12:461 [INFO]>[QY-INFO] -: Mapped "{[/kai/addUser],methods=[POST]}" onto public com.test.tools.util.QingYinResult com.test.cms.controller.KaiController.userAdd(java.util.Map<java.lang.String, java.lang.Object>)
+  <2019-04-17 14:45:12:462 [INFO]>[QY-INFO] -: Mapped "{[/kai/login],methods=[POST]}" onto public com.test.tools.util.QingYinResult com.test.cms.controller.KaiController.login(java.util.Map<java.lang.String, java.lang.Object>)
+  <2019-04-17 14:45:12:464 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0'
+  <2019-04-17 14:45:12:464 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'mvcCorsConfigurations'
+  <2019-04-17 14:45:12:464 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0'
+  <2019-04-17 14:45:12:464 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0'
+  <2019-04-17 14:45:12:464 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0'
+  <2019-04-17 14:45:12:771 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:781 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'mvcContentNegotiationManager'
+  <2019-04-17 14:45:12:781 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#ebf6a7'
+  <2019-04-17 14:45:12:784 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0'
+  <2019-04-17 14:45:12:784 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#ebf6a7'
+  <2019-04-17 14:45:12:784 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#58c8a9'
+  <2019-04-17 14:45:12:790 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#58c8a9'
+  <2019-04-17 14:45:12:790 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1b57d71'
+  <2019-04-17 14:45:12:790 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1b57d71'
+  <2019-04-17 14:45:12:790 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1077bc3'
+  <2019-04-17 14:45:12:790 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1077bc3'
+  <2019-04-17 14:45:12:790 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1e1771c'
+  <2019-04-17 14:45:12:795 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1e1771c'
+  <2019-04-17 14:45:12:795 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1e60e4f'
+  <2019-04-17 14:45:12:801 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1e60e4f'
+  <2019-04-17 14:45:12:801 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1a18b13'
+  <2019-04-17 14:45:12:801 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1a18b13'
+  <2019-04-17 14:45:12:801 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#19610ff'
+  <2019-04-17 14:45:12:801 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#14c7af4'
+  <2019-04-17 14:45:12:811 [DEBUG]>[QY-INFO] -: Invoking afterPropertiesSet() on bean with name '(inner bean)#14c7af4'
+  <2019-04-17 14:45:12:811 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#14c7af4'
+  <2019-04-17 14:45:12:815 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#19610ff'
+  <2019-04-17 14:45:12:815 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1577395'
+  <2019-04-17 14:45:12:821 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1577395'
+  <2019-04-17 14:45:12:821 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#b08ed'
+  <2019-04-17 14:45:12:825 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#b08ed'
+  <2019-04-17 14:45:12:825 [DEBUG]>[QY-INFO] -: Invoking afterPropertiesSet() on bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0'
+  <2019-04-17 14:45:12:825 [INFO]>[QY-INFO] -: Looking for @ControllerAdvice: WebApplicationContext for namespace 'qingyin-yssp-servlet': startup date [Wed Apr 17 14:45:12 CST 2019]; parent: Root WebApplicationContext
+  <2019-04-17 14:45:12:841 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0'
+  <2019-04-17 14:45:12:841 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'mvcUriComponentsContributor'
+  <2019-04-17 14:45:12:841 [DEBUG]>[QY-INFO] -: Creating instance of bean 'mvcUriComponentsContributor'
+  <2019-04-17 14:45:12:841 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'mvcUriComponentsContributor' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:841 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#8c062f'
+  <2019-04-17 14:45:12:841 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'mvcContentNegotiationManager'
+  <2019-04-17 14:45:12:841 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#ebf6a7#1'
+  <2019-04-17 14:45:12:841 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0'
+  <2019-04-17 14:45:12:841 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#ebf6a7#1'
+  <2019-04-17 14:45:12:841 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#58c8a9#1'
+  <2019-04-17 14:45:12:851 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#58c8a9#1'
+  <2019-04-17 14:45:12:851 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1b57d71#1'
+  <2019-04-17 14:45:12:851 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1b57d71#1'
+  <2019-04-17 14:45:12:851 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1077bc3#1'
+  <2019-04-17 14:45:12:851 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1077bc3#1'
+  <2019-04-17 14:45:12:851 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1e1771c#1'
+  <2019-04-17 14:45:12:851 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1e1771c#1'
+  <2019-04-17 14:45:12:851 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1e60e4f#1'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1e60e4f#1'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1a18b13#1'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1a18b13#1'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#19610ff#1'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#14c7af4#1'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Invoking afterPropertiesSet() on bean with name '(inner bean)#14c7af4#1'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#14c7af4#1'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#19610ff#1'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1577395#1'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1577395#1'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#b08ed#1'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#b08ed#1'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Invoking afterPropertiesSet() on bean with name '(inner bean)#8c062f'
+  <2019-04-17 14:45:12:855 [INFO]>[QY-INFO] -: Looking for @ControllerAdvice: WebApplicationContext for namespace 'qingyin-yssp-servlet': startup date [Wed Apr 17 14:45:12 CST 2019]; parent: Root WebApplicationContext
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Returning eagerly cached instance of singleton bean 'mvcUriComponentsContributor' that is not fully initialized yet - a consequence of a circular reference
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#8c062f'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Invoking afterPropertiesSet() on bean with name 'mvcUriComponentsContributor'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'mvcUriComponentsContributor'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#0'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0'
+  <2019-04-17 14:45:12:855 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0'
+  <2019-04-17 14:45:12:861 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:861 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'mvcContentNegotiationManager'
+  <2019-04-17 14:45:12:861 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#58c8a9#2'
+  <2019-04-17 14:45:12:861 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#58c8a9#2'
+  <2019-04-17 14:45:12:861 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1b57d71#2'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1b57d71#2'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1077bc3#2'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1077bc3#2'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1e1771c#2'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1e1771c#2'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1e60e4f#2'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1e60e4f#2'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1a18b13#2'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1a18b13#2'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#19610ff#2'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#14c7af4#2'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Invoking afterPropertiesSet() on bean with name '(inner bean)#14c7af4#2'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#14c7af4#2'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#19610ff#2'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Creating instance of bean '(inner bean)#1ff2313'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Finished creating instance of bean '(inner bean)#1ff2313'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Invoking afterPropertiesSet() on bean with name 'org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Looking for exception mappings: WebApplicationContext for namespace 'qingyin-yssp-servlet': startup date [Wed Apr 17 14:45:12 CST 2019]; parent: Root WebApplicationContext
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0'
+  <2019-04-17 14:45:12:871 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:881 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0'
+  <2019-04-17 14:45:12:881 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping'
+  <2019-04-17 14:45:12:881 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping'
+  <2019-04-17 14:45:12:881 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'mvcCorsConfigurations'
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.MappedInterceptor#0'
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Looking for URL mappings in application context: WebApplicationContext for namespace 'qingyin-yssp-servlet': startup date [Wed Apr 17 14:45:12 CST 2019]; parent: Root WebApplicationContext
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'kaiController': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.context.annotation.internalRequiredAnnotationProcessor': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.context.annotation.internalCommonAnnotationProcessor': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.context.event.internalEventListenerProcessor': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.context.event.internalEventListenerFactory': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'mvcContentNegotiationManager': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'mvcCorsConfigurations': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.format.support.FormattingConversionServiceFactoryBean#0': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'mvcUriComponentsContributor': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.web.servlet.handler.MappedInterceptor#0': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0': no URL paths identified
+  <2019-04-17 14:45:12:890 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0': no URL paths identified
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping': no URL paths identified
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter': no URL paths identified
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter': no URL paths identified
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.web.servlet.view.InternalResourceViewResolver#0': no URL paths identified
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Rejected bean name 'multipartResolver': no URL paths identified
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor': no URL paths identified
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor': no URL paths identified
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Rejected bean name 'environment': no URL paths identified
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Rejected bean name 'systemProperties': no URL paths identified
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Rejected bean name 'systemEnvironment': no URL paths identified
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Rejected bean name 'servletConfig': no URL paths identified
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Rejected bean name 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry': no URL paths identified
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Rejected bean name 'messageSource': no URL paths identified
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Rejected bean name 'applicationEventMulticaster': no URL paths identified
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping'
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter'
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter'
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter'
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter'
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter'
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter'
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'org.springframework.web.servlet.view.InternalResourceViewResolver#0'
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.web.servlet.view.InternalResourceViewResolver#0'
+  <2019-04-17 14:45:12:901 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'org.springframework.web.servlet.view.InternalResourceViewResolver#0' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:911 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.web.servlet.view.InternalResourceViewResolver#0'
+  <2019-04-17 14:45:12:911 [DEBUG]>[QY-INFO] -: Creating shared instance of singleton bean 'multipartResolver'
+  <2019-04-17 14:45:12:911 [DEBUG]>[QY-INFO] -: Creating instance of bean 'multipartResolver'
+  <2019-04-17 14:45:12:915 [DEBUG]>[QY-INFO] -: Eagerly caching bean 'multipartResolver' to allow for resolving potential circular references
+  <2019-04-17 14:45:12:921 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'multipartResolver'
+  <2019-04-17 14:45:12:921 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+  <2019-04-17 14:45:12:921 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+  <2019-04-17 14:45:12:921 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+  <2019-04-17 14:45:12:921 [DEBUG]>[QY-INFO] -: Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@1541730]
+  <2019-04-17 14:45:12:921 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'lifecycleProcessor'
+  <2019-04-17 14:45:12:921 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'multipartResolver'
+  <2019-04-17 14:45:12:921 [DEBUG]>[QY-INFO] -: Using MultipartResolver [org.springframework.web.multipart.commons.CommonsMultipartResolver@1909667]
+  <2019-04-17 14:45:12:921 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver'
+  <2019-04-17 14:45:12:921 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver'
+  <2019-04-17 14:45:12:921 [DEBUG]>[QY-INFO] -: Unable to locate LocaleResolver with name 'localeResolver': using default [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@4c5f50]
+  <2019-04-17 14:45:12:921 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.web.servlet.theme.FixedThemeResolver'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.web.servlet.theme.FixedThemeResolver'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Unable to locate ThemeResolver with name 'themeResolver': using default [org.springframework.web.servlet.theme.FixedThemeResolver@11b3056]
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Unable to locate RequestToViewNameTranslator with name 'viewNameTranslator': using default [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1fbff7f]
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.web.servlet.view.InternalResourceViewResolver#0'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Creating instance of bean 'org.springframework.web.servlet.support.SessionFlashMapManager'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Finished creating instance of bean 'org.springframework.web.servlet.support.SessionFlashMapManager'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Unable to locate FlashMapManager with name 'flashMapManager': using default [org.springframework.web.servlet.support.SessionFlashMapManager@f16471]
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Returning cached instance of singleton bean 'org.springframework.context.annotation.internalScheduledAnnotationProcessor'
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Searching for key 'spring.liveBeansView.mbeanDomain' in [servletConfigInitParams]
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Searching for key 'spring.liveBeansView.mbeanDomain' in [servletContextInitParams]
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Searching for key 'spring.liveBeansView.mbeanDomain' in [jndiProperties]
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Looking up JNDI object with name [java:comp/env/spring.liveBeansView.mbeanDomain]
+  <2019-04-17 14:45:12:931 [DEBUG]>[QY-INFO] -: Converted JNDI name [java:comp/env/spring.liveBeansView.mbeanDomain] not found - trying original name [spring.liveBeansView.mbeanDomain]. javax.naming.NameNotFoundException: Name [spring.liveBeansView.mbeanDomain] is not bound in this Context. Unable to find [spring.liveBeansView.mbeanDomain].
+  <2019-04-17 14:45:12:941 [DEBUG]>[QY-INFO] -: Looking up JNDI object with name [spring.liveBeansView.mbeanDomain]
+  <2019-04-17 14:45:12:941 [DEBUG]>[QY-INFO] -: JNDI lookup for name [spring.liveBeansView.mbeanDomain] threw NamingException with message: Name [spring.liveBeansView.mbeanDomain] is not bound in this Context. Unable to find [spring.liveBeansView.mbeanDomain].. Returning null.
+  <2019-04-17 14:45:12:941 [DEBUG]>[QY-INFO] -: Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+  <2019-04-17 14:45:12:941 [DEBUG]>[QY-INFO] -: Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+  <2019-04-17 14:45:12:941 [DEBUG]>[QY-INFO] -: Could not find key 'spring.liveBeansView.mbeanDomain' in any property source. Returning [null]
+  <2019-04-17 14:45:12:941 [DEBUG]>[QY-INFO] -: Published WebApplicationContext of servlet 'qingyin-yssp' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.qingyin-yssp]
+  <2019-04-17 14:45:12:941 [INFO]>[QY-INFO] -: FrameworkServlet 'qingyin-yssp': initialization completed in 810 ms
+  <2019-04-17 14:45:12:941 [DEBUG]>[QY-INFO] -: Servlet 'qingyin-yssp' configured successfully
+  <2019-04-17 14:45:14:821 [INFO]>[QY-INFO] -: 获取access_token成功，有效时长7200.0秒 token:20_7TB9KIGGpkfF6UwDSYPeKMBsFLIZseF13aUxNOZuljPkGr9Leu54HhV5K_EYSDJmv2QYFjLYJ4kTkEc1xdABZ2RznwszPYW79YB4FYVMfbp2-wAydvxXJ5uZEX2qvR82w5IAllpwi6aM9RcnGZRbAJAXQI
   
