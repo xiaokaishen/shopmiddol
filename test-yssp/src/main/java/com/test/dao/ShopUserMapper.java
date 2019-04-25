@@ -30,4 +30,6 @@ public interface ShopUserMapper {
     int updateByPrimaryKey(ShopUser record);
 
     ShopUser selectShopUserIntegralVieByid(long userid);
+
+    List<ShopUser> selectAll();
 }

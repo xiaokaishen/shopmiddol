@@ -2,28 +2,32 @@ package com.test.cms.service.impl;
 
 
 import com.alibaba.fastjson.JSONObject;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.test.cms.service.KaiService;
 import com.test.dao.ShopUserAuthsMapper;
 import com.test.dao.ShopUserMapper;
-import com.test.pojo.QyUserAuths;
-import com.test.pojo.ShopUser;
-import com.test.pojo.ShopUserAuths;
-import com.test.pojo.UserResult;
+import com.test.pojo.*;
+import com.test.smallApp.utils.SmallAppConstant;
 import com.test.smallApp.utils.SmallAppUtils;
 import com.test.tools.util.*;
 import com.test.utils.JsonUtil;
+import com.test.weixin.utils.TokenUtil;
 import com.vdurmont.emoji.EmojiParser;
+import org.apache.commons.httpclient.util.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.*;
 
 @Service
-public class KaiServiceImpl implements KaiService {
+public class KaiServiceImpl implements KaiService{
 
     @Autowired
     private ShopUserAuthsMapper shopUserAuthsMapper;
@@ -33,8 +37,10 @@ public class KaiServiceImpl implements KaiService {
     @Autowired
     private DataSourceTransactionManager txManager;
 
+
     @Override
     public QingYinResult WXLoginRegist(Map<String, String> userMap) {
+
         UserResult userResult = new UserResult();
         String openId = userMap.get("openid");
         // 如果openId和unionId查询都存在数据，则以unionId为准
@@ -103,8 +109,8 @@ public class KaiServiceImpl implements KaiService {
                     shopUser.setWxname(nickname);// 微信昵称
                     shopUser.setSex(sex);// 用户性别
                     shopUser.setId(userid);// 会员id
-                    shopUser.setCreatetime(new Date());// 创建时间
-                    shopUser.setUpdatetime(new Date());// 更新时间
+                    shopUser.setCreatetime(DateUtils.getNow());// 创建时间
+                    shopUser.setUpdatetime(DateUtils.getNow());// 更新时间
                     shopUser.setUserCity(usercity);
                     int addShopUser = shopUserMapper.insertSelective(shopUser);
                     //用户添加成功
@@ -208,5 +214,60 @@ public class KaiServiceImpl implements KaiService {
             return QingYinResult.build(501, ExceptionUtil.getStackTrace(e));
         }
 
+    }
+
+    @Override
+    public String paySuccess(String oddNumber, String openid, String formid, String money, String name) {
+
+        RestTemplate restTemplate = new RestTemplate();
+
+        // 获取access_token
+        String access_token = TokenUtil.getSmallAppToken();
+        System.out.println("access_token666:"+access_token);
+        String url = "https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send" + "?access_token=" + access_token;
+
+        //拼接推送的模版
+        WxMssVo wxMssVo = new WxMssVo();
+        wxMssVo.setTouser(openid);
+        wxMssVo.setForm_id(formid);
+        wxMssVo.setTemplate_id(SmallAppConstant.TemplateId);
+
+        Map<String, TemplateData> map = new HashMap<>();
+//        //单号
+//        TemplateData keyword1 = new TemplateData();
+//        keyword1.setValue(oddNumber);
+//        map.put("keyword1",keyword1);
+//        //金额
+//        TemplateData keyword2 = new TemplateData();
+//        keyword1.setValue(money);
+//        map.put("keyword2",keyword2);
+//        //下单时间
+//        TemplateData keyword3 = new TemplateData();
+//        keyword1.setValue(new Date().toString());
+//        map.put("keyword3",keyword3);
+//        //物品名称
+//        TemplateData keyword4 = new TemplateData();
+//        keyword1.setValue(name);
+//        map.put("keyword4",keyword4);
+//        //支付时间
+//        TemplateData keyword5 = new TemplateData();
+//        keyword1.setValue(new Date().toString());
+//        map.put("keyword5",keyword5);
+
+        System.out.println(map.toString());
+
+        wxMssVo.setData(map);
+
+        ResponseEntity<String> forEntity = restTemplate.postForEntity(url, wxMssVo, String.class);
+
+        return forEntity.getBody();
+    }
+
+    @Override
+    public QingYinResult findAllUser(Integer page,Integer rows) {
+
+        PageHelper.startPage(page,rows);
+        List<ShopUser> shopUsers = shopUserMapper.selectAll();
+        return QingYinResult.ok(shopUsers);
     }
 }

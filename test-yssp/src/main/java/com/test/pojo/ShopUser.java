@@ -66,12 +66,12 @@ public class ShopUser {
     /**
      * 注册时间
      */
-    private Date createtime;
+    private String createtime;
 
     /**
      * 更新时间
      */
-    private Date updatetime;
+    private String updatetime;
 
     /**
      * 个人简介
@@ -279,7 +279,7 @@ public class ShopUser {
      * 注册时间
      * @return CreateTime 注册时间
      */
-    public Date getCreatetime() {
+    public String getCreatetime() {
         return createtime;
     }
 
@@ -287,7 +287,7 @@ public class ShopUser {
      * 注册时间
      * @param createtime 注册时间
      */
-    public void setCreatetime(Date createtime) {
+    public void setCreatetime(String createtime) {
         this.createtime = createtime;
     }
 
@@ -295,7 +295,7 @@ public class ShopUser {
      * 更新时间
      * @return UpdateTime 更新时间
      */
-    public Date getUpdatetime() {
+    public String getUpdatetime() {
         return updatetime;
     }
 
@@ -303,7 +303,7 @@ public class ShopUser {
      * 更新时间
      * @param updatetime 更新时间
      */
-    public void setUpdatetime(Date updatetime) {
+    public void setUpdatetime(String updatetime) {
         this.updatetime = updatetime;
     }
 

@@ -32,4 +32,19 @@
 	<!--<mvc:resources location="/WEB-INF/css/" mapping="/css/**" />-->
 	<!--<mvc:resources location="/WEB-INF/images/" mapping="/images/**" />-->
 
+    <!--<mvc:cors>
+        <mvc:mapping allow-credentials="true" allowed-headers="Content-Type"
+                     allowed-methods="POST, GET, OPTIONS, DELETE, PUT, HEAD"
+                     allowed-origins="http://test.i.meituan.com"
+                     max-age="3600" path="/**"/>
+    </mvc:cors>
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/ajax/shop/**"/> &lt;!&ndash;sso回调处理&ndash;&gt;
+            <bean class="com.dianping.orderdish.framework.interceptor.ShopSsoInterceptor"/>
+        </mvc:interceptor>
+
+    </mvc:interceptors>-->
+
+
 </beans>

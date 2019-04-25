@@ -390,4 +390,9 @@
     from shop_user
     where ID = #{userid,jdbcType=BIGINT}
   </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from shop_user
+  </select>
 </mapper>

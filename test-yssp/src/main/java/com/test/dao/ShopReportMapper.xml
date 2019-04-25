@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.ShopReportMapper" >
+  <resultMap id="BaseResultMap" type="com.test.pojo.ShopReport" >
+    <id column="report_id" property="reportId" jdbcType="INTEGER" />
+    <result column="report_name" property="reportName" jdbcType="VARCHAR" />
+    <result column="report_phone" property="reportPhone" jdbcType="VARCHAR" />
+    <result column="report_mailbox" property="reportMailbox" jdbcType="VARCHAR" />
+    <result column="report_alipay" property="reportAlipay" jdbcType="VARCHAR" />
+    <result column="report_test_drive" property="reportTestDrive" jdbcType="VARCHAR" />
+    <result column="report_update_time" property="reportUpdateTime" jdbcType="VARCHAR" />
+    <result column="report_create_time" property="reportCreateTime" jdbcType="VARCHAR" />
+    <result column="report_status" property="reportStatus" jdbcType="TINYINT" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    report_id, report_name, report_phone, report_mailbox, report_alipay, report_test_drive, 
+    report_update_time, report_create_time, report_status
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.test.pojo.ShopReportExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from shop_report
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from shop_report
+    where report_id = #{reportId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from shop_report
+    where report_id = #{reportId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.test.pojo.ShopReportExample" >
+    delete from shop_report
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.test.pojo.ShopReport" >
+    insert into shop_report (report_id, report_name, report_phone, 
+      report_mailbox, report_alipay, report_test_drive, 
+      report_update_time, report_create_time, report_status
+      )
+    values (#{reportId,jdbcType=INTEGER}, #{reportName,jdbcType=VARCHAR}, #{reportPhone,jdbcType=VARCHAR}, 
+      #{reportMailbox,jdbcType=VARCHAR}, #{reportAlipay,jdbcType=VARCHAR}, #{reportTestDrive,jdbcType=VARCHAR}, 
+      #{reportUpdateTime,jdbcType=VARCHAR}, #{reportCreateTime,jdbcType=VARCHAR}, #{reportStatus,jdbcType=TINYINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.test.pojo.ShopReport" >
+    insert into shop_report
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="reportId != null" >
+        report_id,
+      </if>
+      <if test="reportName != null" >
+        report_name,
+      </if>
+      <if test="reportPhone != null" >
+        report_phone,
+      </if>
+      <if test="reportMailbox != null" >
+        report_mailbox,
+      </if>
+      <if test="reportAlipay != null" >
+        report_alipay,
+      </if>
+      <if test="reportTestDrive != null" >
+        report_test_drive,
+      </if>
+      <if test="reportUpdateTime != null" >
+        report_update_time,
+      </if>
+      <if test="reportCreateTime != null" >
+        report_create_time,
+      </if>
+      <if test="reportStatus != null" >
+        report_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="reportId != null" >
+        #{reportId,jdbcType=INTEGER},
+      </if>
+      <if test="reportName != null" >
+        #{reportName,jdbcType=VARCHAR},
+      </if>
+      <if test="reportPhone != null" >
+        #{reportPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="reportMailbox != null" >
+        #{reportMailbox,jdbcType=VARCHAR},
+      </if>
+      <if test="reportAlipay != null" >
+        #{reportAlipay,jdbcType=VARCHAR},
+      </if>
+      <if test="reportTestDrive != null" >
+        #{reportTestDrive,jdbcType=VARCHAR},
+      </if>
+      <if test="reportUpdateTime != null" >
+        #{reportUpdateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="reportCreateTime != null" >
+        #{reportCreateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="reportStatus != null" >
+        #{reportStatus,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.test.pojo.ShopReportExample" resultType="java.lang.Integer" >
+    select count(*) from shop_report
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update shop_report
+    <set >
+      <if test="record.reportId != null" >
+        report_id = #{record.reportId,jdbcType=INTEGER},
+      </if>
+      <if test="record.reportName != null" >
+        report_name = #{record.reportName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reportPhone != null" >
+        report_phone = #{record.reportPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reportMailbox != null" >
+        report_mailbox = #{record.reportMailbox,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reportAlipay != null" >
+        report_alipay = #{record.reportAlipay,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reportTestDrive != null" >
+        report_test_drive = #{record.reportTestDrive,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reportUpdateTime != null" >
+        report_update_time = #{record.reportUpdateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reportCreateTime != null" >
+        report_create_time = #{record.reportCreateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reportStatus != null" >
+        report_status = #{record.reportStatus,jdbcType=TINYINT},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update shop_report
+    set report_id = #{record.reportId,jdbcType=INTEGER},
+      report_name = #{record.reportName,jdbcType=VARCHAR},
+      report_phone = #{record.reportPhone,jdbcType=VARCHAR},
+      report_mailbox = #{record.reportMailbox,jdbcType=VARCHAR},
+      report_alipay = #{record.reportAlipay,jdbcType=VARCHAR},
+      report_test_drive = #{record.reportTestDrive,jdbcType=VARCHAR},
+      report_update_time = #{record.reportUpdateTime,jdbcType=VARCHAR},
+      report_create_time = #{record.reportCreateTime,jdbcType=VARCHAR},
+      report_status = #{record.reportStatus,jdbcType=TINYINT}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.test.pojo.ShopReport" >
+    update shop_report
+    <set >
+      <if test="reportName != null" >
+        report_name = #{reportName,jdbcType=VARCHAR},
+      </if>
+      <if test="reportPhone != null" >
+        report_phone = #{reportPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="reportMailbox != null" >
+        report_mailbox = #{reportMailbox,jdbcType=VARCHAR},
+      </if>
+      <if test="reportAlipay != null" >
+        report_alipay = #{reportAlipay,jdbcType=VARCHAR},
+      </if>
+      <if test="reportTestDrive != null" >
+        report_test_drive = #{reportTestDrive,jdbcType=VARCHAR},
+      </if>
+      <if test="reportUpdateTime != null" >
+        report_update_time = #{reportUpdateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="reportCreateTime != null" >
+        report_create_time = #{reportCreateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="reportStatus != null" >
+        report_status = #{reportStatus,jdbcType=TINYINT},
+      </if>
+    </set>
+    where report_id = #{reportId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.test.pojo.ShopReport" >
+    update shop_report
+    set report_name = #{reportName,jdbcType=VARCHAR},
+      report_phone = #{reportPhone,jdbcType=VARCHAR},
+      report_mailbox = #{reportMailbox,jdbcType=VARCHAR},
+      report_alipay = #{reportAlipay,jdbcType=VARCHAR},
+      report_test_drive = #{reportTestDrive,jdbcType=VARCHAR},
+      report_update_time = #{reportUpdateTime,jdbcType=VARCHAR},
+      report_create_time = #{reportCreateTime,jdbcType=VARCHAR},
+      report_status = #{reportStatus,jdbcType=TINYINT}
+    where report_id = #{reportId,jdbcType=INTEGER}
+  </update>
+  <select id="findAllUser" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from shop_report
+  </select>
+</mapper>
