@@ -33,7 +33,6 @@ public class AdminController {
 
 	/**
 	 * 后台用户的登录
-	 * 
 	 * @param map
 	 * @return
 	 */
@@ -51,7 +50,6 @@ public class AdminController {
 
 	/**
 	 * 后台获取用户信息
-	 * 
 	 * @param request
 	 * @return
 	 */

@@ -278,4 +278,10 @@
     <include refid="Base_Column_List"/>
     from shop_report
   </select>
+  <select id="selectByPojo" resultMap="BaseResultMap" parameterType="java.lang.String">
+      select
+      <include refid="Base_Column_List"/>
+      from shop_report
+      where report_name = #{reportName,jdbcType=VARCHAR} and report_phone = #{reportPhone,jdbcType=VARCHAR}
+  </select>
 </mapper>

@@ -30,4 +30,6 @@ public interface ShopReportMapper {
     int updateByPrimaryKey(ShopReport record);
 
     List<ShopReport> findAllUser();
+
+    ShopReport selectByPojo(@Param("reportName")String reportName,@Param("reportPhone")String reportPhone);
 }

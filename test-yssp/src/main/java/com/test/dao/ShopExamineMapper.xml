@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.ShopExamineMapper" >
+  <resultMap id="BaseResultMap" type="com.test.pojo.ShopExamine" >
+    <id column="examine_id" property="examineId" jdbcType="INTEGER" />
+    <result column="examine_store_id" property="examineStoreId" jdbcType="INTEGER" />
+    <result column="examine_store_name" property="examineStoreName" jdbcType="VARCHAR" />
+    <result column="examine_user_id" property="examineUserId" jdbcType="INTEGER" />
+    <result column="examine_user_name" property="examineUserName" jdbcType="VARCHAR" />
+    <result column="examine_user_phone" property="examineUserPhone" jdbcType="VARCHAR" />
+    <result column="examine_user_alipay" property="examineUserAlipay" jdbcType="VARCHAR" />
+    <result column="examine_state" property="examineState" jdbcType="TINYINT" />
+    <result column="payment_state" property="paymentState" jdbcType="TINYINT" />
+    <result column="examine_establish_time" property="examineEstablishTime" jdbcType="VARCHAR" />
+    <result column="examine_modify_time" property="examineModifyTime" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    examine_id, examine_store_id, examine_store_name, examine_user_id, examine_user_name, 
+    examine_user_phone, examine_user_alipay, examine_state, payment_state, examine_establish_time, 
+    examine_modify_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.test.pojo.ShopExamineExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from shop_examine
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from shop_examine
+    where examine_id = #{examineId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from shop_examine
+    where examine_id = #{examineId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.test.pojo.ShopExamineExample" >
+    delete from shop_examine
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.test.pojo.ShopExamine" >
+    insert into shop_examine (examine_id, examine_store_id, examine_store_name, 
+      examine_user_id, examine_user_name, examine_user_phone, 
+      examine_user_alipay, examine_state, payment_state, 
+      examine_establish_time, examine_modify_time
+      )
+    values (#{examineId,jdbcType=INTEGER}, #{examineStoreId,jdbcType=INTEGER}, #{examineStoreName,jdbcType=VARCHAR}, 
+      #{examineUserId,jdbcType=INTEGER}, #{examineUserName,jdbcType=VARCHAR}, #{examineUserPhone,jdbcType=VARCHAR}, 
+      #{examineUserAlipay,jdbcType=VARCHAR}, #{examineState,jdbcType=TINYINT}, #{paymentState,jdbcType=TINYINT}, 
+      #{examineEstablishTime,jdbcType=VARCHAR}, #{examineModifyTime,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.test.pojo.ShopExamine" >
+    insert into shop_examine
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="examineId != null" >
+        examine_id,
+      </if>
+      <if test="examineStoreId != null" >
+        examine_store_id,
+      </if>
+      <if test="examineStoreName != null" >
+        examine_store_name,
+      </if>
+      <if test="examineUserId != null" >
+        examine_user_id,
+      </if>
+      <if test="examineUserName != null" >
+        examine_user_name,
+      </if>
+      <if test="examineUserPhone != null" >
+        examine_user_phone,
+      </if>
+      <if test="examineUserAlipay != null" >
+        examine_user_alipay,
+      </if>
+      <if test="examineState != null" >
+        examine_state,
+      </if>
+      <if test="paymentState != null" >
+        payment_state,
+      </if>
+      <if test="examineEstablishTime != null" >
+        examine_establish_time,
+      </if>
+      <if test="examineModifyTime != null" >
+        examine_modify_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="examineId != null" >
+        #{examineId,jdbcType=INTEGER},
+      </if>
+      <if test="examineStoreId != null" >
+        #{examineStoreId,jdbcType=INTEGER},
+      </if>
+      <if test="examineStoreName != null" >
+        #{examineStoreName,jdbcType=VARCHAR},
+      </if>
+      <if test="examineUserId != null" >
+        #{examineUserId,jdbcType=INTEGER},
+      </if>
+      <if test="examineUserName != null" >
+        #{examineUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="examineUserPhone != null" >
+        #{examineUserPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="examineUserAlipay != null" >
+        #{examineUserAlipay,jdbcType=VARCHAR},
+      </if>
+      <if test="examineState != null" >
+        #{examineState,jdbcType=TINYINT},
+      </if>
+      <if test="paymentState != null" >
+        #{paymentState,jdbcType=TINYINT},
+      </if>
+      <if test="examineEstablishTime != null" >
+        #{examineEstablishTime,jdbcType=VARCHAR},
+      </if>
+      <if test="examineModifyTime != null" >
+        #{examineModifyTime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.test.pojo.ShopExamineExample" resultType="java.lang.Integer" >
+    select count(*) from shop_examine
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update shop_examine
+    <set >
+      <if test="record.examineId != null" >
+        examine_id = #{record.examineId,jdbcType=INTEGER},
+      </if>
+      <if test="record.examineStoreId != null" >
+        examine_store_id = #{record.examineStoreId,jdbcType=INTEGER},
+      </if>
+      <if test="record.examineStoreName != null" >
+        examine_store_name = #{record.examineStoreName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.examineUserId != null" >
+        examine_user_id = #{record.examineUserId,jdbcType=INTEGER},
+      </if>
+      <if test="record.examineUserName != null" >
+        examine_user_name = #{record.examineUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.examineUserPhone != null" >
+        examine_user_phone = #{record.examineUserPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.examineUserAlipay != null" >
+        examine_user_alipay = #{record.examineUserAlipay,jdbcType=VARCHAR},
+      </if>
+      <if test="record.examineState != null" >
+        examine_state = #{record.examineState,jdbcType=TINYINT},
+      </if>
+      <if test="record.paymentState != null" >
+        payment_state = #{record.paymentState,jdbcType=TINYINT},
+      </if>
+      <if test="record.examineEstablishTime != null" >
+        examine_establish_time = #{record.examineEstablishTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.examineModifyTime != null" >
+        examine_modify_time = #{record.examineModifyTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update shop_examine
+    set examine_id = #{record.examineId,jdbcType=INTEGER},
+      examine_store_id = #{record.examineStoreId,jdbcType=INTEGER},
+      examine_store_name = #{record.examineStoreName,jdbcType=VARCHAR},
+      examine_user_id = #{record.examineUserId,jdbcType=INTEGER},
+      examine_user_name = #{record.examineUserName,jdbcType=VARCHAR},
+      examine_user_phone = #{record.examineUserPhone,jdbcType=VARCHAR},
+      examine_user_alipay = #{record.examineUserAlipay,jdbcType=VARCHAR},
+      examine_state = #{record.examineState,jdbcType=TINYINT},
+      payment_state = #{record.paymentState,jdbcType=TINYINT},
+      examine_establish_time = #{record.examineEstablishTime,jdbcType=VARCHAR},
+      examine_modify_time = #{record.examineModifyTime,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.test.pojo.ShopExamine" >
+    update shop_examine
+    <set >
+      <if test="examineStoreId != null" >
+        examine_store_id = #{examineStoreId,jdbcType=INTEGER},
+      </if>
+      <if test="examineStoreName != null" >
+        examine_store_name = #{examineStoreName,jdbcType=VARCHAR},
+      </if>
+      <if test="examineUserId != null" >
+        examine_user_id = #{examineUserId,jdbcType=INTEGER},
+      </if>
+      <if test="examineUserName != null" >
+        examine_user_name = #{examineUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="examineUserPhone != null" >
+        examine_user_phone = #{examineUserPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="examineUserAlipay != null" >
+        examine_user_alipay = #{examineUserAlipay,jdbcType=VARCHAR},
+      </if>
+      <if test="examineState != null" >
+        examine_state = #{examineState,jdbcType=TINYINT},
+      </if>
+      <if test="paymentState != null" >
+        payment_state = #{paymentState,jdbcType=TINYINT},
+      </if>
+      <if test="examineEstablishTime != null" >
+        examine_establish_time = #{examineEstablishTime,jdbcType=VARCHAR},
+      </if>
+      <if test="examineModifyTime != null" >
+        examine_modify_time = #{examineModifyTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where examine_id = #{examineId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.test.pojo.ShopExamine" >
+    update shop_examine
+    set examine_store_id = #{examineStoreId,jdbcType=INTEGER},
+      examine_store_name = #{examineStoreName,jdbcType=VARCHAR},
+      examine_user_id = #{examineUserId,jdbcType=INTEGER},
+      examine_user_name = #{examineUserName,jdbcType=VARCHAR},
+      examine_user_phone = #{examineUserPhone,jdbcType=VARCHAR},
+      examine_user_alipay = #{examineUserAlipay,jdbcType=VARCHAR},
+      examine_state = #{examineState,jdbcType=TINYINT},
+      payment_state = #{paymentState,jdbcType=TINYINT},
+      examine_establish_time = #{examineEstablishTime,jdbcType=VARCHAR},
+      examine_modify_time = #{examineModifyTime,jdbcType=VARCHAR}
+    where examine_id = #{examineId,jdbcType=INTEGER}
+  </update>
+  <select id="findAllExamine" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from shop_examine
+  </select>
+</mapper>

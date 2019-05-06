@@ -1,10 +1,7 @@
 package com.test.cms.service;
 
-import com.github.pagehelper.PageInfo;
-import com.test.pojo.ShopUser;
 import com.test.tools.util.QingYinResult;
 
-import java.util.List;
 import java.util.Map;
 
 public interface KaiService {

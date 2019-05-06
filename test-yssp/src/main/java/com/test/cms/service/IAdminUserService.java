@@ -1,8 +1,6 @@
 package com.test.cms.service;
 
-import javax.servlet.http.HttpServletRequest;
 
-import com.test.pojo.ShopCmsUser;
 import com.test.tools.util.QingYinResult;
 
 /**

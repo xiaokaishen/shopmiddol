@@ -29,7 +29,7 @@ public class ShopReport {
     /**
      * 试驾意向
      */
-    private String reportTestDrive;
+    private Byte reportTestDrive;
 
     /**
      * 更新时间
@@ -45,6 +45,8 @@ public class ShopReport {
      * 状态
      */
     private Byte reportStatus;
+
+
 
     /**
      * 
@@ -130,7 +132,7 @@ public class ShopReport {
      * 
      * @return report_test_drive 
      */
-    public String getReportTestDrive() {
+    public Byte getReportTestDrive() {
         return reportTestDrive;
     }
 
@@ -138,8 +140,8 @@ public class ShopReport {
      * 
      * @param reportTestDrive 
      */
-    public void setReportTestDrive(String reportTestDrive) {
-        this.reportTestDrive = reportTestDrive == null ? null : reportTestDrive.trim();
+    public void setReportTestDrive(Byte reportTestDrive) {
+        this.reportTestDrive = reportTestDrive;
     }
 
     /**
@@ -188,5 +190,20 @@ public class ShopReport {
      */
     public void setReportStatus(Byte reportStatus) {
         this.reportStatus = reportStatus;
+    }
+
+    @Override
+    public String toString() {
+        return "ShopReport{" +
+                "reportId=" + reportId +
+                ", reportName='" + reportName + '\'' +
+                ", reportPhone='" + reportPhone + '\'' +
+                ", reportMailbox='" + reportMailbox + '\'' +
+                ", reportAlipay='" + reportAlipay + '\'' +
+                ", reportTestDrive='" + reportTestDrive + '\'' +
+                ", reportUpdateTime='" + reportUpdateTime + '\'' +
+                ", reportCreateTime='" + reportCreateTime + '\'' +
+                ", reportStatus=" + reportStatus +
+                '}';
     }
 }
