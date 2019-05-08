@@ -8,16 +8,21 @@ E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\dao\ShopReportMapper
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\cms\controller\ReportController.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\utils\JsonUtil.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\dao\impl\JedisClientCluster.java
+E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\cms\controller\StoreController.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\ShopUserAuthsExample.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\ShopUserExample.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\QyUserAuths.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\ShopReportExample.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\ShopUserAuths.java
+E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\cms\service\StoreService.java
+E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\dao\ShopStoreMapper.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\ShopExamineExample.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\dao\ShopExamineMapper.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\cms\service\impl\ExamineServiceImpl.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\ShopCmsUser.java
+E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\ShopStore.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\ShopExamine.java
+E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\ShopStoreExample.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\cms\service\impl\KaiServiceImpl.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\dao\IJedisClient.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\dao\ShopUserAuthsMapper.java
@@ -34,4 +39,5 @@ E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\cms\service\IAdminUs
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\cms\service\ExamineService.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\cms\service\KaiService.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\TemplateData.java
+E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\cms\service\impl\StoreServiceImpl.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\cms\service\impl\AdminUserServiceImpl.java

@@ -10,6 +10,7 @@
     <result column="store_distributor_qc" property="storeDistributorQc" jdbcType="VARCHAR" />
     <result column="store_phone" property="storePhone" jdbcType="VARCHAR" />
     <result column="store_address" property="storeAddress" jdbcType="VARCHAR" />
+    <result column="store_state" property="storeState" jdbcType="TINYINT" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -71,7 +72,7 @@
   </sql>
   <sql id="Base_Column_List" >
     store_id, store_province, store_city, store_region, store_distributor_jc, store_distributor_qc, 
-    store_phone, store_address
+    store_phone, store_address,store_state
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.test.pojo.ShopStoreExample" >
     select
@@ -242,6 +243,9 @@
       <if test="storeAddress != null" >
         store_address = #{storeAddress,jdbcType=VARCHAR},
       </if>
+      <if test="storeState != null" >
+        store_state = #{storeState,jdbcType=TINYINT},
+      </if>
     </set>
     where store_id = #{storeId,jdbcType=INTEGER}
   </update>
@@ -256,4 +260,46 @@
       store_address = #{storeAddress,jdbcType=VARCHAR}
     where store_id = #{storeId,jdbcType=INTEGER}
   </update>
+  <select id="findAllStore" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from shop_store
+    where store_state = 1
+  </select>
+
+  <select id="getProvince" resultType="java.lang.String">
+    select
+    store_province
+    from shop_store GROUP BY store_province;
+  </select>
+    <select id="getStoreCity" resultType="java.lang.String" parameterType="string">
+    select
+    store_city
+    from (select * from shop_store where store_province = #{storeProvince,jdbcType=VARCHAR}) a
+    GROUP BY store_city;
+  </select>
+    <select id="getStoreRegion" resultType="java.lang.String" parameterType="string">
+    select store_region
+    from (select * from shop_store where store_city = #{storeCity,jdbcType=VARCHAR}) a
+    GROUP BY store_region
+  </select>
+
+
+  <select id="getCity" resultType="java.lang.String">
+    select
+    store_city
+    from shop_store GROUP BY store_city;
+  </select>
+  <select id="getRegion" resultType="java.lang.String">
+    select
+    store_region
+    from shop_store GROUP BY store_region;
+  </select>
+
+  <select id="getStoreByRegion" resultMap="BaseResultMap" parameterType="string">
+    select
+    <include refid="Base_Column_List"/>
+    from shop_store
+    where store_region = #{storeRegion,jdbcType=VARCHAR}
+  </select>
 </mapper>

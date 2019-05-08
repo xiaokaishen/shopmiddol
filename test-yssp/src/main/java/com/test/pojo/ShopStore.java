@@ -42,6 +42,19 @@ public class ShopStore {
     private String storeAddress;
 
     /**
+     * 状态
+     */
+    private Byte storeState;
+
+    public Byte getStoreState() {
+        return storeState;
+    }
+
+    public void setStoreState(Byte storeState) {
+        this.storeState = storeState;
+    }
+
+    /**
      * 门店id
      * @return store_id 门店id
      */

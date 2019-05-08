@@ -39,7 +39,7 @@ public class HeadersCORSFilter implements Filter {
 		// 设置多个跨域访问
 
 		String curOrigin = res.getHeader("Origin");
-
+		System.out.println("curOrigin===="+curOrigin);
 		// 如果当前访问来源在application.properties的Access-Control-Allow-Origin配置范围内，则允许访问，否则不允许
 
 		if (curOrigin != null) {

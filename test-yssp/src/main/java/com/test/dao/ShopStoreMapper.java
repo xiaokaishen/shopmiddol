@@ -28,4 +28,20 @@ public interface ShopStoreMapper {
     int updateByPrimaryKeySelective(ShopStore record);
 
     int updateByPrimaryKey(ShopStore record);
+
+    List<ShopStore> findAllStore();
+
+    List<String> getProvince();
+
+
+    List<String> getStoreCity(@Param("storeProvince") String province);
+
+    List<String> getStoreRegion(@Param("storeCity") String city);
+
+
+    List<String> getCity();
+
+    List<String> getRegion();
+
+    List<ShopStore> getStoreByRegion(@Param("storeRegion") String region);
 }

@@ -11,8 +11,19 @@ import com.yssp.config.YSSPSmallAppConfig;
  *
  */
 public interface SmallAppConstant {
-	public static final String AppID = "wx017e3852c759469b";// 小程序appid
-	public static final String AppSecret = "179ee2be17d606565123e9d6a2d22170";// 小程序密钥
+	/**
+	 *小程序appid
+	 */
+	public static final String AppID = "wx017e3852c759469b";
+	/**
+	 * 小程序密钥
+	 */
+	public static final String AppSecret = "179ee2be17d606565123e9d6a2d22170";
+	/**
+	 * 模板消息id
+	 */
+//	public static final String TemplateId = "ZPFCHLg8WW-jNIohKUdUN-QYivFnKtqa5vpcu48Chqc";
+	public static final String TemplateId = "wZZIG3R6w2pSVSfn3exSAUSaYQEZ7cdZQ336STSqwnA";
 	/**
 	 * 登录凭证校验url
 	 */

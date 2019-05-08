@@ -40,6 +40,9 @@ public class ExamineController {
         String reportName = shopReport.getReportName();
         //手机号码
         String reportPhone = shopReport.getReportPhone();
+        if(reportName==null||"".equals(reportName)||reportPhone==null||"".equals(reportPhone)){
+            return QingYinResult.build(400,"请输入名称或手机号");
+        }
         ShopReport report = reportService.findUserByPojo(reportName,reportPhone);
         System.out.println("结果:==="+report);
         return QingYinResult.ok(report);
