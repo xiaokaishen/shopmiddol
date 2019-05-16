@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f08d8b73-6c7f-4624-b7b9-f5dc46ebe67c" name="Default Changelist" comment="Default Changelist">
-      <change beforePath="$PROJECT_DIR$/../test-father/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-father/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-tools/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-tools/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-tools/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-tools/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-tools/target/test-tools.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/test-tools.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,7 +34,7 @@
       <file leaf-file-name="StoreController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/controller/StoreController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
+            <state relative-caret-position="84">
               <caret line="171" column="36" selection-start-line="171" selection-start-column="36" selection-end-line="171" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -556,7 +551,7 @@
       <workItem from="1557193973121" duration="7019000" />
       <workItem from="1557211550837" duration="7612000" />
       <workItem from="1557280778678" duration="1981000" />
-      <workItem from="1557988064227" duration="1279000" />
+      <workItem from="1557988064227" duration="1937000" />
     </task>
     <task id="LOCAL-00001" summary="注册完成，权限注册未完成">
       <created>1555398330831</created>
@@ -600,7 +595,28 @@
       <option name="project" value="LOCAL" />
       <updated>1557988947074</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Default Changelist">
+      <created>1557989409423</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1557989409423</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Default Changelist">
+      <created>1557989442639</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1557989442639</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Default Changelist">
+      <created>1557989785392</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1557989785392</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -609,7 +625,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256541000" />
+    <option name="totallyTimeSpent" value="257199000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -629,16 +645,16 @@
       <window_info id="Image Layers" order="4" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32892805" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="15" sideWeight="0.6013616" side_tool="true" visible="true" weight="0.24701874" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.7609682" side_tool="true" visible="true" weight="0.6286201" />
       <window_info anchor="right" id="Maven Projects" order="10" visible="true" weight="0.22239032" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32892805" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.39863843" visible="true" weight="0.24701874" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.23903178" visible="true" weight="0.6286201" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.39863843" weight="0.58603066" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.32892805" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32599118" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49905482" visible="true" weight="0.20574887" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49905482" visible="true" weight="0.20574887" />
       <window_info id="Web" order="8" sideWeight="0.50094515" side_tool="true" weight="0.19906166" />
       <window_info anchor="right" id="Database" order="7" weight="0.3290469" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
@@ -1006,7 +1022,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/controller/StoreController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
+        <state relative-caret-position="84">
           <caret line="171" column="36" selection-start-line="171" selection-start-column="36" selection-end-line="171" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
