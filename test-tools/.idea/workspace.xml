@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9be0f0f3-d9cb-403c-bdeb-6f42adb758f7" name="Default Changelist" comment="" />
+    <list default="true" id="9be0f0f3-d9cb-403c-bdeb-6f42adb758f7" name="Default Changelist" comment="Default Changelist" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +29,7 @@
       <file leaf-file-name="db.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="189">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
@@ -307,12 +307,27 @@
       <workItem from="1557200009858" duration="2066000" />
       <workItem from="1557211552170" duration="1209000" />
       <workItem from="1557280779043" duration="594000" />
-      <workItem from="1557988153486" duration="1537000" />
+      <workItem from="1557988153486" duration="2098000" />
     </task>
+    <task id="LOCAL-00001" summary="Default Changelist">
+      <created>1557991027687</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1557991027687</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Default Changelist">
+      <created>1557991057120</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557991057120</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66096000" />
+    <option name="totallyTimeSpent" value="66657000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -331,11 +346,11 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.50596255" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="12" sideWeight="0.6414524" side_tool="true" visible="true" weight="0.5349233" />
       <window_info anchor="right" id="Maven Projects" order="10" visible="true" weight="0.5590015" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32892805" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.50596255" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.35854766" visible="true" weight="0.5349233" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.32892805" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32892805" />
       <window_info id="Capture Tool" order="5" />
@@ -372,6 +387,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Default Changelist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Default Changelist" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
@@ -536,7 +555,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="189">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
