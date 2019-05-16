@@ -124,10 +124,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
+    <option name="x" value="162" />
+    <option name="y" value="341" />
     <option name="width" value="1175" />
-    <option name="height" value="1040" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -250,12 +250,12 @@
       <workItem from="1555304786459" duration="611000" />
       <workItem from="1556003918191" duration="1120000" />
       <workItem from="1556072172962" duration="597000" />
-      <workItem from="1557988141360" duration="706000" />
+      <workItem from="1557988141360" duration="711000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10502000" />
+    <option name="totallyTimeSpent" value="10507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -266,9 +266,9 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="10" visible="true" weight="0.32980332" />
+      <window_info active="true" anchor="right" id="Maven Projects" order="10" visible="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3270869" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3270869" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="5" />
