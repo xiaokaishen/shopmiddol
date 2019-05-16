@@ -2,41 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9be0f0f3-d9cb-403c-bdeb-6f42adb758f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/cms/controller/StoreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/cms/service/StoreService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/cms/service/impl/StoreServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-father/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-father/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../test-father/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-father/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/currency/config/CurrencyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/currency/config/CurrencyConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/smallApp/utils/SmallAppConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/smallApp/utils/SmallAppConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/tools/util/HeadersCORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/tools/util/HeadersCORSFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/alipay/config/AlipayConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/alipay/config/AlipayConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/currency/config/CurrencyConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/currency/config/CurrencyConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/smallApp/utils/SmallAppConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/smallApp/utils/SmallAppConstant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/tools/util/HeadersCORSFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/tools/util/HeadersCORSFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/weixin/utils/MenuCurrencyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/weixin/utils/MenuCurrencyManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-tools.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-tools.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../test-yssp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/cms/controller/ExamineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/cms/controller/ExamineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/dao/ShopStoreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/dao/ShopStoreMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/dao/ShopStoreMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/dao/ShopStoreMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/pojo/ShopStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/pojo/ShopStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/src/main/resources/properties/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/src/main/resources/properties/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/src/main/webapp/WEB-INF/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/src/main/webapp/WEB-INF/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/properties/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/target/classes/properties/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,10 +34,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file leaf-file-name="db.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
+            <state relative-caret-position="170">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
@@ -112,11 +88,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="localRepository" value="E:\lk-maven\repository" />
-        <option name="userSettingsFile" value="E:\lk-maven\settings.xml" />
-      </MavenGeneralSettings>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -135,7 +110,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1175" />
@@ -147,6 +125,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,7 +180,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -236,6 +215,49 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -293,11 +315,12 @@
       <workItem from="1557200009858" duration="2066000" />
       <workItem from="1557211552170" duration="1209000" />
       <workItem from="1557280779043" duration="594000" />
+      <workItem from="1557988153486" duration="1043000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64559000" />
+    <option name="totallyTimeSpent" value="65602000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -309,44 +332,47 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="-5" width="940" height="832" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13605443" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="JRebel" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32452276" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32892805" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32892805" />
-      <window_info anchor="bottom" id="Spring" order="9" weight="0.32892805" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32892805" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="JRebel Executor" order="13" />
-      <window_info anchor="bottom" id="JRebel Console" order="14" side_tool="true" />
-      <window_info anchor="bottom" id="MyBatis Sql Log" order="15" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.19235925" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32892805" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.50596255" />
+      <window_info anchor="right" id="Maven Projects" order="10" visible="true" weight="0.5590015" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32892805" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.50596255" />
+      <window_info anchor="bottom" id="Spring" order="9" weight="0.32892805" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32892805" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11649016" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="JRebel Executor" order="13" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="MyBatis Sql Log" order="15" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.19235925" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32980332" />
+      <window_info id="JRebel" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3295082" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Translate" order="9" weight="0.3297587" />
-      <window_info anchor="right" id="Maven Projects" order="10" visible="true" weight="0.13265306" />
+      <window_info anchor="bottom" id="JRebel Console" order="14" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,6 +382,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Thread.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/smallApp/utils/SmallTokenThread.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -511,7 +544,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
+        <state relative-caret-position="170">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>

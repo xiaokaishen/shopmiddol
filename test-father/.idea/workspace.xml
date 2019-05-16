@@ -2,58 +2,80 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="672940a3-74f3-460f-b82a-b7bf8a099ca2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/cms/controller/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/cms/service/IAdminUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/cms/service/impl/AdminUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/config/GlobalCorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/pojo/TemplateData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/pojo/WxMssVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-tools/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../test-tools/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-tools/src/main/java/com/currency/config/CurrencyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/src/main/java/com/currency/config/CurrencyConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-tools/src/main/java/com/test/smallApp/utils/SmallAppConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/src/main/java/com/test/smallApp/utils/SmallAppConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-tools/src/main/java/com/test/tools/util/HeadersCORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/src/main/java/com/test/tools/util/HeadersCORSFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-tools/target/classes/com/alipay/config/AlipayConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/classes/com/alipay/config/AlipayConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-tools/target/classes/com/currency/config/CurrencyConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/classes/com/currency/config/CurrencyConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-tools/target/classes/com/test/smallApp/utils/SmallAppConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/classes/com/test/smallApp/utils/SmallAppConstant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-tools/target/classes/com/test/tools/util/HeadersCORSFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/classes/com/test/tools/util/HeadersCORSFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-tools/target/classes/com/test/weixin/utils/MenuCurrencyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/classes/com/test/weixin/utils/MenuCurrencyManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../test-tools/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../test-tools/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../test-tools/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-tools/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../test-tools/target/test-tools.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../test-tools/target/test-tools.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../test-yssp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/cms/controller/KaiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/cms/controller/KaiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/cms/service/KaiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/cms/service/KaiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/src/main/resources/spring/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/src/main/resources/spring/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/src/main/webapp/WEB-INF/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/src/main/webapp/WEB-INF/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/cms/controller/KaiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/cms/controller/KaiController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/cms/service/KaiService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/cms/service/KaiService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/cms/service/impl/KaiServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/cms/service/impl/KaiServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/spring/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/target/classes/spring/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/cms/controller/KaiController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/cms/service/KaiService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/cms/service/impl/KaiServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/dao/IJedisClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/dao/ShopUserAuthsMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/dao/ShopUserAuthsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/dao/ShopUserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/dao/ShopUserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/dao/impl/JedisClientCluster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/dao/impl/JedisClientPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/pojo/QyUserAuths.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/pojo/ShopUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/pojo/ShopUserAuths.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/pojo/ShopUserAuthsExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/pojo/ShopUserAuthsExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/pojo/ShopUserAuthsExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/pojo/ShopUserAuthsExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/pojo/ShopUserExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/pojo/ShopUserExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/pojo/ShopUserExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/pojo/ShopUserExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/pojo/UserResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/com/test/utils/JsonUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/mybatis/mybatis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/properties/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/properties/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/properties/redis.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/spring/spring-dao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/spring/spring-redis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/spring/spring-service.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/spring/spring-task.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/spring/spring-trans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/classes/spring/springmvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/tomcat/conf/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/tomcat/conf/tomcat-users.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-yssp/target/tomcat/conf/web.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
+            <state relative-caret-position="-1330">
               <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
             </state>
           </provider>
@@ -76,10 +98,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Bundled (Maven 2)" />
-      </MavenGeneralSettings>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -98,10 +120,13 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1235" />
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1175" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -110,6 +135,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -129,8 +157,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -154,6 +180,49 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -181,48 +250,53 @@
       <workItem from="1555304786459" duration="611000" />
       <workItem from="1556003918191" duration="1120000" />
       <workItem from="1556072172962" duration="597000" />
+      <workItem from="1557988141360" duration="706000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9796000" />
+    <option name="totallyTimeSpent" value="10502000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="356" y="0" width="988" height="832" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10967742" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="JRebel" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32786885" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="JRebel Console" order="12" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.112600535" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="10" visible="true" weight="0.32980332" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3270869" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18759455" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32980332" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.112600535" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32980332" />
+      <window_info id="JRebel" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3295082" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Translate" order="9" />
-      <window_info anchor="right" id="Maven Projects" order="10" />
+      <window_info anchor="bottom" id="JRebel Console" order="12" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +308,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
+        <state relative-caret-position="209">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1330">
           <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
         </state>
       </provider>
