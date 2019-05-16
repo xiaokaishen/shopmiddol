@@ -13,11 +13,11 @@ public interface StoreService {
     QingYinResult delStoreById(Integer storeId);
 
 
-    List<String> getProvince();
+    List<ShopStore> getProvince();
 
-    List<String> getStoreCity(String province);
+    List<ShopStore> getStoreCity(String province);
 
-    List<String> getStoreRegion(String city);
+    List<ShopStore> getStoreRegion(String city);
 
     
     
@@ -26,4 +26,10 @@ public interface StoreService {
     List<String> getRegion();
 
     List<ShopStore> getStoreByRegion(String region);
+
+    QingYinResult selectAllStore();
+
+    ShopStore findById(String id);
+
+    void updateStore(List<ShopStore> allStore);
 }

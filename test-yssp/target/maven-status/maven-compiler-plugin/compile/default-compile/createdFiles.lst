@@ -27,6 +27,7 @@ com\test\pojo\ShopUserExample$Criterion.class
 com\test\pojo\ShopCmsUserExample.class
 com\test\utils\DownloadUtil.class
 com\test\pojo\ShopExamineExample.class
+com\test\utils\QRCodeUtil.class
 com\test\pojo\TemplateData.class
 com\test\dao\ShopStoreMapper.class
 com\test\cms\controller\AdminController.class
@@ -44,6 +45,7 @@ com\test\dao\impl\JedisClientPool.class
 com\test\cms\service\IAdminUserService.class
 com\test\pojo\ShopUserExample$Criteria.class
 com\test\pojo\ShopUserExample.class
+com\test\pojo\Vo.class
 com\test\cms\service\KaiService.class
 com\test\cms\service\impl\ReportServiceImpl.class
 com\test\pojo\ShopReport.class
@@ -56,6 +58,7 @@ com\test\pojo\ShopCmsUserExample$Criterion.class
 com\test\pojo\ShopExamineExample$Criterion.class
 com\test\pojo\ShopUserExample$GeneratedCriteria.class
 com\test\cms\service\impl\StoreServiceImpl.class
+com\test\config\ImageAction.class
 com\test\dao\IJedisClient.class
 com\test\dao\ShopCmsUserMapper.class
 com\test\utils\JsonUtil.class

@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.test.cms.service.ReportService;
 import com.test.dao.ShopReportMapper;
 import com.test.pojo.ShopReport;
+import com.test.tools.util.DateUtils;
 import com.test.tools.util.QingYinResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,8 @@ public class ReportServiceImpl implements ReportService {
 
     @Override
     public Integer addReport(ShopReport shopReport) {
+        shopReport.setReportCreateTime(DateUtils.getNow());
+        shopReport.setReportUpdateTime(DateUtils.getNow());
         int insert = shopReportMapper.insert(shopReport);
         return insert;
     }

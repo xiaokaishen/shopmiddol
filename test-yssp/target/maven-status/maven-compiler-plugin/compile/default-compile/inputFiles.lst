@@ -1,8 +1,10 @@
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\ShopCmsUserExample.java
+E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\Vo.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\ShopReport.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\utils\DownloadUtil.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\dao\ShopUserMapper.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\cms\controller\KaiController.java
+E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\config\ImageAction.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\ShopUser.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\dao\ShopReportMapper.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\cms\controller\ReportController.java
@@ -29,6 +31,7 @@ E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\dao\ShopUserAuthsMap
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\pojo\UserResult.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\cms\controller\AdminController.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\dao\ShopCmsUserMapper.java
+E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\utils\QRCodeUtil.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\cms\service\ReportService.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\cms\service\impl\ReportServiceImpl.java
 E:\idealiangkai\shopmiddol\test-yssp\src\main\java\com\test\config\GlobalCorsConfig.java

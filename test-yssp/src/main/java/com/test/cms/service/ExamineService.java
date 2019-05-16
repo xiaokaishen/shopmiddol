@@ -12,4 +12,10 @@ public interface ExamineService {
     QingYinResult findAllExamine(Integer page, Integer rows);
 
     void addUser(List<ShopExamine> list);
+
+    ShopExamine findUserByPojo(String reportName, String reportPhone);
+
+    QingYinResult examineYorNbyId(Integer examineId,byte examineState);
+
+    QingYinResult paymentYorNbyId(Integer examineId);
 }

@@ -3,13 +3,14 @@ package com.test.cms.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.test.cms.service.ExamineService;
 import com.test.dao.ShopExamineMapper;
+import com.test.dao.ShopStoreMapper;
 import com.test.pojo.ShopExamine;
 import com.test.pojo.ShopReport;
+import com.test.pojo.ShopStore;
 import com.test.tools.util.DateUtils;
 import com.test.tools.util.QingYinResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.w3c.dom.stylesheets.LinkStyle;
 
 import java.util.List;
 
@@ -18,14 +19,18 @@ public class ExamineServiceImpl implements ExamineService {
 
     @Autowired
     private ShopExamineMapper shopExamineMapper;
+    @Autowired
+    private ShopStoreMapper shopStoreMapper;
 
     @Override
     public Integer addExamine(ShopReport shopReport) {
         ShopExamine shopExamine = new ShopExamine();
         //审核门店id
-        shopExamine.setExamineStoreId(4399);
+        shopExamine.setExamineStoreId(shopReport.getReportStoreId());
         //审核门店名称
-        shopExamine.setExamineStoreName("4S店某某俱乐部");
+        ShopStore shopStore = shopStoreMapper.selectByPrimaryKey(shopReport.getReportStoreId());
+        System.out.println("ssssssssssssss"+shopStore);
+        shopExamine.setExamineStoreName(shopStore.getStoreDistributorJc());
         //审核用户id
         shopExamine.setExamineUserId(shopReport.getReportId());
         //审核用户名称
@@ -61,5 +66,33 @@ public class ExamineServiceImpl implements ExamineService {
         for (ShopExamine shopExamine : list) {
             shopExamineMapper.insert(shopExamine);
         }
+    }
+
+    @Override
+    public ShopExamine findUserByPojo(String reportName, String reportPhone) {
+        ShopExamine shopExamine = shopExamineMapper.selectByPojo(reportName,reportPhone);
+        return shopExamine;
+    }
+
+    @Override
+    public QingYinResult examineYorNbyId(Integer examineId,byte examineState) {
+        ShopExamine shopExamine = shopExamineMapper.selectByPrimaryKey(examineId);
+        shopExamine.setExamineState(examineState);
+        int i = shopExamineMapper.updateByPrimaryKey(shopExamine);
+        if(i==1){
+            return QingYinResult.ok();
+        }
+        return QingYinResult.build(400,"审核状态未修改成功");
+    }
+
+    @Override
+    public QingYinResult paymentYorNbyId(Integer examineId) {
+        ShopExamine shopExamine = shopExamineMapper.selectByPrimaryKey(examineId);
+        shopExamine.setPaymentState((byte)1);
+        int i = shopExamineMapper.updateByPrimaryKey(shopExamine);
+        if(i==1){
+            return QingYinResult.ok();
+        }
+        return QingYinResult.build(400,"支付情况未修改成功");
     }
 }

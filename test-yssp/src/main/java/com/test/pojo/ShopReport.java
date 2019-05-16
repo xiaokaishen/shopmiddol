@@ -46,19 +46,30 @@ public class ShopReport {
      */
     private Byte reportStatus;
 
+    /**
+     *4s店id
+     */
+    private Integer reportStoreId;
 
+    public Integer getReportStoreId() {
+        return reportStoreId;
+    }
+
+    public void setReportStoreId(Integer reportStoreId) {
+        this.reportStoreId = reportStoreId;
+    }
 
     /**
-     * 
-     * @return report_id 
+     *
+     * @return report_id
      */
     public Integer getReportId() {
         return reportId;
     }
 
     /**
-     * 
-     * @param reportId 
+     *
+     * @param reportId
      */
     public void setReportId(Integer reportId) {
         this.reportId = reportId;
@@ -192,18 +203,4 @@ public class ShopReport {
         this.reportStatus = reportStatus;
     }
 
-    @Override
-    public String toString() {
-        return "ShopReport{" +
-                "reportId=" + reportId +
-                ", reportName='" + reportName + '\'' +
-                ", reportPhone='" + reportPhone + '\'' +
-                ", reportMailbox='" + reportMailbox + '\'' +
-                ", reportAlipay='" + reportAlipay + '\'' +
-                ", reportTestDrive='" + reportTestDrive + '\'' +
-                ", reportUpdateTime='" + reportUpdateTime + '\'' +
-                ", reportCreateTime='" + reportCreateTime + '\'' +
-                ", reportStatus=" + reportStatus +
-                '}';
-    }
 }

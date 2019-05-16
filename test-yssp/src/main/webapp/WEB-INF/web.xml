@@ -64,13 +64,22 @@
 		<servlet-name>qingyin-yssp</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-
-	<!-- 在项目启动的时候就启动获取微信token的servlet -->
+	<!--img-->
 	<servlet>
-		<servlet-name>loadServlet</servlet-name>
-		<servlet-class>com.test.wxsmallapp.servlet.GetAccessTokenServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
+		<servlet-name>imageUrl</servlet-name>
+		<servlet-class>com.test.config.ImageAction</servlet-class>
 	</servlet>
+	<servlet-mapping>
+		<servlet-name>imageUrl</servlet-name>
+		<url-pattern>/imgurl</url-pattern>
+	</servlet-mapping>
+	<!--img-->
+	<!-- 在项目启动的时候就启动获取微信token的servlet -->
+	<!--<servlet>-->
+		<!--<servlet-name>loadServlet</servlet-name>-->
+		<!--<servlet-class>com.test.wxsmallapp.servlet.GetAccessTokenServlet</servlet-class>-->
+		<!--<load-on-startup>1</load-on-startup>-->
+	<!--</servlet>-->
 	<!-- log4j路径配置 -->
 
 	<context-param>

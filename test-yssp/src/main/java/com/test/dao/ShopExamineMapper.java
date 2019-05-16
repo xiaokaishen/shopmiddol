@@ -30,4 +30,6 @@ public interface ShopExamineMapper {
     int updateByPrimaryKey(ShopExamine record);
 
     List<ShopExamine> findAllExamine();
+
+    ShopExamine selectByPojo(@Param("examineUserName") String reportName,@Param("examineUserPhone") String reportPhone);
 }

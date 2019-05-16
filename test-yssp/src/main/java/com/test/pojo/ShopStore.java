@@ -1,5 +1,9 @@
 package com.test.pojo;
 
+import com.sun.javafx.beans.IDProperty;
+
+import java.util.List;
+
 public class ShopStore {
     /**
      * 门店id
@@ -45,6 +49,67 @@ public class ShopStore {
      * 状态
      */
     private Byte storeState;
+    /**
+     * 展示图片路径
+     */
+    private String storeViewUrl;
+    /**
+     * 下载图片路径
+     */
+    private String storeDownloadUrl;
+
+
+    @Override
+    public String toString() {
+        return "ShopStore{" +
+                "storeId=" + storeId +
+                ", storeProvince='" + storeProvince + '\'' +
+                ", storeCity='" + storeCity + '\'' +
+                ", storeRegion='" + storeRegion + '\'' +
+                ", storeDistributorJc='" + storeDistributorJc + '\'' +
+                ", storeDistributorQc='" + storeDistributorQc + '\'' +
+                ", storePhone='" + storePhone + '\'' +
+                ", storeAddress='" + storeAddress + '\'' +
+                ", storeState=" + storeState +
+                ", storeViewUrl='" + storeViewUrl + '\'' +
+                ", storeDownloadUrl='" + storeDownloadUrl + '\'' +
+                ", childList=" + childList +
+                '}';
+    }
+
+    public Integer getStoreId() {
+        return storeId;
+    }
+
+    public void setStoreId(Integer storeId) {
+        this.storeId = storeId;
+    }
+
+    public String getStoreViewUrl() {
+        return storeViewUrl;
+    }
+
+    public void setStoreViewUrl(String storeViewUrl) {
+        this.storeViewUrl = storeViewUrl;
+    }
+
+    public String getStoreDownloadUrl() {
+        return storeDownloadUrl;
+    }
+
+    public void setStoreDownloadUrl(String storeDownloadUrl) {
+        this.storeDownloadUrl = storeDownloadUrl;
+    }
+
+    private List<ShopStore> childList;
+
+    public List<ShopStore> getChildList() {
+        return childList;
+    }
+
+    public void setChildList(List<ShopStore> childList) {
+        this.childList = childList;
+    }
 
     public Byte getStoreState() {
         return storeState;
@@ -54,21 +119,6 @@ public class ShopStore {
         this.storeState = storeState;
     }
 
-    /**
-     * 门店id
-     * @return store_id 门店id
-     */
-    public Integer getStoreId() {
-        return storeId;
-    }
-
-    /**
-     * 门店id
-     * @param storeId 门店id
-     */
-    public void setStoreId(Integer storeId) {
-        this.storeId = storeId;
-    }
 
     /**
      * 门店所在省份

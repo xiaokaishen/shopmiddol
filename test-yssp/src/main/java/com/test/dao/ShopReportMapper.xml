@@ -11,6 +11,7 @@
     <result column="report_update_time" property="reportUpdateTime" jdbcType="VARCHAR" />
     <result column="report_create_time" property="reportCreateTime" jdbcType="VARCHAR" />
     <result column="report_status" property="reportStatus" jdbcType="TINYINT" />
+      <result column="report_store_id" property="reportStoreId" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -71,8 +72,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    report_id, report_name, report_phone, report_mailbox, report_alipay, report_test_drive, 
-    report_update_time, report_create_time, report_status
+    report_id, report_name, report_phone, report_mailbox, report_alipay, report_test_drive,
+    report_update_time, report_create_time, report_status,report_store_id
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.test.pojo.ShopReportExample" >
     select
@@ -89,7 +90,7 @@
     </if>
   </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from shop_report
     where report_id = #{reportId,jdbcType=INTEGER}
@@ -105,13 +106,15 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.test.pojo.ShopReport" >
-    insert into shop_report (report_id, report_name, report_phone, 
-      report_mailbox, report_alipay, report_test_drive, 
-      report_update_time, report_create_time, report_status
+    insert into shop_report (report_id, report_name, report_phone,
+      report_mailbox, report_alipay, report_test_drive,
+      report_update_time, report_create_time, report_status,
+      report_store_id
       )
-    values (#{reportId,jdbcType=INTEGER}, #{reportName,jdbcType=VARCHAR}, #{reportPhone,jdbcType=VARCHAR}, 
-      #{reportMailbox,jdbcType=VARCHAR}, #{reportAlipay,jdbcType=VARCHAR}, #{reportTestDrive,jdbcType=VARCHAR}, 
-      #{reportUpdateTime,jdbcType=VARCHAR}, #{reportCreateTime,jdbcType=VARCHAR}, #{reportStatus,jdbcType=TINYINT}
+    values (#{reportId,jdbcType=INTEGER}, #{reportName,jdbcType=VARCHAR}, #{reportPhone,jdbcType=VARCHAR},
+      #{reportMailbox,jdbcType=VARCHAR}, #{reportAlipay,jdbcType=VARCHAR}, #{reportTestDrive,jdbcType=VARCHAR},
+      #{reportUpdateTime,jdbcType=VARCHAR}, #{reportCreateTime,jdbcType=VARCHAR}, #{reportStatus,jdbcType=TINYINT},
+      #{reportStoreId,jdbcType=INTEGER}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.test.pojo.ShopReport" >

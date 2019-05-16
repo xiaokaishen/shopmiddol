@@ -73,8 +73,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    examine_id, examine_store_id, examine_store_name, examine_user_id, examine_user_name, 
-    examine_user_phone, examine_user_alipay, examine_state, payment_state, examine_establish_time, 
+    examine_id, examine_store_id, examine_store_name, examine_user_id, examine_user_name,
+    examine_user_phone, examine_user_alipay, examine_state, payment_state, examine_establish_time,
     examine_modify_time
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.test.pojo.ShopExamineExample" >
@@ -92,7 +92,7 @@
     </if>
   </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from shop_examine
     where examine_id = #{examineId,jdbcType=INTEGER}
@@ -108,14 +108,14 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.test.pojo.ShopExamine" >
-    insert into shop_examine (examine_id, examine_store_id, examine_store_name, 
-      examine_user_id, examine_user_name, examine_user_phone, 
-      examine_user_alipay, examine_state, payment_state, 
+    insert into shop_examine (examine_id, examine_store_id, examine_store_name,
+      examine_user_id, examine_user_name, examine_user_phone,
+      examine_user_alipay, examine_state, payment_state,
       examine_establish_time, examine_modify_time
       )
-    values (#{examineId,jdbcType=INTEGER}, #{examineStoreId,jdbcType=INTEGER}, #{examineStoreName,jdbcType=VARCHAR}, 
-      #{examineUserId,jdbcType=INTEGER}, #{examineUserName,jdbcType=VARCHAR}, #{examineUserPhone,jdbcType=VARCHAR}, 
-      #{examineUserAlipay,jdbcType=VARCHAR}, #{examineState,jdbcType=TINYINT}, #{paymentState,jdbcType=TINYINT}, 
+    values (#{examineId,jdbcType=INTEGER}, #{examineStoreId,jdbcType=INTEGER}, #{examineStoreName,jdbcType=VARCHAR},
+      #{examineUserId,jdbcType=INTEGER}, #{examineUserName,jdbcType=VARCHAR}, #{examineUserPhone,jdbcType=VARCHAR},
+      #{examineUserAlipay,jdbcType=VARCHAR}, #{examineState,jdbcType=TINYINT}, #{paymentState,jdbcType=TINYINT},
       #{examineEstablishTime,jdbcType=VARCHAR}, #{examineModifyTime,jdbcType=VARCHAR}
       )
   </insert>
@@ -310,5 +310,11 @@
     select
     <include refid="Base_Column_List"/>
     from shop_examine
+  </select>
+  <select id="selectByPojo" resultMap="BaseResultMap" parameterType="string">
+    select
+    <include refid="Base_Column_List"/>
+    from shop_examine
+    where examine_user_name = #{examineUserName,jdbcType=VARCHAR} and examine_user_phone = #{examineUserPhone,jdbcType=VARCHAR}
   </select>
 </mapper>

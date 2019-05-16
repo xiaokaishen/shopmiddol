@@ -31,12 +31,12 @@ public interface ShopStoreMapper {
 
     List<ShopStore> findAllStore();
 
-    List<String> getProvince();
+    List<ShopStore> getProvince();
 
 
-    List<String> getStoreCity(@Param("storeProvince") String province);
+    List<ShopStore> getStoreCity(@Param("storeProvince") String province);
 
-    List<String> getStoreRegion(@Param("storeCity") String city);
+    List<ShopStore> getStoreRegion(@Param("storeCity") String city);
 
 
     List<String> getCity();
