@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f08d8b73-6c7f-4624-b7b9-f5dc46ebe67c" name="Default Changelist" comment="Default Changelist">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,14 +31,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StoreController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StoreController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/controller/StoreController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
+            <state relative-caret-position="272">
               <caret line="171" column="36" selection-start-line="171" selection-start-column="36" selection-end-line="171" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KaiController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -168,7 +177,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/test/dao/ShopUserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/pojo/ShopUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/cms/service/impl/KaiServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/cms/controller/AdminController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/utils/DownloadUtil.java" />
@@ -195,6 +203,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/test/dao/ShopStoreMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/cms/service/impl/AdminUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/cms/controller/ExamineController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java" />
       </list>
     </option>
   </component>
@@ -551,7 +560,7 @@
       <workItem from="1557193973121" duration="7019000" />
       <workItem from="1557211550837" duration="7612000" />
       <workItem from="1557280778678" duration="1981000" />
-      <workItem from="1557988064227" duration="1937000" />
+      <workItem from="1557988064227" duration="2081000" />
     </task>
     <task id="LOCAL-00001" summary="注册完成，权限注册未完成">
       <created>1555398330831</created>
@@ -616,7 +625,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557989785392</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Default Changelist">
+      <created>1557990028571</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1557990028571</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -625,7 +641,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257199000" />
+    <option name="totallyTimeSpent" value="257343000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -638,6 +654,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32599118" />
@@ -645,16 +662,16 @@
       <window_info id="Image Layers" order="4" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32892805" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.7609682" side_tool="true" visible="true" weight="0.6286201" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="15" sideWeight="0.7609682" side_tool="true" visible="true" weight="0.58603066" />
       <window_info anchor="right" id="Maven Projects" order="10" visible="true" weight="0.22239032" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.23903178" visible="true" weight="0.6286201" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.23903178" visible="true" weight="0.58603066" />
       <window_info anchor="bottom" id="Run" order="4" sideWeight="0.39863843" weight="0.58603066" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.32892805" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32599118" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49905482" visible="true" weight="0.20574887" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49905482" visible="true" weight="0.20574887" />
       <window_info id="Web" order="8" sideWeight="0.50094515" side_tool="true" weight="0.19906166" />
       <window_info anchor="right" id="Database" order="7" weight="0.3290469" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
@@ -838,13 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/dao/ShopReportMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -1022,11 +1032,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/controller/StoreController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
+        <state relative-caret-position="272">
           <caret line="171" column="36" selection-start-line="171" selection-start-column="36" selection-end-line="171" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/cms/controller/KaiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
         </state>
       </provider>
     </entry>
