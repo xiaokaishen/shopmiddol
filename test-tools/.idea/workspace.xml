@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9be0f0f3-d9cb-403c-bdeb-6f42adb758f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../test-father/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-father/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-tools.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-tools.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-yssp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-yssp/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9be0f0f3-d9cb-403c-bdeb-6f42adb758f7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -315,12 +307,12 @@
       <workItem from="1557200009858" duration="2066000" />
       <workItem from="1557211552170" duration="1209000" />
       <workItem from="1557280779043" duration="594000" />
-      <workItem from="1557988153486" duration="1043000" />
+      <workItem from="1557988153486" duration="1286000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65602000" />
+    <option name="totallyTimeSpent" value="65845000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
